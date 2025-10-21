@@ -2,17 +2,81 @@
 <html lang="ro">
 <head>
     <meta charset="UTF-8">
-    <title>imi place inghetata!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header Exemplu</title>
     <style>
-        body { 
-            font-family: Arial, sans-serif; 
-            text-align: center; 
-            margin-top: 50px; 
+        /* Resetări de bază */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
         }
+
+        /* Stilurile pentru Header */
+        .site-header {
+            display: flex;
+            justify-content: space-between; /* Elementele vor fi la capete, lăsând mijlocul liber */
+            align-items: center;          /* Aliniază elementele pe verticală (centrat) */
+            padding: 20px 40px;           /* Spațiu interior (sus/jos 20px, stânga/dreapta 40px) */
+            background-color: #f8f8f8;    /* O culoare de fundal discretă */
+            border-bottom: 1px solid #ddd; /* O linie subtilă de separare */
+        }
+
+        /* Stilul pentru Nume (stânga) */
+        .site-name {
+            font-size: 1.8rem; /* Mărime font mai mare */
+            font-weight: bold;
+            color: #333;
+        }
+
+        /* Containerul pentru navigație (dreapta) */
+        .main-nav ul {
+            margin: 0;
+            padding: 0;
+            list-style: none; /* Elimină bulinele de la listă */
+            display: flex;    /* Afișează elementele listei pe orizontală */
+            gap: 25px;        /* Spațiu între butoane */
+        }
+
+        /* Stilul pentru link-urile de navigație */
+        .main-nav a {
+            text-decoration: none; /* Elimină sublinierea link-urilor */
+            color: #555;
+            font-size: 1rem;
+            font-weight: 600;
+            padding: 8px 12px; /* Spațiu în interiorul "butonului" */
+            border-radius: 5px;  /* Colțuri ușor rotunjite */
+            transition: background-color 0.3s, color 0.3s; /* Tranziție lină la hover */
+        }
+
+        /* Efect la trecerea mouse-ului peste link */
+        .main-nav a:hover {
+            background-color: #e0e0e0; /* Schimbă fundalul */
+            color: #000;              /* Schimbă culoarea textului */
+        }
+
     </style>
 </head>
 <body>
-    <h1>Salut, Lume! 👋</h1>
-    <p>Acesta este primul meu site web găzduit pe GitHub Pages.</p>
+
+    <header class="site-header">
+        <div class="site-name">
+            Numele Tău
+        </div>
+
+        <nav class="main-nav">
+            <ul>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li><a href="/newsletter">Newsletter</a></li>
+                <li><a href="/servicii">Servicii</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main style="padding: 40px; min-height: 300px;">
+        <h2>Conținutul paginii</h2>
+        <p>Acesta este corpul site-ului tău...</p>
+    </main>
+
 </body>
 </html>
