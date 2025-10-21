@@ -3,55 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Header Exemplu</title>
+    <title>Header Modificat</title>
     <style>
-        /* Resetări de bază */
         body {
             margin: 0;
             font-family: Arial, sans-serif;
         }
 
-        /* Stilurile pentru Header */
         .site-header {
             display: flex;
-            justify-content: space-between; /* Elementele vor fi la capete, lăsând mijlocul liber */
-            align-items: center;          /* Aliniază elementele pe verticală (centrat) */
-            padding: 20px 40px;           /* Spațiu interior (sus/jos 20px, stânga/dreapta 40px) */
-            background-color: #f8f8f8;    /* O culoare de fundal discretă */
-            border-bottom: 1px solid #ddd; /* O linie subtilă de separare */
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background-color: #FFFDD0; 
+            border-bottom: 1px solid #ddd;
         }
 
-        /* Stilul pentru Nume (stânga) */
         .site-name {
-            font-size: 1.8rem; /* Mărime font mai mare */
+            font-size: 1.8rem;
             font-weight: bold;
             color: #333;
         }
 
-        /* Containerul pentru navigație (dreapta) */
         .main-nav ul {
             margin: 0;
             padding: 0;
-            list-style: none; /* Elimină bulinele de la listă */
-            display: flex;    /* Afișează elementele listei pe orizontală */
-            gap: 25px;        /* Spațiu între butoane */
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 25px;
         }
 
-        /* Stilul pentru link-urile de navigație */
         .main-nav a {
-            text-decoration: none; /* Elimină sublinierea link-urilor */
+            text-decoration: none;
             color: #555;
             font-size: 1rem;
             font-weight: 600;
-            padding: 8px 12px; /* Spațiu în interiorul "butonului" */
-            border-radius: 5px;  /* Colțuri ușor rotunjite */
-            transition: background-color 0.3s, color 0.3s; /* Tranziție lină la hover */
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
         }
 
-        /* Efect la trecerea mouse-ului peste link */
         .main-nav a:hover {
-            background-color: #e0e0e0; /* Schimbă fundalul */
-            color: #000;              /* Schimbă culoarea textului */
+            background-color: #e0e0e0;
+            color: #000;
+        }
+
+        .main-nav a.cta-button {
+            font-weight: bold;
+            font-size: 1.05rem;
+            padding: 10px 18px;
+            background-color: #333;
+            color: #fff;
+            border-radius: 5px;
+        }
+
+        .main-nav a.cta-button:hover {
+            background-color: #555;
+            color: #fff;
         }
 
     </style>
@@ -66,9 +75,9 @@
         <nav class="main-nav">
             <ul>
                 <li><a href="/blog">Blog</a></li>
-                <li><a href="/contact">Contact</a></li>
                 <li><a href="/newsletter">Newsletter</a></li>
                 <li><a href="/servicii">Servicii</a></li>
+                <li><a href="/contact" class="cta-button">Contact</a></li>
             </ul>
         </nav>
     </header>
