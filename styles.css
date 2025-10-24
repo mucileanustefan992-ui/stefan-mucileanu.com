@@ -114,7 +114,7 @@ body {
     z-index: 10;
 }
 
-.sparkle-container {
+.floating-particles {
     position: absolute;
     top: 0;
     left: 0;
@@ -126,9 +126,9 @@ body {
 
 .sparkle {
     position: absolute;
-    background-color: rgba(255, 255, 255, 1); 
+    background-color: rgba(255, 255, 255, 0.15); 
     border-radius: 50%;
-    box-shadow: 0 0 8px rgba(255, 255, 255, 1); 
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.1); 
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     z-index: 5;
@@ -136,8 +136,8 @@ body {
 
 @keyframes moveSparkle {
     0% { transform: translate(var(--x-start), var(--y-start)) scale(0.6) opacity(0); }
-    20% { opacity: 1; }
-    80% { opacity: 1; }
+    20% { opacity: 0.5; }
+    80% { opacity: 0.5; }
     100% { transform: translate(var(--x-end), var(--y-end)) scale(0.8) opacity(0); }
 }
 
