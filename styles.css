@@ -129,27 +129,39 @@ body {
 
 .particle {
     position: absolute;
-    bottom: 0;
-    width: 3px;
-    height: 3px;
+    width: var(--size);
+    height: var(--size);
     background-color: rgba(255, 255, 255, 0.15);
     border-radius: 50%;
     box-shadow: 0 0 6px rgba(255, 255, 255, 0.1);
-    animation-name: floatUp;
+    animation-name: floatAround;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
 }
 
-@keyframes floatUp {
-    from {
-        transform: translateY(0);
+@keyframes floatAround {
+    0% {
+        transform: translate(var(--x-start), var(--y-start)) scale(var(--scale-start));
+        opacity: 0;
+    }
+    25% {
+        transform: translate(var(--x-mid1), var(--y-mid1)) scale(var(--scale-mid));
         opacity: 0.7;
     }
-    to {
-        transform: translateY(-100vh);
+    50% {
+        transform: translate(var(--x-mid2), var(--y-mid2)) scale(var(--scale-start));
+        opacity: 0.4;
+    }
+    75% {
+        transform: translate(var(--x-mid3), var(--y-mid3)) scale(var(--scale-mid));
+        opacity: 0.7;
+    }
+    100% {
+        transform: translate(var(--x-end), var(--y-end)) scale(var(--scale-start));
         opacity: 0;
     }
 }
+
 
 .blinking-contact-button {
     display: inline-block;
