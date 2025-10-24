@@ -8,7 +8,6 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* Am mărit padding-ul stânga/dreapta de la 40px la 80px */
     padding: 30px 80px; 
     background-color: #ffffff;
     border-bottom: 1px solid #dddddd;
