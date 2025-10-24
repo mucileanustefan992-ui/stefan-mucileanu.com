@@ -13,22 +13,6 @@ body {
     border-bottom: 1px solid #dddddd;
 }
 
-/* REGULI NOI PENTRU LOGO ȘI NUME */
-.site-branding {
-    display: flex; 
-    align-items: center; 
-    gap: 15px; 
-}
-
-.site-logo {
-    width: 50px; 
-    height: 50px;
-    border-radius: 50%; 
-    object-fit: cover; 
-    vertical-align: middle; 
-}
-/* SFÂRȘIT REGULI NOI */
-
 .site-name {
     font-size: 1.8rem;
     font-weight: bold;
