@@ -1,37 +1,23 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const mainContent = document.querySelector('.main-content-area');
-    if (mainContent) {
-        const floatingParticlesContainer = document.querySelector('.floating-particles');
 
-        const numberOfSparkles = 100;
+    function createParticles(){
+        const container=document.createElement('div');
+        container.className='floating-particles';
+        document.body.appendChild(container);
 
-        function createSparkle() {
-            const sparkle = document.createElement('div');
-            sparkle.classList.add('sparkle');
-
-            const size = Math.random() * 3 + 1;
-            sparkle.style.width = `${size}px`;
-            sparkle.style.height = `${size}px`;
-
-            const startX = Math.random() * window.innerWidth;
-            const startY = Math.random() * window.innerHeight;
-            const endX = Math.random() * window.innerWidth;
-            const endY = Math.random() * window.innerHeight;
-
-            const duration = Math.random() * 10 + 10;
-            const delay = Math.random() * 10;
-
-            sparkle.style.setProperty('--x-start', `${startX}px`);
-            sparkle.style.setProperty('--y-start', `${startY}px`);
-            sparkle.style.setProperty('--x-end', `${endX}px`);
-            sparkle.style.setProperty('--y-end', `${endY}px`);
-            sparkle.style.animation = `moveSparkle ${duration}s ${delay}s infinite linear`;
-
-            floatingParticlesContainer.appendChild(sparkle);
+        function createParticle(){
+            const p=document.createElement('div');
+            p.className='particle';
+            p.style.left=Math.random()*100+'%';
+            p.style.animationDelay=Math.random()*15+'s';
+            p.style.animationDuration=(Math.random()*10+10)+'s';
+            container.appendChild(p);
+            setTimeout(()=>{p.remove()},20000);
         }
 
-        for (let i = 0; i < numberOfSparkles; i++) {
-            createSparkle();
-        }
+        setInterval(createParticle,800);
+        for(let i=0;i<10;i++) setTimeout(createParticle,i*300);
     }
+
+    createParticles();
 });
