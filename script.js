@@ -30,11 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
             sparkle.style.animation = `moveSparkle ${duration}s ${delay}s infinite linear`;
 
             sparkleContainer.appendChild(sparkle);
-            
-            setTimeout(() => {
-                 sparkle.remove();
-                 createSparkle();
-            }, (duration + delay) * 1000);
         }
 
         for (let i = 0; i < numberOfSparkles; i++) {
