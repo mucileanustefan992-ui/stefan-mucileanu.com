@@ -114,28 +114,30 @@ body {
     z-index: 10;
 }
 
-.background-beams {
+.sparkle-container {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     overflow: hidden;
-}
-
-.beam {
-    position: absolute;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0) 100%);
-    opacity: 0;
-    animation: moveBeam 10s infinite linear;
     pointer-events: none;
 }
 
-@keyframes moveBeam {
-    0% { transform: translate(-100vw, -100vh) rotate(45deg); opacity: 0; }
-    25% { opacity: 1; }
-    75% { opacity: 1; }
-    100% { transform: translate(100vw, 100vh) rotate(45deg); opacity: 0; }
+.sparkle {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.7);
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes moveSparkle {
+    0% { transform: translate(var(--x-start), var(--y-start)) scale(0.5) opacity(0); }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { transform: translate(var(--x-end), var(--y-end)) scale(0.8) opacity(0); }
 }
 
 .blinking-contact-button {
