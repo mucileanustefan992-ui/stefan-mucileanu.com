@@ -1,3 +1,5 @@
+alert('JavaScript Funcționează!');
+
 document.addEventListener('DOMContentLoaded', () => {
     const mainContent = document.querySelector('.main-content-area');
     if (mainContent) {
