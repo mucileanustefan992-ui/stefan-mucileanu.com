@@ -100,7 +100,7 @@ body {
 }
 
 .main-content-area {
-    background-color: #28a745;
+    background: radial-gradient(circle at 50% 50%, #22422A 0%, #0A1C1F 100%); 
     overflow: hidden;
     position: relative;
     display: flex;
@@ -126,17 +126,17 @@ body {
 
 .sparkle {
     position: absolute;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.15);
     border-radius: 50%;
-    box-shadow: 0 0 8px rgba(255, 255, 255, 0.7);
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.1);
     animation-timing-function: linear;
     animation-iteration-count: infinite;
 }
 
 @keyframes moveSparkle {
-    0% { transform: translate(var(--x-start), var(--y-start)) scale(0.5) opacity(0); }
-    10% { opacity: 1; }
-    90% { opacity: 1; }
+    0% { transform: translate(var(--x-start), var(--y-start)) scale(0.6) opacity(0); }
+    20% { opacity: 0.5; }
+    80% { opacity: 0.5; }
     100% { transform: translate(var(--x-end), var(--y-end)) scale(0.8) opacity(0); }
 }
 
