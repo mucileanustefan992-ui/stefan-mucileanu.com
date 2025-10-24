@@ -1,9 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const mainContent = document.querySelector('.main-content-area');
     if (mainContent) {
-        const sparkleContainer = document.createElement('div');
-        sparkleContainer.classList.add('sparkle-container');
-        mainContent.appendChild(sparkleContainer);
+        const floatingParticlesContainer = document.querySelector('.floating-particles');
 
         const numberOfSparkles = 100;
 
@@ -29,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
             sparkle.style.setProperty('--y-end', `${endY}px`);
             sparkle.style.animation = `moveSparkle ${duration}s ${delay}s infinite linear`;
 
-            sparkleContainer.appendChild(sparkle);
+            floatingParticlesContainer.appendChild(sparkle);
         }
 
         for (let i = 0; i < numberOfSparkles; i++) {
