@@ -23,14 +23,6 @@
         .site-name {
             font-size: 1.8rem;
             font-weight: bold;
-            text-transform: uppercase;
-        }
-
-        .name-stefan {
-            color: #28a745;
-        }
-        
-        .name-mucileanu {
             color: #333333;
         }
 
@@ -40,7 +32,7 @@
             list-style: none;
             display: flex;
             align-items: center;
-            gap: 40px;
+            gap: 25px;
         }
 
         .main-nav a {
@@ -82,3 +74,26 @@
     </style>
 </head>
 <body>
+
+    <header class="site-header">
+        <div class="site-name">
+            Numele Tău
+        </div>
+
+        <nav class="main-nav">
+            <ul>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/newsletter">Newsletter</a></li>
+                <li><a href="/servicii">Servicii</a></li>
+                <li><a href="/contact" class="cta-button">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main style="padding: 40px; min-height: 300px;">
+        <h2>Conținutul paginii</h2>
+        <p>Acesta este corpul site-ului tău...</p>
+    </main>
+
+</body>
+</html>
