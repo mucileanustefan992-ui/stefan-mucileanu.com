@@ -36,18 +36,20 @@
         }
 
         .main-nav a {
+            display: inline-block;
             text-decoration: none;
             color: #ffffff;
             font-size: 1rem;
             font-weight: 600;
             padding: 8px 12px;
             border-radius: 5px;
-            transition: background-color 0.3s, color 0.3s;
+            transition: background-color 0.3s, color 0.3s, transform 0.2s ease-out, outline 0.2s ease-in-out;
         }
 
-        .main-nav a:hover {
+        .main-nav a:not(.cta-button):hover {
             background-color: #333;
             color: #ffffff;
+            outline: 2px solid #FF8C00;
         }
 
         .main-nav a.cta-button {
@@ -62,6 +64,12 @@
         .main-nav a.cta-button:hover {
             background-color: #e07b00;
             color: #ffffff;
+            transform: translateY(-4px) scale(1.05);
+        }
+
+        .main-nav a.cta-button:active {
+            transform: translateY(-1px) scale(1.02);
+            transition-duration: 0.1s;
         }
 
     </style>
@@ -88,5 +96,7 @@
         <p>Acesta este corpul site-ului tău...</p>
     </main>
 
+</body>
+</html>
 </body>
 </html>
