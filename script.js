@@ -5,13 +5,13 @@ document.addEventListener('DOMContentLoaded', () => {
         sparkleContainer.classList.add('sparkle-container');
         mainContent.appendChild(sparkleContainer);
 
-        const numberOfSparkles = 30;
+        const numberOfSparkles = 100;
 
         function createSparkle() {
             const sparkle = document.createElement('div');
             sparkle.classList.add('sparkle');
 
-            const size = Math.random() * 8 + 4;
+            const size = Math.random() * 3 + 1;
             sparkle.style.width = `${size}px`;
             sparkle.style.height = `${size}px`;
 
@@ -20,8 +20,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const endX = Math.random() * window.innerWidth;
             const endY = Math.random() * window.innerHeight;
 
-            const duration = Math.random() * 5 + 5;
-            const delay = Math.random() * 5;
+            const duration = Math.random() * 10 + 10;
+            const delay = Math.random() * 10;
 
             sparkle.style.setProperty('--x-start', `${startX}px`);
             sparkle.style.setProperty('--y-start', `${startY}px`);
