@@ -1,1 +1,88 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - STEFAN MUCILEANU</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+    <header class="site-header">
+        <div class="site-name">
+            <span class="name-stefan">STEFAN</span> <span class="name-mucileanu">MUCILEANU</span>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/newsletter">Newsletter</a></li>
+                <li><a href="/servicii">Servicii</a></li>
+                <li><a href="contact.html" class="cta-button">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content-area">
+        <div class="form-container">
+            <h2 class="form-title">> Completează formularul pentru o Consultanță Gratuită de Marketing</h2>
+            <p class="form-subtitle">Ai nevoie de ajutor cu situația ta?</p>
+            <p class="form-subtitle">Vrei să afli cum îți putem sprijini afacerea?</p>
+            <p class="form-subtitle">Și nu-ți face griji - nu te vom deranja cu obligații sau oferte de vânzări agasante.</p>
+            <p class="form-subtitle">Amândoi știm că avem lucruri mai importante de făcut.</p>
+
+            <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="contact-form">
+                <div class="form-group">
+                    <label for="name" class="form-label">> NUME: *</label>
+                    <input type="text" id="name" name="name" class="form-input" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone" class="form-label">> NUMĂR_TELEFON: *</label>
+                    <input type="tel" id="phone" name="phone" class="form-input" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="company" class="form-label">> NUME_COMPANIE:</label>
+                    <input type="text" id="company" name="company" class="form-input">
+                </div>
+
+                <div class="form-group">
+                    <label for="email" class="form-label">> EMAIL: *</label>
+                    <input type="email" id="email" name="email" class="form-input" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="question" class="form-label">> CEA MAI IMPORTANTĂ ÎNTREBARE A TA: *</label>
+                    <textarea id="question" name="question" class="form-textarea" rows="3" required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="find" class="form-label">> CUM M-AI GĂSIT?: *</label>
+                    <input type="text" id="find" name="find" class="form-input" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="website" class="form-label">> WEBSITE-UL TĂU:</label>
+                    <input type="text" id="website" name="website" class="form-input">
+                </div>
+
+                <div class="form-group">
+                    <label for="product" class="form-label">> ALEGE_PRODUSUL: *</label>
+                    <select id="product" name="product" class="form-select" required>
+                        <option value="">-- Te rog, alege o opțiune --</option>
+                        <option value="serviciu_1">Serviciu 1</option>
+                        <option value="serviciu_2">Serviciu 2</option>
+                        <option value="serviciu_3">Serviciu 3</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="form-button">> VREAU ASTA!</button>
+                
+                <p class="form-required-note">> * CÂMPURI_OBLIGATORII</p>
+            </form>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
