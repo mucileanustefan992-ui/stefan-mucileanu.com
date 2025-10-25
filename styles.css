@@ -22,6 +22,11 @@ body {
     z-index: 100;
 }
 
+.site-name-link {
+    text-decoration: none;
+    color: inherit;
+}
+
 .site-name {
     font-size: 1.8rem;
     font-weight: bold;
@@ -234,8 +239,6 @@ body {
         box-shadow: 0 0 25px rgba(40, 167, 69, 0.9); 
     }
 }
-
-/* --- STILURI NOI PENTRU PAGINA DE CONTACT --- */
 
 .form-container {
     width: 90%;
