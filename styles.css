@@ -4,9 +4,8 @@ html, body {
     font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column;
-    /* NOU: Gradient radial centrat și mai difuz pentru o tranziție mai lină */
-    background: radial-gradient(ellipse at center, #1F3A29 0%, #050A08 60%, #000000 100%);
-    /* Asigură că fundalul acoperă tot, chiar și la scroll */
+    /* NOU: Gradient radial extins, cu amestecare organică verde-negru */
+    background: radial-gradient(ellipse farthest-corner at center, #1A3521 0%, #0A150C 50%, #000000 100%);
     background-attachment: fixed;
 }
 
