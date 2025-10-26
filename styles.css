@@ -205,19 +205,19 @@ html, body {
     color: #ffffff;
     margin: 0 0 15px 0;
     line-height: 1.2;
-    /* Efect de glow alb-verzui subtil, mai multe straturi */
+    /* NOU: Efect de glow mai pronunțat și integrat cu fundalul */
     text-shadow:
-        0 0 5px rgba(255, 255, 255, 0.4), /* Glow intern alb */
-        0 0 15px rgba(40, 167, 69, 0.3),  /* Glow verde mai mare */
-        0 0 25px rgba(0, 0, 0, 0.5);     /* Umbră moale pentru adâncime */
+        0 0 10px rgba(255, 255, 255, 0.4),   /* Glow alb subtil */
+        0 0 25px rgba(40, 167, 69, 0.4),    /* Glow verde mai puternic */
+        0 0 40px rgba(0, 0, 0, 0.8);        /* Umbră mare, întunecată, care se pierde în fundal */
 }
 
 .main-title .green-text {
     color: #28a745;
-    /* Glow verde mai pronunțat pentru textul verde */
+    /* NOU: Glow verde intens */
     text-shadow:
-        0 0 8px rgba(40, 167, 69, 0.7),   /* Glow verde intens */
-        0 0 20px rgba(40, 167, 69, 0.4);  /* Glow verde difuz */
+        0 0 15px rgba(40, 167, 69, 0.8),    /* Glow verde vibrant */
+        0 0 30px rgba(40, 167, 69, 0.5);    /* Glow verde difuz */
 }
 
 .subtitle {
@@ -300,10 +300,10 @@ html, body {
     border-radius: 10px;
     border: 3px solid #ffffff;
     animation: blink 1.5s infinite alternate;
-    /* box-shadow ca un glow subtil, fără offset */
+    /* NOU: box-shadow ca un glow verde, cu umbră închisă pentru integrare */
     box-shadow:
-        0 0 10px rgba(40, 167, 69, 0.5), /* Glow verde mediu */
-        0 0 25px rgba(0, 0, 0, 0.7);     /* Umbră mare pentru a "ancora" butonul */
+        0 0 12px rgba(40, 167, 69, 0.6),    /* Glow verde */
+        0 0 30px rgba(26, 46, 47, 0.8);     /* Umbră mare, din fundal */
     transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
     text-transform: uppercase;
 }
@@ -311,24 +311,24 @@ html, body {
 .blinking-contact-button:hover {
     background-color: #218838;
     transform: scale(1.05);
-    /* box-shadow mai intens la hover */
+    /* NOU: box-shadow mai intens la hover */
     box-shadow:
-        0 0 15px rgba(40, 167, 69, 0.7), /* Glow verde mai intens */
-        0 0 30px rgba(0, 0, 0, 0.9);     /* Umbră mai mare și mai densă */
+        0 0 18px rgba(40, 167, 69, 0.8),    /* Glow verde mai intens */
+        0 0 40px rgba(26, 46, 47, 1);       /* Umbră mai profundă */
 }
 
 @keyframes blink {
     0% {
         opacity: 1;
         box-shadow:
-            0 0 10px rgba(40, 167, 69, 0.5),
-            0 0 25px rgba(0, 0, 0, 0.7);
+            0 0 12px rgba(40, 167, 69, 0.6),
+            0 0 30px rgba(26, 46, 47, 0.8);
     }
     100% {
         opacity: 0.9;
         box-shadow:
-            0 0 15px rgba(40, 167, 69, 0.7),
-            0 0 30px rgba(0, 0, 0, 0.9);
+            0 0 18px rgba(40, 167, 69, 0.8),
+            0 0 40px rgba(26, 46, 47, 1);
     }
 }
 
@@ -355,20 +355,20 @@ html, body {
     text-align: center;
     background-color: rgba(0, 0, 0, 0.6);
     border-radius: 10px;
-    /* box-shadow ca un glow verde subtil */
+    /* NOU: box-shadow ca un glow verde subtil, cu umbră întunecată */
     box-shadow:
-        0 0 10px rgba(40, 167, 69, 0.3),  /* Glow verde subtil */
-        0 0 20px rgba(0, 0, 0, 0.6);      /* Umbră mai mare și întunecată */
+        0 0 10px rgba(40, 167, 69, 0.4),    /* Glow verde subtil */
+        0 0 25px rgba(26, 46, 47, 0.7);     /* Umbră întunecată, din fundal */
 }
 
 .form-title {
     font-size: 2.5rem;
     color: #ffffff;
     margin-bottom: 25px;
-    /* text-shadow ca un glow alb subtil */
+    /* NOU: text-shadow ca un glow alb subtil */
     text-shadow:
-        0 0 5px rgba(255, 255, 255, 0.5),
-        0 0 10px rgba(0, 0, 0, 0.4);
+        0 0 8px rgba(255, 255, 255, 0.6),
+        0 0 15px rgba(0, 0, 0, 0.5);
     line-height: 1.3;
 }
 
@@ -421,10 +421,10 @@ html, body {
 .form-select:focus {
     outline: none;
     border-color: #99ff99;
-    /* box-shadow ca un glow la focus */
+    /* NOU: box-shadow ca un glow la focus */
     box-shadow:
-        0 0 8px rgba(153, 255, 153, 0.6), /* Glow verde-deschis */
-        0 0 15px rgba(0, 0, 0, 0.5);      /* Umbră pentru adâncime */
+        0 0 10px rgba(153, 255, 153, 0.7), /* Glow verde-deschis */
+        0 0 20px rgba(26, 46, 47, 0.6);   /* Umbră pentru adâncime */
 }
 
 .form-select {
@@ -449,10 +449,10 @@ html, body {
     background-color: #28a745;
     border-radius: 10px;
     border: 3px solid #ffffff;
-    /* box-shadow ca un glow subtil */
+    /* NOU: box-shadow ca un glow subtil, cu umbră întunecată */
     box-shadow:
-        0 0 8px rgba(40, 167, 69, 0.5),   /* Glow verde */
-        0 0 20px rgba(0, 0, 0, 0.6);      /* Umbră întunecată */
+        0 0 10px rgba(40, 167, 69, 0.5),   /* Glow verde */
+        0 0 25px rgba(26, 46, 47, 0.7);    /* Umbră întunecată, din fundal */
     transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
     text-transform: uppercase;
     font-family: 'Courier New', Courier, monospace;
@@ -465,10 +465,10 @@ html, body {
 .form-button:hover {
     background-color: #218838;
     transform: scale(1.03);
-    /* box-shadow mai intens la hover */
+    /* NOU: box-shadow mai intens la hover */
     box-shadow:
-        0 0 12px rgba(40, 167, 69, 0.7),  /* Glow verde mai intens */
-        0 0 25px rgba(0, 0, 0, 0.8);      /* Umbră mai profundă */
+        0 0 15px rgba(40, 167, 69, 0.7),  /* Glow verde mai intens */
+        0 0 35px rgba(26, 46, 47, 0.9);   /* Umbră mai profundă */
 }
 
 .form-required-note {
