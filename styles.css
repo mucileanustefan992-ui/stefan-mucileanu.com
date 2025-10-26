@@ -4,18 +4,19 @@ html, body {
     font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column;
-    background: radial-gradient(ellipse at center, #1F3A29 0%, #050A08 60%, #000000 100%);
-    background-attachment: fixed;
+    /* NOU: Fundal alb */
+    background: #ffffff;
     scroll-behavior: smooth;
 }
 
+/* Stiluri header principal (index.html) */
 .site-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 30px 80px;
-    background-color: #ffffff;
-    border-bottom: 1px solid #dddddd;
+    background-color: #ffffff; /* Rămâne alb */
+    border-bottom: 1px solid #cccccc; /* Linie gri deschis */
     flex-shrink: 0;
     position: sticky;
     top: 0;
@@ -34,12 +35,12 @@ html, body {
 }
 
 .name-stefan {
-    color: #28a745;
+    color: #000000; /* Negru */
     text-transform: uppercase;
 }
 
 .name-mucileanu {
-    color: #000000;
+    color: #000000; /* Negru */
     text-transform: uppercase;
 }
 
@@ -55,7 +56,7 @@ html, body {
 .main-nav a {
     display: inline-block;
     text-decoration: none;
-    color: #555555;
+    color: #333333; /* Gri închis */
     font-size: 1.3rem;
     font-weight: 600;
     padding: 10px 14px;
@@ -67,7 +68,7 @@ html, body {
 
 .main-nav a:not(.cta-button):hover {
     background-color: transparent;
-    color: #000000;
+    color: #000000; /* Negru la hover */
     outline: none;
 }
 
@@ -76,7 +77,7 @@ html, body {
     position: absolute;
     width: 100%;
     height: 3px;
-    background-color: #28a745;
+    background-color: #000000; /* Subliniere neagră */
     bottom: 5px;
     left: 0;
     transform: scaleX(0);
@@ -92,15 +93,15 @@ html, body {
     font-weight: bold;
     font-size: 1.35rem;
     padding: 12px 24px;
-    background-color: #28a745;
-    color: #ffffff;
+    background-color: #000000; /* Negru */
+    color: #ffffff; /* Alb */
     border-radius: 30px;
     box-shadow: none;
     transition: background-color 0.3s, transform 0.3s;
 }
 
 .main-nav a.cta-button:hover {
-    background-color: #218838;
+    background-color: #333333; /* Gri închis la hover */
     color: #ffffff;
     transform: translateY(-4px) scale(1.05);
     box-shadow: none;
@@ -111,13 +112,14 @@ html, body {
     transition-duration: 0.1s;
 }
 
+/* Stiluri header pagina de contact (contact.html) */
 .contact-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 30px 80px;
-    background-color: #ffffff;
-    border-bottom: 1px solid #dddddd;
+    background-color: #ffffff; /* Alb */
+    border-bottom: 1px solid #cccccc; /* Gri deschis */
     flex-shrink: 0;
     position: sticky;
     top: 0;
@@ -130,11 +132,11 @@ html, body {
     font-weight: bold;
 }
 .contact-header .name-stefan {
-    color: #28a745;
+    color: #000000; /* Negru */
     text-transform: uppercase;
 }
 .contact-header .name-mucileanu {
-    color: #000000;
+    color: #000000; /* Negru */
     text-transform: uppercase;
 }
 
@@ -150,32 +152,34 @@ html, body {
 .contact-nav-button {
     display: inline-block;
     text-decoration: none;
-    color: #ffffff;
+    color: #000000; /* Negru */
     font-size: 1.2rem;
     font-weight: bold;
     padding: 10px 20px;
-    background-color: #333333;
-    border: 2px solid #28a745;
+    background-color: #f0f0f0; /* Gri foarte deschis */
+    border: 2px solid #000000; /* Bordură neagră */
     border-radius: 5px;
-    transition: background-color 0.3s, border-color 0.3s, transform 0.2s ease-out;
+    transition: background-color 0.3s, border-color 0.3s, transform 0.2s ease-out, color 0.3s;
     font-family: 'Courier New', Courier, monospace;
     text-transform: uppercase;
 }
 
 .contact-nav-button:hover {
-    background-color: #28a745;
-    border-color: #ffffff;
+    background-color: #000000; /* Negru la hover */
+    border-color: #000000;
+    color: #ffffff; /* Alb la hover */
     transform: translateY(-2px) scale(1.05);
 }
 
 .contact-nav-button.active {
-    background-color: #28a745;
-    border-color: #ffffff;
-    color: #ffffff;
+    background-color: #000000; /* Negru */
+    border-color: #000000;
+    color: #ffffff; /* Alb */
 }
 
+/* Stiluri Generale pentru Main Content */
 .main-content-area {
-    background-color: transparent;
+    background-color: transparent; /* Arată fundalul alb al body */
     overflow: visible;
     position: relative;
     display: flex;
@@ -208,20 +212,21 @@ html, body {
 .main-title {
     font-size: 5.25rem;
     font-weight: bold;
-    color: #ffffff;
+    color: #000000; /* Negru */
     margin: 0 0 15px 0;
     line-height: 1.2;
-    text-shadow: none;
+    /* Glow/Shadow negru subtil */
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
 .main-title .green-text {
-    color: #28a745;
-    text-shadow: none;
+    color: #000000; /* Negru */
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
 .subtitle {
     font-size: 2.25rem;
-    color: #ffffff;
+    color: #333333; /* Gri închis */
     margin: 0 0 25px 0;
 }
 
@@ -230,7 +235,7 @@ html, body {
     height: 0;
     border-left: 15px solid transparent;
     border-right: 15px solid transparent;
-    border-top: 20px solid #28a745;
+    border-top: 20px solid #000000; /* Săgeată neagră */
     margin-bottom: 25px;
     animation: bounceArrow 1s infinite alternate;
 }
@@ -240,7 +245,7 @@ html, body {
     to { transform: translateY(5px); }
 }
 
-/* Particule */
+/* Particule - le facem vizibile pe alb */
 .floating-particles {
     position: fixed;
     top: 0;
@@ -257,7 +262,7 @@ html, body {
     position: absolute;
     width: var(--size);
     height: var(--size);
-    background-color: rgba(255, 255, 255, 0.15);
+    background-color: rgba(0, 0, 0, 0.1); /* Gri foarte deschis/transparent */
     border-radius: 50%;
     box-shadow: none;
     animation-name: floatAround;
@@ -272,15 +277,15 @@ html, body {
     }
     25% {
         transform: translate(var(--x-mid1), var(--y-mid1)) scale(var(--scale-mid));
-        opacity: 0.7;
+        opacity: 0.5; /* Opacitate redusă */
     }
     50% {
         transform: translate(var(--x-mid2), var(--y-mid2)) scale(var(--scale-start));
-        opacity: 0.4;
+        opacity: 0.2;
     }
     75% {
         transform: translate(var(--x-mid3), var(--y-mid3)) scale(var(--scale-mid));
-        opacity: 0.7;
+        opacity: 0.5;
     }
     100% {
         transform: translate(var(--x-end), var(--y-end)) scale(var(--scale-start));
@@ -294,35 +299,43 @@ html, body {
     font-size: 1.8rem;
     font-weight: bold;
     text-decoration: none;
-    color: #ffffff;
-    background-color: #28a745;
+    color: #ffffff; /* Text alb */
+    background-color: #000000; /* Fundal negru */
     border-radius: 10px;
-    border: 3px solid #ffffff;
-    animation: blinkSimple 1.5s infinite alternate;
-    box-shadow: none;
-    transition: background-color 0.3s, transform 0.3s;
+    border: 3px solid #000000; /* Bordură neagră */
+    animation: blinkSimpleBlack 1.5s infinite alternate;
+    /* Glow/Shadow alb/gri */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3), 0 0 25px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
     text-transform: uppercase;
 }
 
 .blinking-contact-button:hover {
-    background-color: #218838;
+    background-color: #333333; /* Gri închis la hover */
+    border-color: #333333;
     transform: scale(1.05);
-    box-shadow: none;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5), 0 0 30px rgba(0, 0, 0, 0.3);
 }
 
-@keyframes blinkSimple {
-    from { opacity: 1; }
-    to { opacity: 0.8; }
+@keyframes blinkSimpleBlack {
+     0% {
+        opacity: 1;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.3), 0 0 25px rgba(0, 0, 0, 0.2);
+    }
+    100% {
+        opacity: 0.85;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5), 0 0 30px rgba(0, 0, 0, 0.3);
+    }
 }
 
 
-
+/* --- Stiluri noua secțiune SERVICII (pe index.html) --- */
 .services-section {
     min-height: auto;
     padding: 120px 50px 100px 50px;
     position: relative;
     z-index: 5;
-    background-color: transparent;
+    background-color: transparent; /* Arată fundalul alb */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -332,24 +345,26 @@ html, body {
 .grow-title {
     font-size: 6rem;
     font-weight: bold;
-    color: #28a745;
+    color: #000000; /* Negru */
     margin-bottom: 40px;
     font-family: 'Courier New', Courier, monospace;
     text-transform: uppercase;
-    text-shadow: 0 0 15px rgba(40, 167, 69, 0.8), 0 0 30px rgba(40, 167, 69, 0.5);
+    /* Glow negru subtil */
+    text-shadow: 0 0 15px rgba(0, 0, 0, 0.3), 0 0 25px rgba(0, 0, 0, 0.2);
 }
 
 
 .section-title {
     font-size: 3rem;
-    color: #ffffff;
+    color: #000000; /* Negru */
     margin-bottom: 70px;
     font-family: 'Courier New', Courier, monospace;
     text-transform: uppercase;
-    border-bottom: 3px solid #28a745;
+    border-bottom: 3px solid #000000; /* Linie neagră */
     padding-bottom: 10px;
     display: inline-block;
-    text-shadow: 0 0 10px #28a745, 0 0 20px #28a745, 0 0 30px #28a745;
+    /* Glow negru subtil */
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
 .services-grid {
@@ -362,22 +377,24 @@ html, body {
 }
 
 .service-card {
-    background-color: rgba(0, 0, 0, 0.6);
-    border: 3px solid #28a745;
+    background-color: #ffffff; /* Fundal alb */
+    border: 3px solid #000000; /* Bordură neagră */
     border-radius: 15px;
     padding: 60px;
     font-family: 'Courier New', Courier, monospace;
     transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
     display: flex;
     flex-direction: column;
-    box-shadow: 0 0 20px rgba(40, 167, 69, 0.6);
+    /* Glow/Shadow negru subtil */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
     text-align: center;
 }
 
 .service-card:hover {
     transform: scale(1.1);
-    box-shadow: 0 0 35px rgba(40, 167, 69, 0.9), 0 0 50px rgba(40, 167, 69, 0.4);
-    border-color: #63ff84;
+    /* Glow/Shadow mai intens la hover */
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.3), 0 0 50px rgba(0, 0, 0, 0.1);
+    border-color: #333333; /* Bordură gri închis la hover */
 }
 
 .service-icon {
@@ -389,32 +406,34 @@ html, body {
 .service-icon .icon-svg {
     width: 60px;
     height: 60px;
-    stroke: #28a745;
+    stroke: #000000; /* Negru */
     fill: none;
     stroke-width: 2;
     transition: stroke 0.3s ease, filter 0.3s ease;
-    filter: drop-shadow(0 0 5px rgba(40, 167, 69, 0.7)) drop-shadow(0 0 10px rgba(40, 167, 69, 0.4));
+    /* Glow/Shadow negru */
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.3)) drop-shadow(0 0 10px rgba(0, 0, 0, 0.1));
 }
 
 .service-card:hover .service-icon .icon-svg {
-    stroke: #63ff84;
-    filter: drop-shadow(0 0 8px rgba(99, 255, 132, 0.9)) drop-shadow(0 0 15px rgba(99, 255, 132, 0.6));
+    stroke: #333333; /* Gri închis la hover */
+    filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.5)) drop-shadow(0 0 15px rgba(0, 0, 0, 0.3));
 }
 
 
 .service-title {
-    color: #28a745;
+    color: #000000; /* Negru */
     font-size: 2.5rem;
     margin-top: 0;
     margin-bottom: 30px;
     text-transform: uppercase;
     font-weight: bold;
     text-align: center;
-    text-shadow: 0 0 8px rgba(40, 167, 69, 0.7);
+    /* Glow/Shadow negru subtil */
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
 }
 
 .service-description {
-    color: #dddddd;
+    color: #333333; /* Gri închis */
     font-size: 1.75rem;
     line-height: 1.8;
     text-align: left;
@@ -431,25 +450,27 @@ html, body {
     padding: 40px;
     position: relative;
     z-index: 10;
-    color: #ffffff;
+    color: #000000; /* Text negru */
     font-family: 'Courier New', Courier, monospace;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: #ffffff; /* Fundal alb */
     border-radius: 10px;
-    box-shadow: none;
+    /* Glow/Shadow negru */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
 .form-title {
     font-size: 2.5rem;
-    color: #ffffff;
+    color: #000000; /* Negru */
     margin-bottom: 25px;
-    text-shadow: none;
+    /* Glow negru */
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     line-height: 1.3;
 }
 
 .form-subtitle {
     font-size: 1.2rem;
-    color: #dddddd;
+    color: #333333; /* Gri închis */
     margin: 10px 0;
     text-align: center;
     line-height: 1.5;
@@ -473,7 +494,7 @@ html, body {
 
 .form-label {
     font-size: 1.1rem;
-    color: #ffffff;
+    color: #000000; /* Negru */
     font-weight: bold;
     text-align: left;
     text-transform: uppercase;
@@ -482,9 +503,9 @@ html, body {
 .form-input,
 .form-textarea,
 .form-select {
-    background-color: rgba(0, 0, 0, 0.5);
-    border: 2px solid #28a745;
-    color: #ffffff;
+    background-color: #f9f9f9; /* Gri foarte deschis */
+    border: 2px solid #000000; /* Bordură neagră */
+    color: #000000; /* Text negru */
     padding: 15px;
     font-size: 1rem;
     border-radius: 5px;
@@ -495,13 +516,15 @@ html, body {
 .form-textarea:focus,
 .form-select:focus {
     outline: none;
-    border-color: #99ff99;
-    box-shadow: none;
+    border-color: #555555; /* Gri mai închis la focus */
+    /* Glow/Shadow subtil la focus */
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
 }
 
 .form-select {
     appearance: none;
-    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%2328a745%22%20d%3D%22M287%2C197.3L146.2%2C56.6L5.4%2C197.3c-4.8%2C4.8-12.5%2C4.8-17.3%2C0c-4.8-4.8-4.8-12.5%2C0-17.3l149-149c4.8-4.8%2C12.5-4.8%2C17.3%2C0l149%2C149c4.8%2C4.8%2C4.8%2C12.5%2C0%2C17.3C299.5%2C202.1%2C291.8%2C202.1%2C287%2C197.3z%22%2F%3E%3C%2Fsvg%3E');
+    /* Săgeată neagră */
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23000000%22%20d%3D%22M287%2C197.3L146.2%2C56.6L5.4%2C197.3c-4.8%2C4.8-12.5%2C4.8-17.3%2C0c-4.8-4.8-4.8-12.5%2C0-17.3l149-149c4.8-4.8%2C12.5-4.8%2C17.3%2C0l149%2C149c4.8%2C4.8%2C4.8%2C12.5%2C0%2C17.3C299.5%2C202.1%2C291.8%2C202.1%2C287%2C197.3z%22%2F%3E%3C%2Fsvg%3E');
     background-repeat: no-repeat;
     background-position: right 15px center;
     background-size: 15px;
@@ -517,12 +540,13 @@ html, body {
     font-size: 1.5rem;
     font-weight: bold;
     text-decoration: none;
-    color: #ffffff;
-    background-color: #28a745;
+    color: #ffffff; /* Text alb */
+    background-color: #000000; /* Negru */
     border-radius: 10px;
-    border: 3px solid #ffffff;
-    box-shadow: none;
-    transition: background-color 0.3s, transform 0.3s;
+    border: 3px solid #000000; /* Bordură neagră */
+    /* Glow/Shadow alb/gri */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
     text-transform: uppercase;
     font-family: 'Courier New', Courier, monospace;
     cursor: pointer;
@@ -532,14 +556,16 @@ html, body {
 }
 
 .form-button:hover {
-    background-color: #218838;
+    background-color: #333333; /* Gri închis */
+    border-color: #333333;
     transform: scale(1.03);
-    box-shadow: none;
+    /* Glow/Shadow mai intens */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
 .form-required-note {
     font-size: 1rem;
-    color: #28a745;
+    color: #000000; /* Negru */
     margin-top: 20px;
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
