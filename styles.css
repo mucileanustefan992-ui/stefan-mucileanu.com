@@ -8,6 +8,7 @@ html, body {
     scroll-behavior: smooth;
 }
 
+/* Stiluri header principal (index.html) */
 .site-header {
     display: flex;
     justify-content: space-between;
@@ -110,6 +111,7 @@ html, body {
     transition-duration: 0.1s;
 }
 
+/* Stiluri header pagina de contact (contact.html) */
 .contact-header {
     display: flex;
     justify-content: space-between;
@@ -169,6 +171,7 @@ html, body {
     color: #ffffff;
 }
 
+/* Stiluri Generale pentru Main Content */
 .main-content-area {
     background-color: transparent;
     overflow: visible;
@@ -208,7 +211,7 @@ html, body {
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.main-title .green-text { /* Re-denumit la negru dar păstrăm selectorul pentru consistență */
+.main-title .green-text {
     color: #000000;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -234,6 +237,7 @@ html, body {
     to { transform: translateY(5px); }
 }
 
+/* Particule */
 .floating-particles {
     position: fixed;
     top: 0;
@@ -339,6 +343,7 @@ html, body {
     text-shadow: 0 0 15px rgba(160, 125, 95, 0.5), 0 0 25px rgba(160, 125, 95, 0.3);
 }
 
+
 .section-title {
     font-size: 3rem;
     color: #000000;
@@ -354,8 +359,7 @@ html, body {
 .services-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    /* NOU: Reducem gap-ul pentru a face grila mai compactă */
-    gap: 60px; /* Redus de la 90px */
+    gap: 60px;
     width: 100%;
     max-width: 1600px;
     padding: 0 50px;
@@ -365,8 +369,7 @@ html, body {
     background-color: #ffffff;
     border: 3px solid #A07D5F;
     border-radius: 15px;
-    /* NOU: Reducem padding-ul cu aproximativ 25% */
-    padding: 45px; /* Redus de la 60px (60 * 0.75 = 45) */
+    padding: 45px;
     font-family: 'Courier New', Courier, monospace;
     transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
     display: flex;
@@ -376,43 +379,39 @@ html, body {
 }
 
 .service-card:hover {
-    transform: scale(1.05); /* Ajustăm puțin scala la hover pentru a nu fi prea mare */
+    transform: scale(1.05);
     box-shadow: 0 0 30px rgba(160, 125, 95, 0.5), 0 0 40px rgba(160, 125, 95, 0.2);
     border-color: #8C6D4F;
 }
 
 .service-icon {
-    /* NOU: Reducem dimensiunea icoanei cu aproximativ 25% */
-    font-size: 2.6rem; /* Redus de la 3.5rem (3.5 * 0.75 = 2.625) */
-    /* NOU: Reducem margin-bottom pentru a comprima spațiul */
-    margin-bottom: 25px; /* Redus de la 35px */
+    font-size: 2.6rem;
+    margin-bottom: 25px;
     text-align: center;
 }
 
 .service-icon .icon-svg {
-    /* NOU: Reducem dimensiunea SVG-ului */
-    width: 45px; /* Redus de la 60px (60 * 0.75 = 45) */
-    height: 45px; /* Redus de la 60px */
-    stroke: #A07D5F;
-    fill: none;
-    stroke-width: 2;
-    transition: stroke 0.3s ease, filter 0.3s ease;
+    width: 45px;
+    height: 45px;
+    /* NOU: Schimbat stroke în fill și culoarea */
+    fill: #A07D5F; /* Maro */
+    stroke: none; /* Scoatem conturul */
+    transition: fill 0.3s ease, filter 0.3s ease;
+    /* Glow/Shadow maro */
     filter: drop-shadow(0 0 5px rgba(160, 125, 95, 0.5)) drop-shadow(0 0 10px rgba(160, 125, 95, 0.2));
 }
 
 .service-card:hover .service-icon .icon-svg {
-    stroke: #8C6D4F;
+    fill: #8C6D4F; /* Maro închis la hover */
     filter: drop-shadow(0 0 8px rgba(160, 125, 95, 0.7)) drop-shadow(0 0 15px rgba(160, 125, 95, 0.4));
 }
 
 
 .service-title {
     color: #A07D5F;
-    /* NOU: Reducem dimensiunea fontului titlului cu aproximativ 25% */
-    font-size: 1.875rem; /* Redus de la 2.5rem (2.5 * 0.75 = 1.875) */
+    font-size: 1.875rem;
     margin-top: 0;
-    /* NOU: Reducem margin-bottom */
-    margin-bottom: 20px; /* Redus de la 30px */
+    margin-bottom: 20px;
     text-transform: uppercase;
     font-weight: bold;
     text-align: center;
@@ -421,9 +420,8 @@ html, body {
 
 .service-description {
     color: #333333;
-    /* NOU: Reducem dimensiunea fontului descrierii cu aproximativ 25% */
-    font-size: 1.3rem; /* Redus de la 1.75rem (1.75 * 0.75 = 1.3125) */
-    line-height: 1.6; /* Ajustăm line-height pentru a se potrivi cu noul font-size */
+    font-size: 1.3rem;
+    line-height: 1.6;
     text-align: left;
     font-weight: 700;
 }
