@@ -5,19 +5,19 @@ html, body {
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: transparent;
+    background-color: transparent; /* Păstrăm transparent pentru fundalul cu particule */
     display: flex;
     flex-direction: column;
 }
 
-/* Stiluri pentru header-ul folosit ACUM de ambele pagini (înlocuiește vechiul .site-header) */
-.contact-header { /* Numele clasei rămâne .contact-header dar acum se aplică global */
+/* Stiluri restaurate pentru header-ul principal */
+.site-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 80px; 
-    background-color: #1a1a1a; /* Fundal întunecat */
-    border-bottom: 2px solid #28a745; /* Linie verde jos */
+    padding: 30px 80px;
+    background-color: #ffffff; /* Fundal alb pentru header */
+    border-bottom: 1px solid #dddddd;
     flex-shrink: 0;
     position: relative;
     z-index: 100;
@@ -31,59 +31,94 @@ body {
 .site-name {
     font-size: 1.8rem;
     font-weight: bold;
-    font-family: 'Courier New', Courier, monospace; /* Font similar cu pagina de contact */
+    /* Fontul normal, nu cel Courier */
+    font-family: Arial, sans-serif;
 }
 
 .name-stefan {
-    color: #28a745; 
+    color: #28a745;
     text-transform: uppercase;
 }
 
 .name-mucileanu {
-    color: #ffffff; /* Alb pentru "MUCILEANU" */
+    color: #000000; /* Negru pentru Mucileanu în header-ul alb */
     text-transform: uppercase;
 }
 
-.contact-nav ul {
+/* Stiluri restaurate pentru navigația principală */
+.main-nav ul {
     margin: 0;
     padding: 0;
     list-style: none;
     display: flex;
     align-items: center;
-    gap: 20px; 
+    gap: 40px;
 }
 
-.contact-nav-button {
+.main-nav a {
     display: inline-block;
     text-decoration: none;
-    color: #ffffff;
-    font-size: 1.2rem; 
-    font-weight: bold;
-    padding: 10px 20px;  
-    background-color: #333333; /* Fundal buton inactiv */
-    border: 2px solid #28a745;
+    color: #555555; /* Culoare text link-uri normale */
+    font-size: 1.3rem;
+    font-weight: 600;
+    padding: 10px 14px;
     border-radius: 5px;
-    transition: background-color 0.3s, border-color 0.3s, transform 0.2s ease-out;
-    font-family: 'Courier New', Courier, monospace;
-    text-transform: uppercase;
+    transition: background-color 0.3s, color 0.3s, transform 0.2s ease-out, outline 0.2s ease-in-out;
+    position: relative;
+    /* Font normal */
+     font-family: Arial, sans-serif;
 }
 
-.contact-nav-button:hover {
-    background-color: #28a745; /* Fundal verde la hover */
-    border-color: #ffffff;
-    transform: translateY(-2px) scale(1.05);
+/* Stil hover (fără background, doar subliniere) */
+.main-nav a:not(.cta-button):hover {
+    background-color: transparent;
+    color: #000000; /* Culoare text la hover */
+    outline: none;
 }
 
-.contact-nav-button.active {
-    background-color: #28a745; /* Fundal verde pentru butonul activ */
-    border-color: #ffffff;
+/* Sublinierea la hover */
+.main-nav a:not(.cta-button)::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #28a745; /* Culoare subliniere verde */
+    bottom: 5px;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease-out;
+}
+
+.main-nav a:not(.cta-button):hover::after {
+    transform: scaleX(1);
+}
+
+/* Butonul special Contact */
+.main-nav a.cta-button {
+    font-weight: bold;
+    font-size: 1.35rem;
+    padding: 12px 24px;
+    background-color: #28a745; /* Fundal verde */
+    color: #ffffff; /* Text alb */
+    border-radius: 30px;
+}
+
+.main-nav a.cta-button:hover {
+    background-color: #218838; /* Verde mai închis la hover */
     color: #ffffff;
+    transform: translateY(-4px) scale(1.05); /* Efectul de ridicare */
 }
 
-/* Stiluri Generale pentru Main Content */
+.main-nav a.cta-button:active {
+    transform: translateY(-1px) scale(1.02);
+    transition-duration: 0.1s;
+}
+
+/* Stiluri Generale pentru Main Content - Rămân la fel */
 .main-content-area {
-    background-color: transparent; 
-    overflow: visible;
+    background-color: transparent;
+    overflow: visible; /* Schimbat din hidden pentru a vedea particulele mereu */
     position: relative;
     display: flex;
     justify-content: center;
@@ -91,10 +126,9 @@ body {
     flex-grow: 1;
     text-align: center;
     padding: 50px 0;
-    background: radial-gradient(circle at 50% 50%, #22422A 0%, #0A1C1F 100%);
 }
 
-.contact-page-main {
+.contact-page-main { /* Stil specific paginii de contact pentru scroll */
     align-items: flex-start;
     padding-top: 100px;
     padding-bottom: 100px;
@@ -145,6 +179,7 @@ body {
     to { transform: translateY(5px); }
 }
 
+/* Fundalul cu particule - Rămâne la fel */
 .floating-particles {
     position: fixed;
     top: 0;
@@ -153,7 +188,7 @@ body {
     height: 100%;
     background: radial-gradient(circle at 50% 50%, #22422A 0%, #0A1C1F 100%);
     overflow: hidden;
-    z-index: -1; 
+    z-index: -1;
 }
 
 .particle {
@@ -191,6 +226,7 @@ body {
     }
 }
 
+/* Butonul de pe pagina principală - Rămâne la fel */
 .blinking-contact-button {
     display: inline-block;
     padding: 20px 40px;
@@ -213,18 +249,74 @@ body {
 }
 
 @keyframes blink {
-    0% { 
-        opacity: 1; 
-        box-shadow: 0 0 15px rgba(40, 167, 69, 0.5); 
+    0% {
+        opacity: 1;
+        box-shadow: 0 0 15px rgba(40, 167, 69, 0.5);
     }
-    100% { 
-        opacity: 0.9; 
-        box-shadow: 0 0 25px rgba(40, 167, 69, 0.9); 
+    100% {
+        opacity: 0.9;
+        box-shadow: 0 0 25px rgba(40, 167, 69, 0.9);
     }
 }
 
 /* --- STILURI PAGINA DE CONTACT (formular) --- */
 
+/* Păstrăm header-ul specific paginii de contact */
+.contact-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 80px;
+    background-color: #1a1a1a;
+    border-bottom: 2px solid #28a745;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 100;
+}
+.contact-header .site-name {
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+}
+.contact-header .name-stefan {
+    color: #28a745;
+}
+.contact-header .name-mucileanu {
+    color: #ffffff;
+}
+.contact-nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.contact-nav-button {
+    display: inline-block;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    background-color: #333333;
+    border: 2px solid #28a745;
+    border-radius: 5px;
+    transition: background-color 0.3s, border-color 0.3s, transform 0.2s ease-out;
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: uppercase;
+}
+.contact-nav-button:hover {
+    background-color: #28a745;
+    border-color: #ffffff;
+    transform: translateY(-2px) scale(1.05);
+}
+.contact-nav-button.active {
+    background-color: #28a745;
+    border-color: #ffffff;
+    color: #ffffff;
+}
+
+/* Restul stilurilor pentru formular rămân la fel */
 .form-container {
     width: 90%;
     max-width: 800px;
