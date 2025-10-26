@@ -15,8 +15,10 @@ html, body {
     justify-content: space-between;
     align-items: center;
     padding: 30px 80px;
-    background-color: #ffffff; /* Header alb */
-    border-bottom: 1px solid #cccccc;
+    /* NOU: Fundal crem, la fel ca body */
+    background-color: #F6F4F0;
+    /* NOU: Scoatem linia de jos */
+    border-bottom: none;
     flex-shrink: 0;
     position: sticky;
     top: 0;
@@ -56,7 +58,7 @@ html, body {
 .main-nav a {
     display: inline-block;
     text-decoration: none;
-    color: #333333;
+    color: #333333; /* Gri închis */
     font-size: 1.3rem;
     font-weight: 600;
     padding: 10px 14px;
@@ -68,7 +70,7 @@ html, body {
 
 .main-nav a:not(.cta-button):hover {
     background-color: transparent;
-    color: #000000;
+    color: #000000; /* Negru la hover */
     outline: none;
 }
 
@@ -112,7 +114,7 @@ html, body {
     transition-duration: 0.1s;
 }
 
-/* Stiluri header pagina de contact (contact.html) */
+/* Stiluri header pagina de contact (contact.html) - RĂMÂN LA FEL */
 .contact-header {
     display: flex;
     justify-content: space-between;
@@ -125,21 +127,19 @@ html, body {
     top: 0;
     z-index: 100;
 }
-
 .contact-header .site-name {
     font-family: Arial, sans-serif;
     font-size: 1.8rem;
     font-weight: bold;
 }
 .contact-header .name-stefan {
-    color: #000000; /* Negru */
+    color: #000000;
     text-transform: uppercase;
 }
 .contact-header .name-mucileanu {
-    color: #A07D5F; /* Maro */
+    color: #A07D5F;
     text-transform: uppercase;
 }
-
 .contact-nav ul {
     margin: 0;
     padding: 0;
@@ -148,33 +148,30 @@ html, body {
     align-items: center;
     gap: 20px;
 }
-
 .contact-nav-button {
     display: inline-block;
     text-decoration: none;
-    color: #000000; /* Text negru */
+    color: #000000;
     font-size: 1.2rem;
     font-weight: bold;
     padding: 10px 20px;
-    background-color: #ffffff; /* Fundal alb */
-    border: 2px solid #A07D5F; /* Bordură maro */
+    background-color: #f0f0f0;
+    border: 2px solid #A07D5F;
     border-radius: 5px;
     transition: background-color 0.3s, border-color 0.3s, transform 0.2s ease-out, color 0.3s;
     font-family: 'Courier New', Courier, monospace;
     text-transform: uppercase;
 }
-
 .contact-nav-button:hover {
-    background-color: #A07D5F; /* Maro la hover */
+    background-color: #A07D5F;
     border-color: #A07D5F;
-    color: #ffffff; /* Alb la hover */
+    color: #ffffff;
     transform: translateY(-2px) scale(1.05);
 }
-
 .contact-nav-button.active {
-    background-color: #A07D5F; /* Maro */
+    background-color: #A07D5F;
     border-color: #A07D5F;
-    color: #ffffff; /* Alb */
+    color: #ffffff;
 }
 
 /* Stiluri Generale pentru Main Content */
@@ -183,15 +180,14 @@ html, body {
     overflow: visible;
     position: relative;
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Asigură centrarea content-wrapper */
     align-items: center;
     flex-grow: 1;
-    text-align: center;
+    text-align: center; /* Centrează textul implicit */
     padding: 100px 50px;
-    min-height: calc(100vh - 83px);
+    min-height: calc(100vh - 83px); /* Ajustăm pt header */
     box-sizing: border-box;
 }
-
 
 .contact-page-main {
     align-items: flex-start;
@@ -205,27 +201,27 @@ html, body {
     z-index: 10;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; /* Centrează elementele pe orizontală */
     gap: 20px;
 }
 
 .main-title {
     font-size: 5.25rem;
     font-weight: bold;
-    color: #000000; /* Negru */
+    color: #000000;
     margin: 0 0 15px 0;
     line-height: 1.2;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Umbră foarte subtilă */
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .main-title .green-text {
-    color: #000000; /* Tot negru */
+    color: #000000;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .subtitle {
     font-size: 2.25rem;
-    color: #333333; /* Gri închis */
+    color: #333333;
     margin: 0 0 25px 0;
 }
 
@@ -234,7 +230,7 @@ html, body {
     height: 0;
     border-left: 15px solid transparent;
     border-right: 15px solid transparent;
-    border-top: 20px solid #A07D5F; /* Săgeată maro */
+    border-top: 20px solid #A07D5F;
     margin-bottom: 25px;
     animation: bounceArrow 1s infinite alternate;
 }
@@ -244,7 +240,7 @@ html, body {
     to { transform: translateY(5px); }
 }
 
-/* Particule - le facem gri închis/transparent pentru vizibilitate pe crem */
+/* Particule */
 .floating-particles {
     position: fixed;
     top: 0;
@@ -261,7 +257,7 @@ html, body {
     position: absolute;
     width: var(--size);
     height: var(--size);
-    background-color: rgba(0, 0, 0, 0.1); /* Gri închis transparent */
+    background-color: rgba(0, 0, 0, 0.1);
     border-radius: 50%;
     box-shadow: none;
     animation-name: floatAround;
@@ -299,17 +295,17 @@ html, body {
     font-weight: bold;
     text-decoration: none;
     color: #ffffff;
-    background-color: #A07D5F; /* Maro */
+    background-color: #A07D5F;
     border-radius: 10px;
-    border: 3px solid #A07D5F; /* Maro */
+    border: 3px solid #A07D5F;
     animation: blinkSimpleBrown 1.5s infinite alternate;
-    box-shadow: 0 0 15px rgba(160, 125, 95, 0.4), 0 0 25px rgba(160, 125, 95, 0.2); /* Glow maro */
+    box-shadow: 0 0 15px rgba(160, 125, 95, 0.4), 0 0 25px rgba(160, 125, 95, 0.2);
     transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
     text-transform: uppercase;
 }
 
 .blinking-contact-button:hover {
-    background-color: #8C6D4F; /* Maro închis */
+    background-color: #8C6D4F;
     border-color: #8C6D4F;
     transform: scale(1.05);
     box-shadow: 0 0 20px rgba(160, 125, 95, 0.6), 0 0 30px rgba(160, 125, 95, 0.3);
@@ -343,54 +339,54 @@ html, body {
 .grow-title {
     font-size: 6rem;
     font-weight: bold;
-    color: #A07D5F; /* Maro */
+    color: #A07D5F;
     margin-bottom: 40px;
     font-family: 'Courier New', Courier, monospace;
     text-transform: uppercase;
-    /* Glow maro */
     text-shadow: 0 0 15px rgba(160, 125, 95, 0.5), 0 0 25px rgba(160, 125, 95, 0.3);
 }
 
+
 .section-title {
     font-size: 3rem;
-    color: #000000; /* Negru */
+    color: #000000;
     margin-bottom: 70px;
     font-family: 'Courier New', Courier, monospace;
     text-transform: uppercase;
-    border-bottom: 3px solid #A07D5F; /* Linie maro */
+    border-bottom: 3px solid #A07D5F;
     padding-bottom: 10px;
     display: inline-block;
-    text-shadow: 0 0 10px rgba(160, 125, 95, 0.3); /* Glow maro subtil */
+    text-shadow: 0 0 10px rgba(160, 125, 95, 0.3);
 }
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    /* NOU: 2 coloane */
+    grid-template-columns: repeat(2, 1fr);
     gap: 90px;
     width: 100%;
-    max-width: 2600px;
+    /* NOU: Ajustat max-width pentru 2 coloane */
+    max-width: 1600px;
     padding: 0 50px;
 }
 
 .service-card {
-    background-color: #ffffff; /* Alb */
-    border: 3px solid #A07D5F; /* Bordură maro */
+    background-color: #ffffff;
+    border: 3px solid #A07D5F;
     border-radius: 15px;
     padding: 60px;
     font-family: 'Courier New', Courier, monospace;
     transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
     display: flex;
     flex-direction: column;
-    /* Glow/Shadow maro subtil */
     box-shadow: 0 0 20px rgba(160, 125, 95, 0.3);
     text-align: center;
 }
 
 .service-card:hover {
     transform: scale(1.1);
-    /* Glow/Shadow mai intens la hover */
     box-shadow: 0 0 35px rgba(160, 125, 95, 0.5), 0 0 50px rgba(160, 125, 95, 0.2);
-    border-color: #8C6D4F; /* Maro închis la hover */
+    border-color: #8C6D4F;
 }
 
 .service-icon {
@@ -402,34 +398,32 @@ html, body {
 .service-icon .icon-svg {
     width: 60px;
     height: 60px;
-    stroke: #A07D5F; /* Maro */
+    stroke: #A07D5F;
     fill: none;
     stroke-width: 2;
     transition: stroke 0.3s ease, filter 0.3s ease;
-    /* Glow/Shadow maro */
     filter: drop-shadow(0 0 5px rgba(160, 125, 95, 0.5)) drop-shadow(0 0 10px rgba(160, 125, 95, 0.2));
 }
 
 .service-card:hover .service-icon .icon-svg {
-    stroke: #8C6D4F; /* Maro închis la hover */
+    stroke: #8C6D4F;
     filter: drop-shadow(0 0 8px rgba(160, 125, 95, 0.7)) drop-shadow(0 0 15px rgba(160, 125, 95, 0.4));
 }
 
 
 .service-title {
-    color: #A07D5F; /* Maro */
+    color: #A07D5F;
     font-size: 2.5rem;
     margin-top: 0;
     margin-bottom: 30px;
     text-transform: uppercase;
     font-weight: bold;
     text-align: center;
-    /* Glow/Shadow maro */
     text-shadow: 0 0 8px rgba(160, 125, 95, 0.4);
 }
 
 .service-description {
-    color: #333333; /* Gri închis */
+    color: #333333;
     font-size: 1.75rem;
     line-height: 1.8;
     text-align: left;
@@ -449,7 +443,7 @@ html, body {
     color: #000000;
     font-family: 'Courier New', Courier, monospace;
     text-align: center;
-    background-color: #ffffff; /* Fundal alb */
+    background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
@@ -498,7 +492,7 @@ html, body {
 .form-textarea,
 .form-select {
     background-color: #f9f9f9;
-    border: 2px solid #A07D5F; /* Bordură maro */
+    border: 2px solid #A07D5F;
     color: #000000;
     padding: 15px;
     font-size: 1rem;
@@ -510,13 +504,12 @@ html, body {
 .form-textarea:focus,
 .form-select:focus {
     outline: none;
-    border-color: #8C6D4F; /* Maro închis la focus */
-    box-shadow: 0 0 8px rgba(160, 125, 95, 0.4); /* Glow maro la focus */
+    border-color: #8C6D4F;
+    box-shadow: 0 0 8px rgba(160, 125, 95, 0.4);
 }
 
 .form-select {
     appearance: none;
-    /* Săgeată maro */
     background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23A07D5F%22%20d%3D%22M287%2C197.3L146.2%2C56.6L5.4%2C197.3c-4.8%2C4.8-12.5%2C4.8-17.3%2C0c-4.8-4.8-4.8-12.5%2C0-17.3l149-149c4.8-4.8%2C12.5-4.8%2C17.3%2C0l149%2C149c4.8%2C4.8%2C4.8%2C12.5%2C0%2C17.3C299.5%2C202.1%2C291.8%2C202.1%2C287%2C197.3z%22%2F%3E%3C%2Fsvg%3E');
     background-repeat: no-repeat;
     background-position: right 15px center;
@@ -534,10 +527,10 @@ html, body {
     font-weight: bold;
     text-decoration: none;
     color: #ffffff;
-    background-color: #A07D5F; /* Maro */
+    background-color: #A07D5F;
     border-radius: 10px;
-    border: 3px solid #A07D5F; /* Maro */
-    box-shadow: 0 0 15px rgba(160, 125, 95, 0.4); /* Glow maro */
+    border: 3px solid #A07D5F;
+    box-shadow: 0 0 15px rgba(160, 125, 95, 0.4);
     transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
     text-transform: uppercase;
     font-family: 'Courier New', Courier, monospace;
@@ -548,15 +541,15 @@ html, body {
 }
 
 .form-button:hover {
-    background-color: #8C6D4F; /* Maro închis */
+    background-color: #8C6D4F;
     border-color: #8C6D4F;
     transform: scale(1.03);
-    box-shadow: 0 0 20px rgba(160, 125, 95, 0.6); /* Glow mai intens */
+    box-shadow: 0 0 20px rgba(160, 125, 95, 0.6);
 }
 
 .form-required-note {
     font-size: 1rem;
-    color: #A07D5F; /* Maro */
+    color: #A07D5F;
     margin-top: 20px;
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
