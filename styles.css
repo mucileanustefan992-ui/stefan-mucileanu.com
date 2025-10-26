@@ -4,8 +4,8 @@ html, body {
     font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column;
-    /* NOU: Fundal alb */
-    background: #ffffff;
+    /* NOU: Fundal crem din imagine */
+    background: #F6F4F0;
     scroll-behavior: smooth;
 }
 
@@ -15,7 +15,8 @@ html, body {
     justify-content: space-between;
     align-items: center;
     padding: 30px 80px;
-    background-color: #ffffff; /* Rămâne alb */
+    /* Rămâne alb sau se poate schimba la crem dacă dorești */
+    background-color: #ffffff; 
     border-bottom: 1px solid #cccccc; /* Linie gri deschis */
     flex-shrink: 0;
     position: sticky;
@@ -179,7 +180,7 @@ html, body {
 
 /* Stiluri Generale pentru Main Content */
 .main-content-area {
-    background-color: transparent; /* Arată fundalul alb al body */
+    background-color: transparent; /* Arată fundalul crem al body */
     overflow: visible;
     position: relative;
     display: flex;
@@ -245,7 +246,7 @@ html, body {
     to { transform: translateY(5px); }
 }
 
-/* Particule - le facem vizibile pe alb */
+/* Particule - le facem vizibile pe crem */
 .floating-particles {
     position: fixed;
     top: 0;
@@ -335,7 +336,7 @@ html, body {
     padding: 120px 50px 100px 50px;
     position: relative;
     z-index: 5;
-    background-color: transparent; /* Arată fundalul alb */
+    background-color: transparent; /* Arată fundalul crem */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -377,7 +378,7 @@ html, body {
 }
 
 .service-card {
-    background-color: #ffffff; /* Fundal alb */
+    background-color: #ffffff; /* Rămâne alb pentru a contrasta cu fundalul crem */
     border: 3px solid #000000; /* Bordură neagră */
     border-radius: 15px;
     padding: 60px;
@@ -453,7 +454,8 @@ html, body {
     color: #000000; /* Text negru */
     font-family: 'Courier New', Courier, monospace;
     text-align: center;
-    background-color: #ffffff; /* Fundal alb */
+    /* NOU: Fundal alb pentru a contrasta cu fundalul crem general */
+    background-color: #ffffff; 
     border-radius: 10px;
     /* Glow/Shadow negru */
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
