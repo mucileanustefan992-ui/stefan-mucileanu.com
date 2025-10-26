@@ -5,19 +5,19 @@ html, body {
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: transparent; /* Păstrăm transparent pentru fundalul cu particule */
+    background-color: transparent;
     display: flex;
     flex-direction: column;
 }
 
-/* Stiluri restaurate pentru header-ul principal */
+/* Modificat .site-header pentru a se potrivi cu .contact-header */
 .site-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 80px;
-    background-color: #ffffff; /* Fundal alb pentru header */
-    border-bottom: 1px solid #dddddd;
+    padding: 20px 80px; /* Redus padding-ul vertical ca la contact */
+    background-color: #1a1a1a; /* Fundal negru */
+    border-bottom: 2px solid #28a745; /* Linie verde jos */
     flex-shrink: 0;
     position: relative;
     z-index: 100;
@@ -28,11 +28,11 @@ body {
     color: inherit;
 }
 
+/* Modificat .site-name pentru font și culori */
 .site-name {
     font-size: 1.8rem;
     font-weight: bold;
-    /* Fontul normal, nu cel Courier */
-    font-family: Arial, sans-serif;
+    font-family: 'Courier New', Courier, monospace; /* Font ca la contact */
 }
 
 .name-stefan {
@@ -41,7 +41,7 @@ body {
 }
 
 .name-mucileanu {
-    color: #000000; /* Negru pentru Mucileanu în header-ul alb */
+    color: #ffffff; /* Alb pentru Mucileanu */
     text-transform: uppercase;
 }
 
@@ -58,21 +58,20 @@ body {
 .main-nav a {
     display: inline-block;
     text-decoration: none;
-    color: #555555; /* Culoare text link-uri normale */
+    color: #28a745; /* *** Culoare text link-uri normale setată la VERDE *** */
     font-size: 1.3rem;
     font-weight: 600;
     padding: 10px 14px;
     border-radius: 5px;
     transition: background-color 0.3s, color 0.3s, transform 0.2s ease-out, outline 0.2s ease-in-out;
     position: relative;
-    /* Font normal */
-     font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif; /* Păstrăm fontul Arial pentru butoane */
 }
 
-/* Stil hover (fără background, doar subliniere) */
+/* Stil hover (fără background, subliniere) */
 .main-nav a:not(.cta-button):hover {
     background-color: transparent;
-    color: #000000; /* Culoare text la hover */
+    color: #ffffff; /* Schimbăm în alb la hover pe fundal negru */
     outline: none;
 }
 
@@ -82,7 +81,7 @@ body {
     position: absolute;
     width: 100%;
     height: 3px;
-    background-color: #28a745; /* Culoare subliniere verde */
+    background-color: #28a745;
     bottom: 5px;
     left: 0;
     transform: scaleX(0);
@@ -99,15 +98,17 @@ body {
     font-weight: bold;
     font-size: 1.35rem;
     padding: 12px 24px;
-    background-color: #28a745; /* Fundal verde */
-    color: #ffffff; /* Text alb */
+    background-color: #28a745;
+    color: #ffffff;
     border-radius: 30px;
+    /* Păstrăm fontul Arial și aici */
+    font-family: Arial, sans-serif;
 }
 
 .main-nav a.cta-button:hover {
-    background-color: #218838; /* Verde mai închis la hover */
+    background-color: #218838;
     color: #ffffff;
-    transform: translateY(-4px) scale(1.05); /* Efectul de ridicare */
+    transform: translateY(-4px) scale(1.05);
 }
 
 .main-nav a.cta-button:active {
@@ -118,7 +119,7 @@ body {
 /* Stiluri Generale pentru Main Content - Rămân la fel */
 .main-content-area {
     background-color: transparent;
-    overflow: visible; /* Schimbat din hidden pentru a vedea particulele mereu */
+    overflow: visible;
     position: relative;
     display: flex;
     justify-content: center;
@@ -126,9 +127,10 @@ body {
     flex-grow: 1;
     text-align: center;
     padding: 50px 0;
+    background: radial-gradient(circle at 50% 50%, #22422A 0%, #0A1C1F 100%);
 }
 
-.contact-page-main { /* Stil specific paginii de contact pentru scroll */
+.contact-page-main {
     align-items: flex-start;
     padding-top: 100px;
     padding-bottom: 100px;
@@ -259,10 +261,9 @@ body {
     }
 }
 
-/* --- STILURI PAGINA DE CONTACT (formular) --- */
+/* --- STILURI PAGINA DE CONTACT (formular și header contact) --- */
 
-/* Păstrăm header-ul specific paginii de contact */
-.contact-header {
+.contact-header { /* Header-ul specific paginii de contact */
     display: flex;
     justify-content: space-between;
     align-items: center;
