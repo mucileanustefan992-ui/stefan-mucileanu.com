@@ -6,7 +6,6 @@ html, body {
     flex-direction: column;
     background: radial-gradient(ellipse at center, #1F3A29 0%, #050A08 60%, #000000 100%);
     background-attachment: fixed;
-    /* Adăugat pentru smooth scroll */
     scroll-behavior: smooth;
 }
 
@@ -19,7 +18,7 @@ html, body {
     background-color: #ffffff;
     border-bottom: 1px solid #dddddd;
     flex-shrink: 0;
-    position: sticky; /* Face header-ul să rămână sus la scroll */
+    position: sticky;
     top: 0;
     z-index: 100;
 }
@@ -122,7 +121,7 @@ html, body {
     background-color: #ffffff;
     border-bottom: 1px solid #dddddd;
     flex-shrink: 0;
-    position: sticky; /* Face header-ul să rămână sus la scroll */
+    position: sticky;
     top: 0;
     z-index: 100;
 }
@@ -187,9 +186,9 @@ html, body {
     align-items: center;
     flex-grow: 1;
     text-align: center;
-    padding: 100px 50px; /* Mărit padding-ul sus/jos */
-    min-height: calc(100vh - 83px); /* Ajustează înălțimea relativ la header */
-    box-sizing: border-box; /* Include padding-ul în înălțime */
+    padding: 100px 50px;
+    min-height: calc(100vh - 83px);
+    box-sizing: border-box;
 }
 
 
@@ -197,7 +196,7 @@ html, body {
     align-items: flex-start;
     padding-top: 100px;
     padding-bottom: 100px;
-    min-height: calc(100vh - 83px); /* Ajustează înălțimea relativ la header */
+    min-height: calc(100vh - 83px);
 }
 
 .content-wrapper {
@@ -321,15 +320,15 @@ html, body {
 
 
 /* --- Stiluri noua secțiune SERVICII (pe index.html) --- */
-.services-section { /* Redenumit din .next-section pentru claritate */
-    min-height: 100vh;
-    padding: 80px 50px; /* Mărit padding-ul */
+.services-section {
+    min-height: auto; /* Scoatem înălțimea minimă de ecran */
+    padding: 80px 50px;
     position: relative;
     z-index: 5;
     background-color: transparent;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centrează conținutul secțiunii */
+    align-items: center;
     box-sizing: border-box;
 }
 
@@ -341,56 +340,62 @@ html, body {
     text-transform: uppercase;
     border-bottom: 3px solid #28a745;
     padding-bottom: 10px;
-    display: inline-block; /* Pentru ca border-bottom să fie doar sub text */
+    display: inline-block;
 }
 
 .services-grid {
     display: grid;
-    /* Grid cu coloane care se adaptează, minim 300px lățime */
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 40px; /* Spațiu între carduri */
+    /* NOU: Forțează 4 coloane egale */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px; /* Redus puțin spațiul */
     width: 100%;
-    max-width: 1200px; /* Limitează lățimea maximă a gridului */
+    max-width: 1400px; /* Mărit lățimea maximă pentru a încăpea 4 */
 }
 
 .service-card {
-    background-color: rgba(0, 0, 0, 0.6); /* Fundal întunecat semi-transparent */
-    border: 1px solid rgba(40, 167, 69, 0.4); /* Bordură verde subtilă */
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 2px solid #28a745; /* Bordură verde */
     border-radius: 10px;
     padding: 30px;
-    text-align: left; /* Aliniază textul la stânga în card */
     font-family: 'Courier New', Courier, monospace;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Tranziție pentru hover */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
     display: flex;
-    flex-direction: column; /* Iconița, titlul și textul unul sub altul */
+    flex-direction: column;
+    /* NOU: Adăugat glow verde direct */
+    box-shadow: 0 0 15px rgba(40, 167, 69, 0.4);
+    text-align: center; /* Centrează tot conținutul cardului */
 }
 
 .service-card:hover {
-    transform: scale(1.05); /* Mărire la hover */
-    box-shadow: 0 0 20px rgba(40, 167, 69, 0.5); /* Umbră verde la hover */
-    border-color: #28a745; /* Bordura devine verde solid */
+    transform: scale(1.05);
+    /* NOU: Glow verde mai intens la hover */
+    box-shadow: 0 0 25px rgba(40, 167, 69, 0.7);
+    border-color: #63ff84; /* Verde mai deschis la hover */
 }
 
 .service-icon {
     font-size: 2.5rem;
-    color: #9370DB; /* Mov pal, ca în exemplu */
-    margin-bottom: 20px;
-    text-align: center; /* Centrează iconița placeholder */
-    /* Aici vei înlocui textul cu un element <img> sau un icon font */
+    color: #9370DB;
+    margin-bottom: 25px; /* Spațiu mai mare sub icon */
+    text-align: center;
 }
 
 .service-title {
-    color: #28a745; /* Titlu verde */
-    font-size: 1.5rem;
+    color: #28a745;
+    /* NOU: Mărit font-size și centrat (deja centrat prin card) */
+    font-size: 1.8rem;
     margin-top: 0;
-    margin-bottom: 15px;
+    margin-bottom: 20px; /* Spațiu mai mare sub titlu */
     text-transform: uppercase;
+    font-weight: bold;
 }
 
 .service-description {
-    color: #dddddd; /* Text alb-gri */
-    font-size: 1rem;
-    line-height: 1.6;
+    color: #dddddd;
+    /* NOU: Mărit font-size */
+    font-size: 1.1rem;
+    line-height: 1.7; /* Spațiere între rânduri */
+    text-align: left; /* Aliniem descrierea la stânga pentru lizibilitate */
 }
 
 
