@@ -9,7 +9,6 @@ html, body {
     scroll-behavior: smooth;
 }
 
-/* Stiluri header principal (index.html) */
 .site-header {
     display: flex;
     justify-content: space-between;
@@ -112,7 +111,6 @@ html, body {
     transition-duration: 0.1s;
 }
 
-/* Stiluri header pagina de contact (contact.html) */
 .contact-header {
     display: flex;
     justify-content: space-between;
@@ -176,7 +174,6 @@ html, body {
     color: #ffffff;
 }
 
-/* Stiluri Generale pentru Main Content */
 .main-content-area {
     background-color: transparent;
     overflow: visible;
@@ -319,7 +316,7 @@ html, body {
 }
 
 
-/* --- Stiluri noua secțiune SERVICII (pe index.html) --- */
+
 .services-section {
     min-height: auto;
     padding: 120px 50px 100px 50px;
@@ -332,7 +329,6 @@ html, body {
     box-sizing: border-box;
 }
 
-/* Stiluri pentru titlul "Cum te putem ajuta să CREȘTI" */
 .grow-title {
     font-size: 6rem;
     font-weight: bold;
@@ -340,13 +336,11 @@ html, body {
     margin-bottom: 40px;
     font-family: 'Courier New', Courier, monospace;
     text-transform: uppercase;
-    /* NOU: Efect de glow static verde */
     text-shadow: 0 0 15px rgba(40, 167, 69, 0.8), 0 0 30px rgba(40, 167, 69, 0.5);
 }
 
-/* Am scos animația ::before și @keyframes shine */
 
-.section-title { /* Subtitlul "Serviciile Mele" */
+.section-title {
     font-size: 3rem;
     color: #ffffff;
     margin-bottom: 70px;
