@@ -551,3 +551,106 @@ html, body {
     font-family: 'Courier New', Courier, monospace;
     text-transform: uppercase;
 }
+
+/* --- FOOTER STYLES --- */
+.site-footer {
+    background-color: #8C6D4F; /* Maro închis pentru fundalul footerului */
+    padding: 60px 80px 40px 80px;
+    color: #F6F4F0; /* Text crem deschis */
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.footer-branding {
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #F6F4F0; /* Nume crem deschis */
+}
+
+.footer-socials {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.social-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #F6F4F0; /* Buton crem deschis */
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.social-button svg {
+    width: 24px;
+    height: 24px;
+    fill: #A07D5F; /* Icoană maro */
+    transition: fill 0.3s ease;
+}
+
+.social-button:hover {
+    background-color: #A07D5F; /* Maro la hover */
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.social-button:hover svg {
+    fill: #ffffff; /* Icoană albă la hover */
+}
+
+.footer-divider {
+    border-top: 1px solid rgba(246, 244, 240, 0.3); /* Linie de separare crem transparent */
+    margin: 40px 0;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+}
+
+.copyright {
+    margin: 0;
+    color: #F6F4F0; /* Text copyright crem deschis */
+    font-weight: 500;
+}
+
+.footer-links {
+    display: flex;
+    gap: 30px;
+}
+
+.footer-link {
+    color: #F6F4F0; /* Link crem deschis */
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-weight: 500;
+}
+
+.footer-link:hover {
+    color: #ffffff; /* Alb la hover */
+    text-decoration: underline;
+}
+
+/* Stiluri pentru săgeți (>) de la link-urile de social media dacă vrei să le adaugi în HTML */
+/* De exemplu, <span class="social-arrow">></span> */
+.social-arrow {
+    color: #F6F4F0; /* Culoarea săgeții */
+    margin-right: 5px; /* Spațiu înainte de textul link-ului */
+    font-weight: bold;
+}
