@@ -4,9 +4,10 @@ html, body {
     font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column;
-    /* NOU: Gradient radial extins, cu amestecare organică verde-negru */
-    background: radial-gradient(ellipse farthest-corner at center, #1A3521 0%, #0A150C 50%, #000000 100%);
+    background: radial-gradient(ellipse at center, #1F3A29 0%, #050A08 60%, #000000 100%);
     background-attachment: fixed;
+    /* Adăugat pentru smooth scroll */
+    scroll-behavior: smooth;
 }
 
 /* Stiluri header principal (index.html) */
@@ -18,7 +19,8 @@ html, body {
     background-color: #ffffff;
     border-bottom: 1px solid #dddddd;
     flex-shrink: 0;
-    position: relative;
+    position: sticky; /* Face header-ul să rămână sus la scroll */
+    top: 0;
     z-index: 100;
 }
 
@@ -120,7 +122,8 @@ html, body {
     background-color: #ffffff;
     border-bottom: 1px solid #dddddd;
     flex-shrink: 0;
-    position: relative;
+    position: sticky; /* Face header-ul să rămână sus la scroll */
+    top: 0;
     z-index: 100;
 }
 
@@ -184,15 +187,17 @@ html, body {
     align-items: center;
     flex-grow: 1;
     text-align: center;
-    padding: 50px 0;
-    min-height: 100vh;
+    padding: 100px 50px; /* Mărit padding-ul sus/jos */
+    min-height: calc(100vh - 83px); /* Ajustează înălțimea relativ la header */
+    box-sizing: border-box; /* Include padding-ul în înălțime */
 }
+
 
 .contact-page-main {
     align-items: flex-start;
     padding-top: 100px;
     padding-bottom: 100px;
-    min-height: 100vh;
+    min-height: calc(100vh - 83px); /* Ajustează înălțimea relativ la header */
 }
 
 .content-wrapper {
@@ -315,14 +320,79 @@ html, body {
 }
 
 
-/* --- Stiluri noua secțiune (pe index.html) --- */
-.next-section {
+/* --- Stiluri noua secțiune SERVICII (pe index.html) --- */
+.services-section { /* Redenumit din .next-section pentru claritate */
     min-height: 100vh;
-    padding: 50px 0;
+    padding: 80px 50px; /* Mărit padding-ul */
     position: relative;
     z-index: 5;
     background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrează conținutul secțiunii */
+    box-sizing: border-box;
 }
+
+.section-title {
+    font-size: 3rem;
+    color: #ffffff;
+    margin-bottom: 50px;
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: uppercase;
+    border-bottom: 3px solid #28a745;
+    padding-bottom: 10px;
+    display: inline-block; /* Pentru ca border-bottom să fie doar sub text */
+}
+
+.services-grid {
+    display: grid;
+    /* Grid cu coloane care se adaptează, minim 300px lățime */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px; /* Spațiu între carduri */
+    width: 100%;
+    max-width: 1200px; /* Limitează lățimea maximă a gridului */
+}
+
+.service-card {
+    background-color: rgba(0, 0, 0, 0.6); /* Fundal întunecat semi-transparent */
+    border: 1px solid rgba(40, 167, 69, 0.4); /* Bordură verde subtilă */
+    border-radius: 10px;
+    padding: 30px;
+    text-align: left; /* Aliniază textul la stânga în card */
+    font-family: 'Courier New', Courier, monospace;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Tranziție pentru hover */
+    display: flex;
+    flex-direction: column; /* Iconița, titlul și textul unul sub altul */
+}
+
+.service-card:hover {
+    transform: scale(1.05); /* Mărire la hover */
+    box-shadow: 0 0 20px rgba(40, 167, 69, 0.5); /* Umbră verde la hover */
+    border-color: #28a745; /* Bordura devine verde solid */
+}
+
+.service-icon {
+    font-size: 2.5rem;
+    color: #9370DB; /* Mov pal, ca în exemplu */
+    margin-bottom: 20px;
+    text-align: center; /* Centrează iconița placeholder */
+    /* Aici vei înlocui textul cu un element <img> sau un icon font */
+}
+
+.service-title {
+    color: #28a745; /* Titlu verde */
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.service-description {
+    color: #dddddd; /* Text alb-gri */
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
 
 /* --- STILURI PAGINA DE CONTACT (formular) --- */
 
