@@ -180,6 +180,7 @@ html, body {
     flex-grow: 1;
     text-align: center;
     padding: 50px 0;
+    min-height: 100vh; /* Asigură că prima secțiune umple ecranul */
 }
 
 .contact-page-main {
@@ -313,6 +314,15 @@ html, body {
     }
 }
 
+/* --- Stiluri noua secțiune (pe index.html) --- */
+.next-section {
+    min-height: 100vh; /* Îi dăm o înălțime minimă să fie vizibilă */
+    padding: 50px 0; /* Spațiu intern */
+    position: relative; /* Necesar pentru a păstra contextul z-index */
+    z-index: 5; /* Peste particule, sub header */
+    background-color: transparent; /* Lasă fundalul body-ului să se vadă */
+}
+
 /* --- STILURI PAGINA DE CONTACT (formular) --- */
 
 .form-container {
@@ -409,10 +419,10 @@ html, body {
     font-weight: bold;
     text-decoration: none;
     color: #ffffff;
-    background-color: #28a745; /* Verde */
+    background-color: #28a745;
     border-radius: 10px;
-    border: 3px solid #ffffff; /* Bordură albă */
-    box-shadow: 0 0 15px rgba(40, 167, 69, 0.7); /* Umbră verde */
+    border: 3px solid #ffffff;
+    box-shadow: 0 0 15px rgba(40, 167, 69, 0.7);
     transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
     text-transform: uppercase;
     font-family: 'Courier New', Courier, monospace;
@@ -423,9 +433,9 @@ html, body {
 }
 
 .form-button:hover {
-    background-color: #218838; /* Verde mai închis */
+    background-color: #218838;
     transform: scale(1.03);
-    box-shadow: 0 0 20px rgba(40, 167, 69, 0.9); /* Umbră mai intensă */
+    box-shadow: 0 0 20px rgba(40, 167, 69, 0.9);
 }
 
 .form-required-note {
@@ -434,5 +444,3 @@ html, body {
     margin-top: 20px;
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
-    text-transform: uppercase;
-}
