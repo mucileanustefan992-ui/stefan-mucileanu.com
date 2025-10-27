@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const particlesContainer = document.querySelector('.floating-particles');
-    const numberOfParticles = 50; // Adjust as needed
+    const numberOfParticles = 150; // Poți ajusta numărul
 
     if (particlesContainer) {
         for (let i = 0; i < numberOfParticles; i++) {
@@ -15,26 +15,24 @@ document.addEventListener('DOMContentLoaded', () => {
         particle.classList.add('particle');
         particlesContainer.appendChild(particle);
 
-        const size = Math.random() * 8 + 4; // Particle size between 4px and 12px
-        const duration = Math.random() * 15 + 10; // Animation duration between 10s and 25s
-        const delay = Math.random() * -duration; // Random start delay
+        const size = Math.random() * 6 + 2; // Particule puțin mai mici (2px - 8px)
+        const duration = Math.random() * 20 + 15; // Durată animație (15s - 35s)
+        const delay = Math.random() * -duration; // Start cu delay negativ
 
         const startX = Math.random() * window.innerWidth;
         const startY = Math.random() * window.innerHeight;
+        const endX = startX + (Math.random() - 0.5) * 800;
+        const endY = startY + (Math.random() - 0.5) * 800;
 
-        const endX = startX + (Math.random() - 0.5) * 600; // Move +/- 300px horizontally
-        const endY = startY + (Math.random() - 0.5) * 600; // Move +/- 300px vertically
+        const mid1X = startX + (Math.random() - 0.5) * 1000;
+        const mid1Y = startY + (Math.random() - 0.5) * 1000;
+        const mid2X = startX + (Math.random() - 0.5) * 1000;
+        const mid2Y = startY + (Math.random() - 0.5) * 1000;
+        const mid3X = startX + (Math.random() - 0.5) * 1000;
+        const mid3Y = startY + (Math.random() - 0.5) * 1000;
 
-        // Generate more intermediate points for a "floating" effect
-        const mid1X = startX + (Math.random() - 0.5) * 800;
-        const mid1Y = startY + (Math.random() - 0.5) * 800;
-        const mid2X = startX + (Math.random() - 0.5) * 800;
-        const mid2Y = startY + (Math.random() - 0.5) * 800;
-        const mid3X = startX + (Math.random() - 0.5) * 800;
-        const mid3Y = startY + (Math.random() - 0.5) * 800;
-
-        const scaleStart = Math.random() * 0.5 + 0.5; // Scale between 0.5 and 1
-        const scaleMid = Math.random() * 0.5 + 0.8; // Slightly larger mid-scale
+        const scaleStart = Math.random() * 0.4 + 0.4; // Scală mai mică (0.4 - 0.8)
+        const scaleMid = Math.random() * 0.5 + 0.6;  // Scală medie (0.6 - 1.1)
 
         particle.style.setProperty('--size', `${size}px`);
         particle.style.animation = `floatAround ${duration}s linear ${delay}s infinite`;
