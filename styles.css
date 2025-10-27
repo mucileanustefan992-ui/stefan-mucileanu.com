@@ -671,3 +671,118 @@ html, body {
     margin-right: 5px;
     font-weight: bold;
 }
+
+/* --- Stiluri Secțiune FAQ --- */
+.faq-section {
+    background-color: #F6F4F0; /* Fundal crem */
+    color: #333333; /* Text gri închis */
+    padding: 100px 50px;
+    text-align: center;
+    position: relative;
+    z-index: 5;
+    font-family: Arial, sans-serif; /* Revenim la un font standard pentru lizibilitate */
+}
+
+.faq-main-title {
+    font-size: 3rem;
+    color: #A07D5F; /* Maro */
+    margin-bottom: 50px;
+    font-weight: bold;
+}
+
+.faq-container {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.faq-item {
+    background-color: #ffffff; /* Fundal alb pentru fiecare item */
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border-left: 5px solid #A07D5F; /* Accent maro stânga */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Umbră subtilă */
+    overflow: hidden; /* Ascunde colțurile răspunsului */
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 25px;
+    font-size: 1.4rem; /* Mărit puțin */
+    font-weight: bold;
+    color: #333333;
+    cursor: pointer;
+    list-style: none; /* Elimină markerul standard (săgeata) */
+    position: relative; /* Pentru icon */
+}
+
+/* Elimină săgeata default din Chrome/Safari */
+.faq-question::-webkit-details-marker {
+    display: none;
+}
+
+/* Elimină săgeata default din Firefox */
+.faq-question::marker {
+   display: none;
+}
+
+.faq-icon {
+    width: 24px;
+    height: 24px;
+    border: 2px solid #A07D5F; /* Cerc maro */
+    border-radius: 50%;
+    position: relative;
+    transition: transform 0.3s ease;
+    flex-shrink: 0; /* Previne micșorarea iconiței */
+    margin-left: 15px; /* Spațiu între text și icon */
+}
+
+/* Liniile + și - din icon */
+.faq-icon::before,
+.faq-icon::after {
+    content: '';
+    position: absolute;
+    background-color: #A07D5F; /* Linii maro */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Linia orizontală (-) */
+.faq-icon::before {
+    width: 12px;
+    height: 2px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Linia verticală (+) */
+.faq-icon::after {
+    width: 2px;
+    height: 12px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Când este deschis, rotește iconița și ascunde linia verticală */
+details[open] > summary .faq-icon {
+     /* Rotește ușor cercul (opțional) */
+}
+
+details[open] > summary .faq-icon::after {
+    transform: translate(-50%, -50%) rotate(90deg);
+    opacity: 0; /* Ascunde linia verticală pentru a face "-" */
+}
+
+.faq-answer {
+    padding: 0 25px 25px 25px; /* Padding sub întrebare */
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #555555; /* Gri mai deschis pentru răspuns */
+}
+
+.faq-answer p {
+    margin: 0;
+}
