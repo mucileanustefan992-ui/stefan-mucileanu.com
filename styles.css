@@ -249,7 +249,8 @@ html, body {
     height: 100%;
     background: transparent;
     overflow: hidden;
-    z-index: 1;
+    /* NOU: Mărit z-index pentru a fi deasupra fundalului secțiunilor, dar sub conținut */
+    z-index: 2; /* Era 1 sau 0 */
     pointer-events: none;
 }
 
@@ -289,7 +290,15 @@ html, body {
 }
 /* --- Sfârșit Particule --- */
 
-
+/* Asigură-te că secțiunile de conținut au un z-index mai mare */
+.about-intro-section,
+.services-section,
+.faq-section {
+    position: relative; /* Necesar pentru z-index */
+    z-index: 5; /* Mai mare decât particulele */
+    /* ... restul stilurilor ... */
+    background-color: transparent; /* Verifică să fie transparent */
+}
 
 .blinking-contact-button {
     display: inline-block;
