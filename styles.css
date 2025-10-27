@@ -30,13 +30,13 @@ html, body {
 .site-name {
     font-size: 2.5rem;
     font-weight: normal;
-    font-family: Arial, sans-serif; /* Revenit la font standard */
+    font-family: Arial, sans-serif;
     letter-spacing: 1px;
 }
 
 .name-stefan,
 .name-mucileanu {
-    text-transform: uppercase; /* Revenit la uppercase */
+    text-transform: uppercase;
 }
 
 .name-stefan {
@@ -115,7 +115,7 @@ html, body {
     transition-duration: 0.1s;
 }
 
-/* Stiluri header pagina de contact (contact.html) - Adaptăm fontul numelui */
+/* Stiluri header pagina de contact (contact.html) */
 .contact-header {
     display: flex;
     justify-content: space-between;
@@ -131,12 +131,12 @@ html, body {
 .contact-header .site-name {
     font-size: 2.5rem;
     font-weight: normal;
-    font-family: Arial, sans-serif; /* Revenit la font standard */
+    font-family: Arial, sans-serif;
     letter-spacing: 1px;
 }
 .contact-header .name-stefan,
 .contact-header .name-mucileanu {
-    text-transform: uppercase; /* Revenit la uppercase */
+    text-transform: uppercase;
 }
 .contact-header .name-stefan {
     color: #000000;
@@ -236,12 +236,11 @@ html, body {
     margin: 15px 0 25px 0;
 }
 
-/* Scoatem săgeata */
 .arrow-down {
    display: none;
 }
 
-/* Particule */
+/* --- Particule --- */
 .floating-particles {
     position: fixed;
     top: 0;
@@ -250,8 +249,7 @@ html, body {
     height: 100%;
     background: transparent;
     overflow: hidden;
-    /* NOU: z-index mai mare decât fundalul body, dar mai mic decât conținutul */
-    z-index: 1;
+    z-index: 1; /* Peste fundalul body, sub conținut */
     pointer-events: none;
 }
 
@@ -259,8 +257,7 @@ html, body {
     position: absolute;
     width: var(--size);
     height: var(--size);
-    /* NOU: Culoare maro transparent */
-    background-color: rgba(160, 125, 95, 0.15); /* Folosim RGB(A) pentru #A07D5F */
+    background-color: rgba(160, 125, 95, 0.15); /* Maro transparent */
     border-radius: 50%;
     box-shadow: none;
     animation-name: floatAround;
@@ -270,11 +267,12 @@ html, body {
 
 @keyframes floatAround {
     0% { transform: translate(var(--x-start), var(--y-start)) scale(var(--scale-start)) opacity(0); }
-    25% { transform: translate(var(--x-mid1), var(--y-mid1)) scale(var(--scale-mid)) opacity(0.6); } /* Opacitate ajustată */
-    50% { transform: translate(var(--x-mid2), var(--y-mid2)) scale(var(--scale-start)) opacity(0.3); } /* Opacitate ajustată */
-    75% { transform: translate(var(--x-mid3), var(--y-mid3)) scale(var(--scale-mid)) opacity(0.6); } /* Opacitate ajustată */
+    25% { transform: translate(var(--x-mid1), var(--y-mid1)) scale(var(--scale-mid)) opacity(0.6); }
+    50% { transform: translate(var(--x-mid2), var(--y-mid2)) scale(var(--scale-start)) opacity(0.3); }
+    75% { transform: translate(var(--x-mid3), var(--y-mid3)) scale(var(--scale-mid)) opacity(0.6); }
     100% { transform: translate(var(--x-end), var(--y-end)) scale(var(--scale-start)) opacity(0); }
 }
+/* --- Sfârșit Particule --- */
 
 .blinking-contact-button {
     display: inline-block;
@@ -715,10 +713,10 @@ details[open] > summary .faq-icon::after {
 .footer-branding {
     font-size: 1.8rem;
     font-weight: normal;
-    font-family: Arial, sans-serif; /* Revenit la font standard */
+    font-family: Arial, sans-serif;
     letter-spacing: 1px;
     color: #F6F4F0;
-    text-transform: uppercase; /* Revenit la uppercase */
+    text-transform: uppercase;
 }
 
 .footer-name {
