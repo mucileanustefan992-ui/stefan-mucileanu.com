@@ -115,7 +115,7 @@ html, body {
     transition-duration: 0.1s;
 }
 
-/* Stiluri header pagina de contact (contact.html) */
+/* Stiluri header pagina de contact (contact.html) - Adaptăm fontul numelui */
 .contact-header {
     display: flex;
     justify-content: space-between;
@@ -301,6 +301,47 @@ html, body {
     100% { opacity: 0.85; box-shadow: 0 0 20px rgba(160, 125, 95, 0.6), 0 0 30px rgba(160, 125, 95, 0.3); }
 }
 
+/* --- Stiluri Secțiune Intro Despre --- */
+.about-intro-section {
+    background-color: #F6F4F0;
+    padding: 80px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    position: relative;
+    z-index: 5;
+    min-height: 50vh;
+    box-sizing: border-box;
+}
+
+.intro-text-content {
+    flex-grow: 1;
+    max-width: 600px;
+    text-align: center;
+    color: #333333;
+    font-size: 1.6rem;
+    line-height: 1.6;
+}
+
+.intro-text-content p {
+    margin-bottom: 20px;
+}
+
+.image-placeholder {
+    width: 250px;
+    height: 350px;
+    background-color: #e0e0e0;
+    border: 2px dashed #A07D5F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #A07D5F;
+    font-size: 0.9rem;
+    font-family: 'Courier New', Courier, monospace;
+    flex-shrink: 0;
+}
+
 /* --- Stiluri noua secțiune SERVICII (pe index.html) --- */
 .services-section {
     min-height: auto;
@@ -323,6 +364,7 @@ html, body {
     text-transform: uppercase;
     text-shadow: 0 0 15px rgba(160, 125, 95, 0.5), 0 0 25px rgba(160, 125, 95, 0.3);
 }
+
 
 .section-title {
     font-size: 3rem;
@@ -404,10 +446,9 @@ html, body {
     font-weight: 700;
 }
 
-/* Scoatem stilurile EKG */
-/* .ekg-container, .ekg-svg, #wave-group, @keyframes slide-right, #ekg-path { ... } */
+/* Stiluri EKG Divider - Scoase */
 
-/* --- Stiluri Secțiune FAQ --- */
+/* Stiluri pentru noua secțiune (FAQ) */
 .faq-section {
     background-color: #F6F4F0;
     color: #333333;
@@ -429,15 +470,14 @@ html, body {
 }
 
 .faq-container {
-    /* NOU: Mărit lățimea maximă */
-    max-width: 1400px; /* Era 1200px */
+    max-width: 1200px;
     margin: 0 auto;
     text-align: left;
 }
 
 .faq-item {
     background-color: #ffffff;
-    margin-bottom: 25px; /* Mărit spațiul între itemi */
+    margin-bottom: 20px;
     border-radius: 8px;
     border-left: 5px solid #A07D5F;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
@@ -448,10 +488,8 @@ html, body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* NOU: Mărit padding-ul */
-    padding: 25px 30px; /* Era 20px 25px */
-    /* NOU: Mărit font-size */
-    font-size: 1.6rem; /* Era 1.4rem */
+    padding: 25px 30px;
+    font-size: 1.6rem;
     font-weight: bold;
     color: #333333;
     cursor: pointer;
@@ -503,11 +541,9 @@ details[open] > summary .faq-icon::after {
 }
 
 .faq-answer {
-    /* NOU: Mărit padding-ul */
-    padding: 0 30px 30px 30px; /* Era 0 25px 25px 25px */
-    /* NOU: Mărit font-size */
-    font-size: 1.25rem; /* Era 1.1rem */
-    line-height: 1.8; /* Ajustat line-height */
+    padding: 0 30px 30px 30px;
+    font-size: 1.25rem;
+    line-height: 1.8;
     color: #555555;
 }
 
