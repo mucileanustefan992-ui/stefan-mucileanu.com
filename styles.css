@@ -4,7 +4,6 @@ html, body {
     font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column;
-    /* Fundal crem */
     background: #F6F4F0;
     scroll-behavior: smooth;
 }
@@ -31,13 +30,13 @@ html, body {
 .site-name {
     font-size: 2.5rem;
     font-weight: normal;
-    font-family: 'cursive', sans-serif;
+    font-family: Arial, sans-serif; /* Revenit la font standard */
     letter-spacing: 1px;
 }
 
 .name-stefan,
 .name-mucileanu {
-    text-transform: none;
+    text-transform: uppercase; /* Revenit la uppercase */
 }
 
 .name-stefan {
@@ -116,7 +115,7 @@ html, body {
     transition-duration: 0.1s;
 }
 
-/* Stiluri header pagina de contact (contact.html) */
+/* Stiluri header pagina de contact (contact.html) - Adaptăm fontul numelui */
 .contact-header {
     display: flex;
     justify-content: space-between;
@@ -132,12 +131,12 @@ html, body {
 .contact-header .site-name {
     font-size: 2.5rem;
     font-weight: normal;
-    font-family: 'cursive', sans-serif;
+    font-family: Arial, sans-serif; /* Revenit la font standard */
     letter-spacing: 1px;
 }
 .contact-header .name-stefan,
 .contact-header .name-mucileanu {
-    text-transform: none;
+    text-transform: uppercase; /* Revenit la uppercase */
 }
 .contact-header .name-stefan {
     color: #000000;
@@ -237,6 +236,7 @@ html, body {
     margin: 15px 0 25px 0;
 }
 
+/* Scoatem săgeata */
 .arrow-down {
    display: none;
 }
@@ -250,7 +250,8 @@ html, body {
     height: 100%;
     background: transparent;
     overflow: hidden;
-    z-index: 0;
+    /* NOU: z-index mai mare decât fundalul body, dar mai mic decât conținutul */
+    z-index: 1;
     pointer-events: none;
 }
 
@@ -258,7 +259,8 @@ html, body {
     position: absolute;
     width: var(--size);
     height: var(--size);
-    background-color: rgba(0, 0, 0, 0.1);
+    /* NOU: Culoare maro transparent */
+    background-color: rgba(160, 125, 95, 0.15); /* Folosim RGB(A) pentru #A07D5F */
     border-radius: 50%;
     box-shadow: none;
     animation-name: floatAround;
@@ -268,9 +270,9 @@ html, body {
 
 @keyframes floatAround {
     0% { transform: translate(var(--x-start), var(--y-start)) scale(var(--scale-start)) opacity(0); }
-    25% { transform: translate(var(--x-mid1), var(--y-mid1)) scale(var(--scale-mid)) opacity(0.5); }
-    50% { transform: translate(var(--x-mid2), var(--y-mid2)) scale(var(--scale-start)) opacity(0.2); }
-    75% { transform: translate(var(--x-mid3), var(--y-mid3)) scale(var(--scale-mid)) opacity(0.5); }
+    25% { transform: translate(var(--x-mid1), var(--y-mid1)) scale(var(--scale-mid)) opacity(0.6); } /* Opacitate ajustată */
+    50% { transform: translate(var(--x-mid2), var(--y-mid2)) scale(var(--scale-start)) opacity(0.3); } /* Opacitate ajustată */
+    75% { transform: translate(var(--x-mid3), var(--y-mid3)) scale(var(--scale-mid)) opacity(0.6); } /* Opacitate ajustată */
     100% { transform: translate(var(--x-end), var(--y-end)) scale(var(--scale-start)) opacity(0); }
 }
 
@@ -305,9 +307,9 @@ html, body {
 /* --- Stiluri Secțiune Intro Despre --- */
 .about-intro-section {
     background-color: #F6F4F0;
-    padding: 100px 80px; /* Ajustat padding */
+    padding: 100px 80px;
     display: flex;
-    flex-direction: column; /* Stack rows vertically */
+    flex-direction: column;
     gap: 80px;
     position: relative;
     z-index: 5;
@@ -367,7 +369,7 @@ html, body {
     padding: 120px 50px 100px 50px;
     position: relative;
     z-index: 5;
-    background-color: transparent; /* Changed to transparent to show body background */
+    background-color: transparent;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -713,20 +715,19 @@ details[open] > summary .faq-icon::after {
 .footer-branding {
     font-size: 1.8rem;
     font-weight: normal;
-    font-family: 'cursive', sans-serif;
+    font-family: Arial, sans-serif; /* Revenit la font standard */
     letter-spacing: 1px;
     color: #F6F4F0;
-    text-transform: none;
+    text-transform: uppercase; /* Revenit la uppercase */
 }
 
 .footer-name {
-    font-family: 'cursive', sans-serif;
-    font-size: 2.5rem;
-    font-weight: normal;
-    text-transform: none;
+    font-family: Arial, sans-serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
     color: #F6F4F0;
 }
-
 
 .footer-socials {
     display: flex;
