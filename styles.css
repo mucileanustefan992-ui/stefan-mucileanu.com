@@ -28,13 +28,12 @@ html, body {
 }
 
 .site-name {
-    font-size: 2.5rem; /* Mărit puțin fontul */
-    font-weight: normal; /* Font normal, nu bold */
-    font-family: 'cursive', sans-serif; /* Font cursiv standard */
-    letter-spacing: 1px; /* Spațiere între litere */
+    font-size: 2.5rem;
+    font-weight: normal;
+    font-family: 'cursive', sans-serif;
+    letter-spacing: 1px;
 }
 
-/* Scoatem text-transform uppercase pentru font cursiv */
 .name-stefan,
 .name-mucileanu {
     text-transform: none;
@@ -116,7 +115,7 @@ html, body {
     transition-duration: 0.1s;
 }
 
-/* Stiluri header pagina de contact (contact.html) - Adaptăm fontul numelui */
+/* Stiluri header pagina de contact (contact.html) */
 .contact-header {
     display: flex;
     justify-content: space-between;
@@ -188,7 +187,7 @@ html, body {
     justify-content: center;
     align-items: center;
     flex-grow: 1;
-    text-align: center; /* Centrare implicită */
+    text-align: center;
     padding: 100px 50px;
     min-height: calc(100vh - 83px);
     box-sizing: border-box;
@@ -206,39 +205,37 @@ html, body {
     z-index: 10;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centrare pe orizontală */
+    align-items: center;
     gap: 20px;
-    max-width: 1200px; /* Limităm lățimea containerului central */
-    margin: 0 auto; /* Centrare container */
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .main-title {
     font-size: 5.25rem;
     font-weight: bold;
     color: #000000;
-    margin: 0; /* Scoatem margin-bottom */
+    margin: 0;
     line-height: 1.2;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Stil pentru fiecare linie a titlului */
 .main-title .title-line {
-    display: block; /* Forțează fiecare span pe un rând nou */
-    margin-bottom: 10px; /* Spațiu între rânduri */
+    display: block;
+    margin-bottom: 10px;
 }
 
-.main-title .brown-text { /* Schimbat din green-text */
-    color: #A07D5F; /* Maro */
+.main-title .brown-text {
+    color: #A07D5F;
     text-shadow: 0 0 10px rgba(160, 125, 95, 0.3);
 }
 
 .subtitle {
     font-size: 2.25rem;
     color: #333333;
-    margin: 15px 0 25px 0; /* Ajustat marginile */
+    margin: 15px 0 25px 0;
 }
 
-/* Scoatem săgeata */
 .arrow-down {
    display: none;
 }
@@ -341,7 +338,7 @@ html, body {
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 coloane */
+    grid-template-columns: repeat(2, 1fr);
     gap: 60px;
     width: 100%;
     max-width: 1600px;
@@ -410,28 +407,108 @@ html, body {
 /* Scoatem stilurile EKG */
 /* .ekg-container, .ekg-svg, #wave-group, @keyframes slide-right, #ekg-path { ... } */
 
-/* Stiluri pentru noua secțiune (placeholder) */
-.new-content-section {
+/* Stiluri pentru noua secțiune (FAQ) */
+.faq-section { /* Redenumit din .new-content-section */
     background-color: #F6F4F0;
     color: #333333;
-    padding: 80px 50px;
+    padding: 100px 50px;
     text-align: center;
     position: relative;
     z-index: 5;
+    font-family: Arial, sans-serif;
 }
 
-.new-content-section h2 {
-    font-size: 3rem;
+.faq-main-title {
+    font-size: 4.5rem; /* Mărimea nouă */
     color: #A07D5F;
-    margin-bottom: 30px;
-    font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 50px;
+    font-weight: bold;
+    /* Glow maro */
+    text-shadow: 0 0 10px rgba(160, 125, 95, 0.6),
+                 0 0 20px rgba(160, 125, 95, 0.4),
+                 0 0 30px rgba(160, 125, 95, 0.2);
 }
 
-.new-content-section p {
-    font-size: 1.5rem;
-    line-height: 1.6;
-    max-width: 900px;
+.faq-container {
+    max-width: 1200px; /* Lățimea nouă */
     margin: 0 auto;
+    text-align: left;
+}
+
+.faq-item {
+    background-color: #ffffff;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border-left: 5px solid #A07D5F;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 25px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #333333;
+    cursor: pointer;
+    list-style: none;
+    position: relative;
+}
+
+.faq-question::-webkit-details-marker { display: none; }
+.faq-question::marker { display: none; }
+
+.faq-icon {
+    width: 24px;
+    height: 24px;
+    border: 2px solid #A07D5F;
+    border-radius: 50%;
+    position: relative;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+    margin-left: 15px;
+}
+
+.faq-icon::before,
+.faq-icon::after {
+    content: '';
+    position: absolute;
+    background-color: #A07D5F;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.faq-icon::before {
+    width: 12px;
+    height: 2px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.faq-icon::after {
+    width: 2px;
+    height: 12px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+details[open] > summary .faq-icon::after {
+    transform: translate(-50%, -50%) rotate(90deg);
+    opacity: 0;
+}
+
+.faq-answer {
+    padding: 0 25px 25px 25px;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #555555;
+}
+
+.faq-answer p {
+    margin: 0;
 }
 
 /* --- STILURI PAGINA DE CONTACT (formular) --- */
@@ -577,21 +654,20 @@ html, body {
 }
 
 .footer-branding {
-    font-size: 1.8rem; /* Ajustăm să fie similar cu headerul */
+    font-size: 1.8rem;
     font-weight: normal;
     font-family: 'cursive', sans-serif;
     letter-spacing: 1px;
     color: #F6F4F0;
-    text-transform: none; /* Scoatem uppercase pentru font cursiv */
+    text-transform: none;
 }
 
-/* Aplicăm și aici fontul cursiv */
 .footer-name {
     font-family: 'cursive', sans-serif;
     font-size: 2.5rem;
     font-weight: normal;
     text-transform: none;
-    color: #F6F4F0; /* Numele va fi crem deschis */
+    color: #F6F4F0;
 }
 
 
@@ -670,119 +746,4 @@ html, body {
     color: #F6F4F0;
     margin-right: 5px;
     font-weight: bold;
-}
-
-/* --- Stiluri Secțiune FAQ --- */
-.faq-section {
-    background-color: #F6F4F0; /* Fundal crem */
-    color: #333333; /* Text gri închis */
-    padding: 100px 50px;
-    text-align: center;
-    position: relative;
-    z-index: 5;
-    font-family: Arial, sans-serif; /* Revenim la un font standard pentru lizibilitate */
-}
-
-.faq-main-title {
-    font-size: 3rem;
-    color: #A07D5F; /* Maro */
-    margin-bottom: 50px;
-    font-weight: bold;
-}
-
-.faq-container {
-    max-width: 900px;
-    margin: 0 auto;
-    text-align: left;
-}
-
-.faq-item {
-    background-color: #ffffff; /* Fundal alb pentru fiecare item */
-    margin-bottom: 20px;
-    border-radius: 8px;
-    border-left: 5px solid #A07D5F; /* Accent maro stânga */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Umbră subtilă */
-    overflow: hidden; /* Ascunde colțurile răspunsului */
-}
-
-.faq-question {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 25px;
-    font-size: 1.4rem; /* Mărit puțin */
-    font-weight: bold;
-    color: #333333;
-    cursor: pointer;
-    list-style: none; /* Elimină markerul standard (săgeata) */
-    position: relative; /* Pentru icon */
-}
-
-/* Elimină săgeata default din Chrome/Safari */
-.faq-question::-webkit-details-marker {
-    display: none;
-}
-
-/* Elimină săgeata default din Firefox */
-.faq-question::marker {
-   display: none;
-}
-
-.faq-icon {
-    width: 24px;
-    height: 24px;
-    border: 2px solid #A07D5F; /* Cerc maro */
-    border-radius: 50%;
-    position: relative;
-    transition: transform 0.3s ease;
-    flex-shrink: 0; /* Previne micșorarea iconiței */
-    margin-left: 15px; /* Spațiu între text și icon */
-}
-
-/* Liniile + și - din icon */
-.faq-icon::before,
-.faq-icon::after {
-    content: '';
-    position: absolute;
-    background-color: #A07D5F; /* Linii maro */
-    transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-/* Linia orizontală (-) */
-.faq-icon::before {
-    width: 12px;
-    height: 2px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-/* Linia verticală (+) */
-.faq-icon::after {
-    width: 2px;
-    height: 12px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-/* Când este deschis, rotește iconița și ascunde linia verticală */
-details[open] > summary .faq-icon {
-     /* Rotește ușor cercul (opțional) */
-}
-
-details[open] > summary .faq-icon::after {
-    transform: translate(-50%, -50%) rotate(90deg);
-    opacity: 0; /* Ascunde linia verticală pentru a face "-" */
-}
-
-.faq-answer {
-    padding: 0 25px 25px 25px; /* Padding sub întrebare */
-    font-size: 1.1rem;
-    line-height: 1.7;
-    color: #555555; /* Gri mai deschis pentru răspuns */
-}
-
-.faq-answer p {
-    margin: 0;
 }
