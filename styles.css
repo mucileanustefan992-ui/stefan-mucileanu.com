@@ -4,6 +4,7 @@ html, body {
     font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column;
+    /* Fundal crem */
     background: #F6F4F0;
     scroll-behavior: smooth;
 }
@@ -115,7 +116,7 @@ html, body {
     transition-duration: 0.1s;
 }
 
-/* Stiluri header pagina de contact (contact.html) - Adaptăm fontul numelui */
+/* Stiluri header pagina de contact (contact.html) */
 .contact-header {
     display: flex;
     justify-content: space-between;
@@ -304,42 +305,60 @@ html, body {
 /* --- Stiluri Secțiune Intro Despre --- */
 .about-intro-section {
     background-color: #F6F4F0;
-    padding: 80px 50px;
+    padding: 100px 80px; /* Ajustat padding */
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 40px;
+    flex-direction: column; /* Stack rows vertically */
+    gap: 80px;
     position: relative;
     z-index: 5;
-    min-height: 50vh;
     box-sizing: border-box;
 }
 
+.intro-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
 .intro-text-content {
-    flex-grow: 1;
-    max-width: 600px;
-    text-align: center;
+    flex-basis: 55%;
     color: #333333;
-    font-size: 1.6rem;
-    line-height: 1.6;
+    font-size: 1.2rem;
+    line-height: 1.7;
+    text-align: left;
+}
+
+.intro-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #A07D5F;
+    margin-bottom: 25px;
+    font-family: Arial, sans-serif;
 }
 
 .intro-text-content p {
     margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 1.4rem;
 }
 
 .image-placeholder {
-    width: 250px;
-    height: 350px;
+    flex-basis: 40%;
+    height: 400px;
     background-color: #e0e0e0;
     border: 2px dashed #A07D5F;
     display: flex;
     justify-content: center;
     align-items: center;
     color: #A07D5F;
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-family: 'Courier New', Courier, monospace;
     flex-shrink: 0;
+    border-radius: 10px;
 }
 
 /* --- Stiluri noua secțiune SERVICII (pe index.html) --- */
@@ -348,7 +367,7 @@ html, body {
     padding: 120px 50px 100px 50px;
     position: relative;
     z-index: 5;
-    background-color: transparent;
+    background-color: transparent; /* Changed to transparent to show body background */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -445,8 +464,6 @@ html, body {
     text-align: left;
     font-weight: 700;
 }
-
-/* Stiluri EKG Divider - Scoase */
 
 /* Stiluri pentru noua secțiune (FAQ) */
 .faq-section {
