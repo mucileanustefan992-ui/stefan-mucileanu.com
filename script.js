@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
         particle.classList.add('particle');
         particlesContainer.appendChild(particle);
 
-        const size = Math.random() * 6 + 2; // Particule puțin mai mici (2px - 8px)
+        const size = Math.random() * 8 + 4; // Particule puțin mai mici (2px - 8px)
         const duration = Math.random() * 20 + 15; // Durată animație (15s - 35s)
         const delay = Math.random() * -duration; // Start cu delay negativ
 
