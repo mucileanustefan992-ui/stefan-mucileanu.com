@@ -28,19 +28,24 @@ html, body {
 }
 
 .site-name {
-    font-size: 1.8rem;
-    font-weight: bold;
-    font-family: Arial, sans-serif;
+    font-size: 2.5rem; /* Mărit puțin fontul */
+    font-weight: normal; /* Font normal, nu bold */
+    font-family: 'cursive', sans-serif; /* Font cursiv standard */
+    letter-spacing: 1px; /* Spațiere între litere */
+}
+
+/* Scoatem text-transform uppercase pentru font cursiv */
+.name-stefan,
+.name-mucileanu {
+    text-transform: none;
 }
 
 .name-stefan {
     color: #000000;
-    text-transform: uppercase;
 }
 
 .name-mucileanu {
     color: #A07D5F;
-    text-transform: uppercase;
 }
 
 .main-nav ul {
@@ -111,7 +116,7 @@ html, body {
     transition-duration: 0.1s;
 }
 
-/* Stiluri header pagina de contact (contact.html) */
+/* Stiluri header pagina de contact (contact.html) - Adaptăm fontul numelui */
 .contact-header {
     display: flex;
     justify-content: space-between;
@@ -125,17 +130,20 @@ html, body {
     z-index: 100;
 }
 .contact-header .site-name {
-    font-family: Arial, sans-serif;
-    font-size: 1.8rem;
-    font-weight: bold;
+    font-size: 2.5rem;
+    font-weight: normal;
+    font-family: 'cursive', sans-serif;
+    letter-spacing: 1px;
+}
+.contact-header .name-stefan,
+.contact-header .name-mucileanu {
+    text-transform: none;
 }
 .contact-header .name-stefan {
     color: #000000;
-    text-transform: uppercase;
 }
 .contact-header .name-mucileanu {
     color: #A07D5F;
-    text-transform: uppercase;
 }
 .contact-nav ul {
     margin: 0;
@@ -180,7 +188,7 @@ html, body {
     justify-content: center;
     align-items: center;
     flex-grow: 1;
-    text-align: center;
+    text-align: center; /* Centrare implicită */
     padding: 100px 50px;
     min-height: calc(100vh - 83px);
     box-sizing: border-box;
@@ -198,43 +206,41 @@ html, body {
     z-index: 10;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; /* Centrare pe orizontală */
     gap: 20px;
+    max-width: 1200px; /* Limităm lățimea containerului central */
+    margin: 0 auto; /* Centrare container */
 }
 
 .main-title {
     font-size: 5.25rem;
     font-weight: bold;
     color: #000000;
-    margin: 0 0 15px 0;
+    margin: 0; /* Scoatem margin-bottom */
     line-height: 1.2;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.main-title .green-text {
-    color: #000000;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+/* Stil pentru fiecare linie a titlului */
+.main-title .title-line {
+    display: block; /* Forțează fiecare span pe un rând nou */
+    margin-bottom: 10px; /* Spațiu între rânduri */
+}
+
+.main-title .brown-text { /* Schimbat din green-text */
+    color: #A07D5F; /* Maro */
+    text-shadow: 0 0 10px rgba(160, 125, 95, 0.3);
 }
 
 .subtitle {
     font-size: 2.25rem;
     color: #333333;
-    margin: 0 0 25px 0;
+    margin: 15px 0 25px 0; /* Ajustat marginile */
 }
 
+/* Scoatem săgeata */
 .arrow-down {
-    width: 0;
-    height: 0;
-    border-left: 15px solid transparent;
-    border-right: 15px solid transparent;
-    border-top: 20px solid #A07D5F;
-    margin-bottom: 25px;
-    animation: bounceArrow 1s infinite alternate;
-}
-
-@keyframes bounceArrow {
-    from { transform: translateY(-5px); }
-    to { transform: translateY(5px); }
+   display: none;
 }
 
 /* Particule */
@@ -263,26 +269,11 @@ html, body {
 }
 
 @keyframes floatAround {
-    0% {
-        transform: translate(var(--x-start), var(--y-start)) scale(var(--scale-start));
-        opacity: 0;
-    }
-    25% {
-        transform: translate(var(--x-mid1), var(--y-mid1)) scale(var(--scale-mid));
-        opacity: 0.5;
-    }
-    50% {
-        transform: translate(var(--x-mid2), var(--y-mid2)) scale(var(--scale-start));
-        opacity: 0.2;
-    }
-    75% {
-        transform: translate(var(--x-mid3), var(--y-mid3)) scale(var(--scale-mid));
-        opacity: 0.5;
-    }
-    100% {
-        transform: translate(var(--x-end), var(--y-end)) scale(var(--scale-start));
-        opacity: 0;
-    }
+    0% { transform: translate(var(--x-start), var(--y-start)) scale(var(--scale-start)) opacity(0); }
+    25% { transform: translate(var(--x-mid1), var(--y-mid1)) scale(var(--scale-mid)) opacity(0.5); }
+    50% { transform: translate(var(--x-mid2), var(--y-mid2)) scale(var(--scale-start)) opacity(0.2); }
+    75% { transform: translate(var(--x-mid3), var(--y-mid3)) scale(var(--scale-mid)) opacity(0.5); }
+    100% { transform: translate(var(--x-end), var(--y-end)) scale(var(--scale-start)) opacity(0); }
 }
 
 .blinking-contact-button {
@@ -309,16 +300,9 @@ html, body {
 }
 
 @keyframes blinkSimpleBrown {
-     0% {
-        opacity: 1;
-        box-shadow: 0 0 15px rgba(160, 125, 95, 0.4), 0 0 25px rgba(160, 125, 95, 0.2);
-    }
-    100% {
-        opacity: 0.85;
-        box-shadow: 0 0 20px rgba(160, 125, 95, 0.6), 0 0 30px rgba(160, 125, 95, 0.3);
-    }
+     0% { opacity: 1; box-shadow: 0 0 15px rgba(160, 125, 95, 0.4), 0 0 25px rgba(160, 125, 95, 0.2); }
+    100% { opacity: 0.85; box-shadow: 0 0 20px rgba(160, 125, 95, 0.6), 0 0 30px rgba(160, 125, 95, 0.3); }
 }
-
 
 /* --- Stiluri noua secțiune SERVICII (pe index.html) --- */
 .services-section {
@@ -343,7 +327,6 @@ html, body {
     text-shadow: 0 0 15px rgba(160, 125, 95, 0.5), 0 0 25px rgba(160, 125, 95, 0.3);
 }
 
-
 .section-title {
     font-size: 3rem;
     color: #000000;
@@ -358,7 +341,7 @@ html, body {
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr); /* 2 coloane */
     gap: 60px;
     width: 100%;
     max-width: 1600px;
@@ -424,7 +407,10 @@ html, body {
     font-weight: 700;
 }
 
-/* Stiluri pentru noua secțiune (exemplu) */
+/* Scoatem stilurile EKG */
+/* .ekg-container, .ekg-svg, #wave-group, @keyframes slide-right, #ekg-path { ... } */
+
+/* Stiluri pentru noua secțiune (placeholder) */
 .new-content-section {
     background-color: #F6F4F0;
     color: #333333;
@@ -591,11 +577,23 @@ html, body {
 }
 
 .footer-branding {
-    font-size: 1.8rem;
-    font-weight: bold;
-    text-transform: uppercase;
+    font-size: 1.8rem; /* Ajustăm să fie similar cu headerul */
+    font-weight: normal;
+    font-family: 'cursive', sans-serif;
+    letter-spacing: 1px;
     color: #F6F4F0;
+    text-transform: none; /* Scoatem uppercase pentru font cursiv */
 }
+
+/* Aplicăm și aici fontul cursiv */
+.footer-name {
+    font-family: 'cursive', sans-serif;
+    font-size: 2.5rem;
+    font-weight: normal;
+    text-transform: none;
+    color: #F6F4F0; /* Numele va fi crem deschis */
+}
+
 
 .footer-socials {
     display: flex;
