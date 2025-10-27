@@ -424,23 +424,27 @@ html, body {
     font-weight: 700;
 }
 
-
 /* --- NOU: Stiluri EKG Divider --- */
 .ekg-container {
     width: 100%;
     height: 120px;
     overflow: hidden;
-    background: transparent; /* Păstrează fundalul crem al paginii */
-    position: relative; /* Asigură că stă peste particule */
-    z-index: 5;
-    margin-top: -1px; /* Suprapuneri pentru a evita linii fine */
+    /* NOU: Setăm fundalul explicit */
+    background-color: #F6F4F0;
+    position: relative;
+    /* NOU: Mărim z-index-ul considerabil */
+    z-index: 50;
+    margin-top: -1px;
     margin-bottom: -1px;
 }
 
 .ekg-svg {
-    width: 200%; /* Dublu pentru loop */
+    width: 200%;
     height: 100%;
     display: block;
+    /* NOU: Scoatem temporar masca pentru test */
+    /* mask-image: linear-gradient(to right, black 70%, transparent 100%); */
+    /* -webkit-mask-image: linear-gradient(to right, black 70%, transparent 100%); */
 }
 
 #wave-group {
@@ -456,6 +460,10 @@ html, body {
 
 #ekg-path {
     vector-effect: non-scaling-stroke;
+    /* Asigurăm culoarea aici, deși e și în SVG */
+    stroke: #A07D5F;
+    stroke-width: 3; /* Mărit puțin grosimea pentru vizibilitate */
+    fill: none;
 }
 
 /* Stiluri pentru noua secțiune (exemplu) */
