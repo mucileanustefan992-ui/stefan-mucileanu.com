@@ -407,8 +407,8 @@ html, body {
 /* Scoatem stilurile EKG */
 /* .ekg-container, .ekg-svg, #wave-group, @keyframes slide-right, #ekg-path { ... } */
 
-/* Stiluri pentru noua secțiune (FAQ) */
-.faq-section { /* Redenumit din .new-content-section */
+/* --- Stiluri Secțiune FAQ --- */
+.faq-section {
     background-color: #F6F4F0;
     color: #333333;
     padding: 100px 50px;
@@ -419,25 +419,25 @@ html, body {
 }
 
 .faq-main-title {
-    font-size: 4.5rem; /* Mărimea nouă */
+    font-size: 4.5rem;
     color: #A07D5F;
     margin-bottom: 50px;
     font-weight: bold;
-    /* Glow maro */
     text-shadow: 0 0 10px rgba(160, 125, 95, 0.6),
                  0 0 20px rgba(160, 125, 95, 0.4),
                  0 0 30px rgba(160, 125, 95, 0.2);
 }
 
 .faq-container {
-    max-width: 1200px; /* Lățimea nouă */
+    /* NOU: Mărit lățimea maximă */
+    max-width: 1400px; /* Era 1200px */
     margin: 0 auto;
     text-align: left;
 }
 
 .faq-item {
     background-color: #ffffff;
-    margin-bottom: 20px;
+    margin-bottom: 25px; /* Mărit spațiul între itemi */
     border-radius: 8px;
     border-left: 5px solid #A07D5F;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
@@ -448,8 +448,10 @@ html, body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 25px;
-    font-size: 1.4rem;
+    /* NOU: Mărit padding-ul */
+    padding: 25px 30px; /* Era 20px 25px */
+    /* NOU: Mărit font-size */
+    font-size: 1.6rem; /* Era 1.4rem */
     font-weight: bold;
     color: #333333;
     cursor: pointer;
@@ -501,9 +503,11 @@ details[open] > summary .faq-icon::after {
 }
 
 .faq-answer {
-    padding: 0 25px 25px 25px;
-    font-size: 1.1rem;
-    line-height: 1.7;
+    /* NOU: Mărit padding-ul */
+    padding: 0 30px 30px 30px; /* Era 0 25px 25px 25px */
+    /* NOU: Mărit font-size */
+    font-size: 1.25rem; /* Era 1.1rem */
+    line-height: 1.8; /* Ajustat line-height */
     color: #555555;
 }
 
