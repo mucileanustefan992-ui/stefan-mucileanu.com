@@ -266,13 +266,29 @@ html, body {
 }
 
 @keyframes floatAround {
-    0% { transform: translate(var(--x-start), var(--y-start)) scale(var(--scale-start)) opacity(0); }
-    25% { transform: translate(var(--x-mid1), var(--y-mid1)) scale(var(--scale-mid)) opacity(0.6); }
-    50% { transform: translate(var(--x-mid2), var(--y-mid2)) scale(var(--scale-start)) opacity(0.3); }
-    75% { transform: translate(var(--x-mid3), var(--y-mid3)) scale(var(--scale-mid)) opacity(0.6); }
-    100% { transform: translate(var(--x-end), var(--y-end)) scale(var(--scale-start)) opacity(0); }
+    0% {
+        transform: translate(var(--x-start), var(--y-start)) scale(var(--scale-start));
+        opacity: 0;
+    }
+    25% {
+        transform: translate(var(--x-mid1), var(--y-mid1)) scale(var(--scale-mid));
+        opacity: 0.6;
+    }
+    50% {
+        transform: translate(var(--x-mid2), var(--y-mid2)) scale(var(--scale-start));
+        opacity: 0.3;
+    }
+    75% {
+        transform: translate(var(--x-mid3), var(--y-mid3)) scale(var(--scale-mid));
+        opacity: 0.6;
+    }
+    100% {
+        transform: translate(var(--x-end), var(--y-end)) scale(var(--scale-start));
+        opacity: 0;
+    }
 }
 /* --- Sfârșit Particule --- */
+
 
 .blinking-contact-button {
     display: inline-block;
