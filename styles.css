@@ -19,7 +19,7 @@ html, body {
     flex-shrink: 0;
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 100; /* Header-ul trebuie să fie cel mai sus */
 }
 
 .site-name-link {
@@ -182,7 +182,8 @@ html, body {
 .main-content-area {
     background-color: transparent;
     overflow: visible;
-    position: relative;
+    position: relative; /* Necesar pentru z-index */
+    z-index: 5; /* Peste particule */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -198,11 +199,12 @@ html, body {
     padding-top: 100px;
     padding-bottom: 100px;
     min-height: calc(100vh - 83px);
+    z-index: 5; /* Asigurăm că și pagina de contact e peste particule */
 }
 
 .content-wrapper {
     position: relative;
-    z-index: 10;
+    z-index: 10; /* Conținutul specific trebuie să fie cel mai sus */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -236,10 +238,6 @@ html, body {
     margin: 15px 0 25px 0;
 }
 
-.arrow-down {
-   display: none;
-}
-
 /* --- Particule --- */
 .floating-particles {
     position: fixed;
@@ -249,8 +247,8 @@ html, body {
     height: 100%;
     background: transparent;
     overflow: hidden;
-    /* NOU: Mărit z-index pentru a fi deasupra fundalului secțiunilor, dar sub conținut */
-    z-index: 2; /* Era 1 sau 0 */
+    /* NOU: z-index setat la 1 */
+    z-index: 1;
     pointer-events: none;
 }
 
@@ -258,47 +256,23 @@ html, body {
     position: absolute;
     width: var(--size);
     height: var(--size);
-    background-color: rgba(111, 78, 55, 0.3); /* Maro cald transparent */
+    background-color: rgba(160, 125, 95, 0.15); /* Maro transparent */
     border-radius: 50%;
-    box-shadow: 0 0 8px rgba(111, 78, 55, 0.15); /* o mică strălucire difuză */
+    /* Am scos umbra de la particule */
+    box-shadow: none;
     animation-name: floatAround;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
 }
 
 @keyframes floatAround {
-    0% {
-        transform: translate(var(--x-start), var(--y-start)) scale(var(--scale-start));
-        opacity: 0;
-    }
-    25% {
-        transform: translate(var(--x-mid1), var(--y-mid1)) scale(var(--scale-mid));
-        opacity: 0.7;
-    }
-    50% {
-        transform: translate(var(--x-mid2), var(--y-mid2)) scale(var(--scale-start));
-        opacity: 0.4;
-    }
-    75% {
-        transform: translate(var(--x-mid3), var(--y-mid3)) scale(var(--scale-mid));
-        opacity: 0.7;
-    }
-    100% {
-        transform: translate(var(--x-end), var(--y-end)) scale(var(--scale-start));
-        opacity: 0;
-    }
+    0% { transform: translate(var(--x-start), var(--y-start)) scale(var(--scale-start)) opacity(0); }
+    25% { transform: translate(var(--x-mid1), var(--y-mid1)) scale(var(--scale-mid)) opacity(0.6); }
+    50% { transform: translate(var(--x-mid2), var(--y-mid2)) scale(var(--scale-start)) opacity(0.3); }
+    75% { transform: translate(var(--x-mid3), var(--y-mid3)) scale(var(--scale-mid)) opacity(0.6); }
+    100% { transform: translate(var(--x-end), var(--y-end)) scale(var(--scale-start)) opacity(0); }
 }
 /* --- Sfârșit Particule --- */
-
-/* Asigură-te că secțiunile de conținut au un z-index mai mare */
-.about-intro-section,
-.services-section,
-.faq-section {
-    position: relative; /* Necesar pentru z-index */
-    z-index: 5; /* Mai mare decât particulele */
-    /* ... restul stilurilor ... */
-    background-color: transparent; /* Verifică să fie transparent */
-}
 
 .blinking-contact-button {
     display: inline-block;
@@ -336,6 +310,7 @@ html, body {
     flex-direction: column;
     gap: 80px;
     position: relative;
+    /* NOU: z-index mai mare decât particulele */
     z-index: 5;
     box-sizing: border-box;
 }
@@ -392,6 +367,7 @@ html, body {
     min-height: auto;
     padding: 120px 50px 100px 50px;
     position: relative;
+    /* NOU: z-index mai mare decât particulele */
     z-index: 5;
     background-color: transparent;
     display: flex;
@@ -498,6 +474,7 @@ html, body {
     padding: 100px 50px;
     text-align: center;
     position: relative;
+    /* NOU: z-index mai mare decât particulele */
     z-index: 5;
     font-family: Arial, sans-serif;
 }
