@@ -658,36 +658,32 @@ html, body {
 /* --- Waveform Divider Styles --- */
 .waveform-divider {
     width: 100%;
-    height: 60px; /* Înălțimea SVG-ului */
-    background-color: #F6F4F0; /* Fundalul general al paginii */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden; /* Asigură că unda nu depășește marginea */
-    position: relative;
-    z-index: 5; /* Asigură că este deasupra particulelor dacă este cazul */
+    height: 80px; /* Mărit puțin înălțimea pentru vizibilitate */
+    background-color: #F6F4F0; /* Fundal crem */
+    position: relative; /* Necesar pentru mască */
+    z-index: 5;
+    margin-top: -1px; /* Suprapunere mică pentru a evita linii fine */
+    margin-bottom: -1px; /* Suprapunere mică */
+    overflow: hidden; /* Ascunde ce depășește */
 }
 
-.waveform-svg {
+.waveform-divider svg {
+    display: block; /* Elimină spațiul de sub SVG */
     width: 100%;
     height: 100%;
-    fill: none; /* Nu are umplere solidă */
-    stroke: #A07D5F; /* Culoarea maro a undei */
-    stroke-width: 3px; /* Grosimea liniei */
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    /* Adăugăm un gradient subtil pentru a imita estomparea la dreapta */
-    /* Aceasta este o soluție CSS, pentru un gradient real în SVG ar fi necesară o modificare directă în SVG */
-    mask-image: linear-gradient(to right, black 80%, transparent 100%);
-    -webkit-mask-image: linear-gradient(to right, black 80%, transparent 100%);
+    /* Mască pentru efectul de fade-out spre dreapta */
+    mask-image: linear-gradient(to right, black 70%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, black 70%, transparent 100%);
 }
 
 /* Stiluri pentru noua secțiune (exemplu) */
 .new-content-section {
-    background-color: #F6F4F0; /* Asigură că fundalul se potrivește */
+    background-color: #F6F4F0;
     color: #333333;
     padding: 80px 50px;
     text-align: center;
+    position: relative; /* Asigură că stă peste particule */
+    z-index: 5;
 }
 
 .new-content-section h2 {
