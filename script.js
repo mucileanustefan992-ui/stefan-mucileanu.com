@@ -1,26 +1,37 @@
 document.addEventListener('DOMContentLoaded', () => {
     const particlesContainer = document.querySelector('.floating-particles');
-    const numberOfParticles = 180; // mai multe particule
+    const numberOfParticles = 180; // numărul total de particule
 
-    if (particlesContainer) {
+    if (!particlesContainer) return;
+
+    // Funcție care generează particulele
+    function generateParticles() {
+        // Golește containerul la reîncărcare/redimensionare
+        particlesContainer.innerHTML = '';
+
+        // Calculăm înălțimea totală a paginii (nu doar viewport)
+        const totalHeight = Math.max(
+            document.body.scrollHeight,
+            document.documentElement.scrollHeight
+        );
+
         for (let i = 0; i < numberOfParticles; i++) {
-            createParticle();
+            createParticle(totalHeight);
         }
     }
 
-    function createParticle() {
+    // Funcția care creează fiecare particulă individuală
+    function createParticle(totalHeight) {
         const particle = document.createElement('div');
         particle.classList.add('particle');
         particlesContainer.appendChild(particle);
 
-        // Particule puțin mai mari
         const size = Math.random() * 10 + 6; // 6px - 16px
         const duration = Math.random() * 25 + 20; // 20s - 45s
         const delay = Math.random() * -duration;
 
-        // Poziții și traiectorii variabile
         const startX = Math.random() * window.innerWidth;
-        const startY = Math.random() * window.innerHeight;
+        const startY = Math.random() * totalHeight;
         const endX = startX + (Math.random() - 0.5) * 1000;
         const endY = startY + (Math.random() - 0.5) * 1000;
 
@@ -49,4 +60,15 @@ document.addEventListener('DOMContentLoaded', () => {
         particle.style.setProperty('--scale-start', scaleStart);
         particle.style.setProperty('--scale-mid', scaleMid);
     }
+
+    // Generează particulele inițial
+    generateParticles();
+
+    // Recalculează și regenerează particulele dacă se redimensionează fereastra
+    window.addEventListener('resize', () => {
+        clearTimeout(window._resizeTimeout);
+        window._resizeTimeout = setTimeout(() => {
+            generateParticles();
+        }, 400);
+    });
 });
