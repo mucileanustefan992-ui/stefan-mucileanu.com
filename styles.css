@@ -240,15 +240,16 @@ html, body {
 
 /* --- Particule (vizibile pe toate paginile) --- */
 .floating-particles {
-    position: fixed;
+    position: fixed; /* rămâne peste tot, indiferent de scroll */
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: transparent;
-    overflow: hidden;
-    z-index: 1; /* sub conținut, peste fundal */
+    width: 100%;
+    height: 100%; /* acoperă tot viewport-ul mereu */
+    z-index: -1;
     pointer-events: none;
+    overflow: hidden;
+}
+
 }
 
 .particle {
