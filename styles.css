@@ -718,9 +718,6 @@ details[open] > summary .faq-icon::after {
     font-family: 'Courier New', Courier, monospace;
     text-align: center;
     flex-shrink: 0;
-    /* NOU: z-index mai mare decât particulele */
-    position: relative;
-    z-index: 5;
 }
 
 .footer-top {
@@ -767,8 +764,9 @@ details[open] > summary .faq-icon::after {
 }
 
 .social-button svg {
-    width: 24px;
-    height: 24px;
+    /* Ajustăm dimensiunea pentru logo-urile noi */
+    width: 28px; 
+    height: 28px;
     fill: #A07D5F;
     transition: fill 0.3s ease;
 }
