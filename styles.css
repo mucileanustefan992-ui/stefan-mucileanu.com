@@ -6,6 +6,8 @@ html, body {
     flex-direction: column;
     background: #F6F4F0;
     scroll-behavior: smooth;
+    position: relative;
+    overflow-x: hidden;
 }
 
 /* Stiluri header principal (index.html) */
@@ -195,10 +197,9 @@ html, body {
 }
 
 .contact-page-main,
-.legal-page-main { /* Aplicăm și paginilor legale */
+.legal-page-main {
     align-items: flex-start;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding: 80px 50px; /* Redus padding-ul de sus/jos */
     min-height: calc(100vh - 83px);
     z-index: 5;
 }
@@ -567,6 +568,54 @@ details[open] > summary .faq-icon::after {
 .faq-answer p {
     margin: 0;
 }
+
+/* --- STILURI PAGINI LEGALE (Privacy & Terms) --- */
+.legal-content-container {
+    width: 90%;
+    max-width: 1000px; /* Mărit lățimea */
+    margin: 0 auto;
+    padding: 50px;
+    position: relative;
+    z-index: 10;
+    color: #333333; /* Text principal gri închis */
+    font-family: Arial, sans-serif; /* Font standard */
+    text-align: left; /* Aliniat stânga */
+    background-color: #ffffff; /* Fundal alb */
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Umbră subtilă */
+}
+
+.legal-content-container h1 {
+    font-size: 3.5rem; /* Mărit */
+    color: #A07D5F; /* Maro */
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.legal-content-container h2 {
+    font-size: 2rem; /* Mărit */
+    color: #000000; /* Negru */
+    margin-top: 40px;
+    margin-bottom: 15px;
+}
+
+.legal-content-container p, .legal-content-container li {
+    font-size: 1.25rem; /* Mărit */
+    line-height: 1.8; /* Spațiere */
+    color: #555555; /* Gri mediu */
+    margin-bottom: 20px;
+}
+
+.legal-content-container ul {
+    padding-left: 40px;
+}
+
+.legal-content-container .last-updated {
+    font-style: italic;
+    color: #777777;
+    margin-bottom: 30px;
+}
+
 
 /* --- STILURI PAGINA DE CONTACT (formular) --- */
 
