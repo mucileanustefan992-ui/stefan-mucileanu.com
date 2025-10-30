@@ -194,7 +194,8 @@ html, body {
     box-sizing: border-box;
 }
 
-.contact-page-main {
+.contact-page-main,
+.legal-page-main { /* Aplicăm și paginilor legale */
     align-items: flex-start;
     padding-top: 100px;
     padding-bottom: 100px;
@@ -255,9 +256,9 @@ html, body {
     position: absolute;
     width: var(--size);
     height: var(--size);
-    background-color: rgba(160, 125, 95, 0.15); /* Maro transparent */
+    background-color: rgba(111, 78, 55, 0.3);
     border-radius: 50%;
-    box-shadow: none;
+    box-shadow: 0 0 8px rgba(111, 78, 55, 0.15);
     animation-name: floatAround;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
@@ -265,9 +266,9 @@ html, body {
 
 @keyframes floatAround {
     0% { transform: translate(var(--x-start), var(--y-start)) scale(var(--scale-start)) opacity(0); }
-    25% { transform: translate(var(--x-mid1), var(--y-mid1)) scale(var(--scale-mid)) opacity(0.6); }
-    50% { transform: translate(var(--x-mid2), var(--y-mid2)) scale(var(--scale-start)) opacity(0.3); }
-    75% { transform: translate(var(--x-mid3), var(--y-mid3)) scale(var(--scale-mid)) opacity(0.6); }
+    25% { transform: translate(var(--x-mid1), var(--y-mid1)) scale(var(--scale-mid)) opacity(0.7); }
+    50% { transform: translate(var(--x-mid2), var(--y-mid2)) scale(var(--scale-start)) opacity(0.4); }
+    75% { transform: translate(var(--x-mid3), var(--y-mid3)) scale(var(--scale-mid)) opacity(0.7); }
     100% { transform: translate(var(--x-end), var(--y-end)) scale(var(--scale-start)) opacity(0); }
 }
 /* --- Sfârșit Particule --- */
@@ -700,8 +701,8 @@ details[open] > summary .faq-icon::after {
     font-family: 'Courier New', Courier, monospace;
     text-align: center;
     flex-shrink: 0;
-    position: relative; /* Necesar pentru z-index */
-    z-index: 5; /* Peste particule */
+    position: relative;
+    z-index: 5;
 }
 
 .footer-top {
