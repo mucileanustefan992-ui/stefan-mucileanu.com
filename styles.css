@@ -10,6 +10,22 @@ html, body {
     overflow-x: hidden;
 }
 
+/* Stiluri Generale pentru Main Content */
+.main-content-area {
+    background-color: transparent;
+    overflow: visible;
+    position: relative;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    text-align: center;
+    padding: 100px 50px;
+    min-height: calc(100vh - 83px);
+    box-sizing: border-box;
+}
+
 /* --- Particule (vizibile pe toate paginile) --- */
 .floating-particles {
     position: fixed;
@@ -44,21 +60,6 @@ html, body {
 }
 /* --- Sfârșit Particule --- */
 
-/* Stiluri Generale pentru Main Content */
-.main-content-area {
-    background-color: transparent;
-    overflow: visible;
-    position: relative;
-    z-index: 5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-grow: 1;
-    text-align: center;
-    padding: 100px 50px;
-    min-height: calc(100vh - 83px);
-    box-sizing: border-box;
-}
 
 /* --- FOOTER STYLES (Global) --- */
 .site-footer {
@@ -177,7 +178,6 @@ html, body {
 /* --- STILURI MEDIA QUERIES (Global) --- */
 @media (max-width: 768px) {
     
-    /* Ajustări Header */
     .site-header,
     .contact-header {
         flex-direction: column;
@@ -205,7 +205,6 @@ html, body {
         justify-content: center;
     }
     
-    /* Stil Cursiv pentru Nume pe Mobil */
     .site-name,
     .contact-header .site-name {
         font-size: 2.5rem;
@@ -227,7 +226,6 @@ html, body {
         text-transform: none;
     }
 
-    /* Ajustări Conținut Principal */
     .main-content-area {
         padding: 60px 20px;
     }
@@ -240,7 +238,6 @@ html, body {
         font-size: 1.5rem;
     }
 
-    /* Ajustări Secțiune Intro */
     .about-intro-section {
         padding: 60px 20px;
     }
@@ -258,7 +255,6 @@ html, body {
         font-size: 1.1rem;
     }
 
-    /* Ajustări Secțiune Servicii */
     .services-section {
         padding: 80px 20px;
     }
@@ -290,7 +286,6 @@ html, body {
         font-size: 1.1rem;
     }
 
-    /* Ajustări Secțiune FAQ */
     .faq-section {
         padding: 80px 20px;
     }
@@ -313,7 +308,6 @@ html, body {
         padding: 0 20px 20px 20px;
     }
 
-    /* Ajustări Pagini Legale */
     .legal-content-container {
         padding: 20px;
     }
@@ -327,7 +321,6 @@ html, body {
         font-size: 1rem;
     }
 
-    /* Ajustări Formular Contact */
     .form-container {
         padding: 20px;
     }
@@ -335,7 +328,6 @@ html, body {
         font-size: 2rem;
     }
 
-    /* Ajustări Footer */
     .site-footer {
         padding: 40px 20px;
     }
