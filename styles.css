@@ -10,7 +10,8 @@ html, body {
     overflow-x: hidden;
 }
 
-/* Stiluri header principal (index.html) */
+/* --- Stiluri PC (Implicit) --- */
+
 .site-header {
     display: flex;
     justify-content: space-between;
@@ -30,15 +31,16 @@ html, body {
 }
 
 .site-name {
-    font-size: 2.5rem;
-    font-weight: normal;
-    font-family: 'cursive', 'Brush Script MT', sans-serif;
+    /* Stil PC: Arial, Bold, Uppercase */
+    font-size: 1.8rem;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
     letter-spacing: 1px;
 }
 
 .name-stefan,
 .name-mucileanu {
-    text-transform: none;
+    text-transform: uppercase;
 }
 
 .name-stefan {
@@ -131,14 +133,15 @@ html, body {
     z-index: 100;
 }
 .contact-header .site-name {
-    font-size: 2.5rem;
-    font-weight: normal;
-    font-family: 'cursive', 'Brush Script MT', sans-serif;
+    /* Stil PC: Arial, Bold, Uppercase */
+    font-size: 1.8rem;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
     letter-spacing: 1px;
 }
 .contact-header .name-stefan,
 .contact-header .name-mucileanu {
-    text-transform: none;
+    text-transform: uppercase;
 }
 .contact-header .name-stefan {
     color: #000000;
@@ -362,7 +365,7 @@ html, body {
 .intro-image {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Schimbat în 'cover' pentru a umple containerul */
+    object-fit: cover;
     display: block;
 }
 
@@ -573,6 +576,54 @@ details[open] > summary .faq-icon::after {
     margin: 0;
 }
 
+/* --- STILURI PAGINI LEGALE (Privacy & Terms) --- */
+.legal-content-container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 50px;
+    position: relative;
+    z-index: 10;
+    color: #333333;
+    font-family: Arial, sans-serif;
+    text-align: left;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.legal-content-container h1 {
+    font-size: 3.5rem;
+    color: #A07D5F;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.legal-content-container h2 {
+    font-size: 2rem;
+    color: #000000;
+    margin-top: 40px;
+    margin-bottom: 15px;
+}
+
+.legal-content-container p, .legal-content-container li {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    color: #555555;
+    margin-bottom: 20px;
+}
+
+.legal-content-container ul {
+    padding-left: 40px;
+}
+
+.legal-content-container .last-updated {
+    font-style: italic;
+    color: #777777;
+    margin-bottom: 30px;
+}
+
+
 /* --- STILURI PAGINA DE CONTACT (formular) --- */
 
 .form-container {
@@ -727,6 +778,7 @@ details[open] > summary .faq-icon::after {
 }
 
 .footer-name {
+    /* Stil PC: Arial, Bold, Uppercase */
     font-family: Arial, sans-serif;
     font-size: 1.8rem;
     font-weight: bold;
@@ -809,4 +861,160 @@ details[open] > summary .faq-icon::after {
     color: #F6F4F0;
     margin-right: 5px;
     font-weight: bold;
+}
+
+/* --- STILURI MOBILE (TELEFON) --- */
+@media (max-width: 768px) {
+    
+    /* Ajustări Header */
+    .site-header,
+    .contact-header {
+        flex-direction: column;
+        padding: 20px;
+        gap: 15px;
+    }
+    
+    .main-nav ul {
+        gap: 10px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .main-nav a {
+        font-size: 1rem;
+        padding: 8px 10px;
+    }
+    
+    .main-nav a.cta-button {
+        font-size: 1rem;
+        padding: 10px 15px;
+    }
+    
+    .contact-nav ul {
+        justify-content: center;
+    }
+    
+    /* Stil Cursiv pentru Nume pe Mobil */
+    .site-name,
+    .contact-header .site-name {
+        font-size: 2.5rem;
+        font-weight: normal;
+        font-family: 'cursive', 'Brush Script MT', sans-serif;
+    }
+
+    .name-stefan,
+    .contact-header .name-stefan,
+    .name-mucileanu,
+    .contact-header .name-mucileanu {
+        text-transform: none; /* Fără uppercase pe mobil */
+    }
+    
+    .footer-name {
+        font-family: 'cursive', 'Brush Script MT', sans-serif;
+        font-size: 2.5rem;
+        font-weight: normal;
+        text-transform: none;
+    }
+
+    /* Ajustări Conținut Principal */
+    .main-content-area {
+        padding: 60px 20px;
+    }
+    
+    .main-title {
+        font-size: 3rem; /* Titlu mai mic */
+    }
+    
+    .subtitle {
+        font-size: 1.5rem;
+    }
+
+    /* Ajustări Secțiune Intro */
+    .about-intro-section {
+        padding: 60px 20px;
+    }
+    
+    .intro-row {
+        flex-direction: column; /* Stivuim pe mobil */
+        gap: 30px;
+    }
+    
+    .intro-title {
+        font-size: 2rem;
+    }
+    
+    .intro-text-content p {
+        font-size: 1.1rem;
+    }
+
+    /* Ajustări Secțiune Servicii */
+    .services-section {
+        padding: 80px 20px;
+    }
+    
+    .grow-title {
+        font-size: 3.5rem;
+        text-align: center;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr; /* 1 coloană pe mobil */
+        padding: 0 10px;
+        gap: 40px;
+    }
+    
+    .service-card {
+        padding: 30px;
+    }
+    
+    .service-title {
+        font-size: 1.6rem;
+    }
+    
+    .service-description {
+        font-size: 1.1rem;
+    }
+
+    /* Ajustări Secțiune FAQ */
+    .faq-section {
+        padding: 80px 20px;
+    }
+    
+    .faq-main-title {
+        font-size: 2.8rem;
+    }
+    
+    .faq-container {
+        max-width: 100%;
+    }
+    
+    .faq-question {
+        font-size: 1.2rem;
+        padding: 20px;
+    }
+    
+    .faq-answer {
+        font-size: 1rem;
+        padding: 0 20px 20px 20px;
+    }
+    
+    /* Ajustări Footer */
+    .site-footer {
+        padding: 40px 20px;
+    }
+    
+    .footer-top {
+        flex-direction: column;
+        gap: 30px;
+        margin-bottom: 30px;
+    }
+    
+    .footer-bottom {
+        flex-direction: column-reverse;
+        gap: 20px;
+    }
 }
