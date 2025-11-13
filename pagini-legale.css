@@ -1,117 +1,117 @@
 /* Stiluri header pagina de contact (folosit și aici) */
 .contact-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px 80px;
-    background-color: #ffffff;
-    border-bottom: 1px solid #cccccc;
-    flex-shrink: 0;
-    position: sticky;
-    top: 0;
-    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 80px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #cccccc;
+    flex-shrink: 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 .contact-header .site-name {
-    font-size: 2.5rem;
-    font-weight: normal;
-    font-family: Arial, sans-serif;
-    letter-spacing: 1px;
+    font-size: 2.5rem;
+    font-weight: 700;
+    font-family: 'Playfair Display', serif; /* Modificat - Font nou */
+    letter-spacing: 1px;
 }
 .contact-header .name-stefan,
 .contact-header .name-mucileanu {
-    text-transform: uppercase;
+    text-transform: uppercase;
 }
 .contact-header .name-stefan {
-    color: #000000;
+    color: #000000;
 }
 .contact-header .name-mucileanu {
-    color: #A07D5F;
+    color: #000000; /* Modificat - Negru */
 }
 .contact-nav ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: flex;
-    align-items: center;
-    gap: 20px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 .contact-nav-button {
-    display: inline-block;
-    text-decoration: none;
-    color: #000000;
-    font-size: 1.2rem;
-    font-weight: bold;
-    padding: 10px 20px;
-    background-color: #f0f0f0;
-    border: 2px solid #A07D5F;
-    border-radius: 5px;
-    transition: background-color 0.3s, border-color 0.3s, transform 0.2s ease-out, color 0.3s;
-    font-family: 'Courier New', Courier, monospace;
-    text-transform: uppercase;
+    display: inline-block;
+    text-decoration: none;
+    color: #000000;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+    border: 2px solid #FF6600; /* Modificat - Portocaliu */
+    border-radius: 5px;
+    transition: background-color 0.3s, border-color 0.3s, transform 0.2s ease-out, color 0.3s;
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: uppercase;
 }
 .contact-nav-button:hover {
-    background-color: #A07D5F;
-    border-color: #A07D5F;
-    color: #ffffff;
-    transform: translateY(-2px) scale(1.05);
+    background-color: #FF6600; /* Modificat - Portocaliu */
+    border-color: #FF6600; /* Modificat - Portocaliu */
+    color: #ffffff;
+    transform: translateY(-2px) scale(1.05);
 }
 .contact-nav-button.active {
-    background-color: #A07D5F;
-    border-color: #A07D5F;
-    color: #ffffff;
+    background-color: #FF6600; /* Modificat - Portocaliu */
+    border-color: #FF6600; /* Modificat - Portocaliu */
+    color: #ffffff;
 }
 
 /* Stiluri pagina legală */
 .legal-page-main {
-    align-items: flex-start;
-    padding: 80px 50px;
-    min-height: calc(100vh - 83px);
-    z-index: 5;
+    align-items: flex-start;
+    padding: 80px 50px;
+    min-height: calc(100vh - 83px);
+    z-index: 5;
 }
 
 /* --- STILURI PAGINI LEGALE (Privacy & Terms) --- */
 .legal-content-container {
-    width: 90%;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 50px;
-    position: relative;
-    z-index: 10;
-    color: #333333;
-    font-family: Arial, sans-serif;
-    text-align: left;
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 50px;
+    position: relative;
+    z-index: 10;
+    color: #333333;
+    font-family: Arial, sans-serif;
+    text-align: left;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
 .legal-content-container h1 {
-    font-size: 3.5rem;
-    color: #A07D5F;
-    margin-bottom: 10px;
-    font-weight: bold;
+    font-size: 3.5rem;
+    color: #FF6600; /* Modificat - Portocaliu */
+    margin-bottom: 10px;
+    font-weight: bold;
 }
 
 .legal-content-container h2 {
-    font-size: 2rem;
-    color: #000000;
-    margin-top: 40px;
-    margin-bottom: 15px;
+    font-size: 2rem;
+    color: #000000;
+    margin-top: 40px;
+    margin-bottom: 15px;
 }
 
 .legal-content-container p, .legal-content-container li {
-    font-size: 1.25rem;
-    line-height: 1.8;
-    color: #555555;
-    margin-bottom: 20px;
+    font-size: 1.25rem;
+    line-height: 1.8;
+    color: #555555;
+    margin-bottom: 20px;
 }
 
 .legal-content-container ul {
-    padding-left: 40px;
+    padding-left: 40px;
 }
 
 .legal-content-container .last-updated {
-    font-style: italic;
-    color: #777777;
-    margin-bottom: 30px;
+    font-style: italic;
+    color: #777777;
+    margin-bottom: 30px;
 }
