@@ -1,308 +1,151 @@
-/* Import Google Font pentru header */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
-
 html, body {
-    height: 100%;
-    margin: 0;
-    font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    background: #F6F4F0;
-    scroll-behavior: smooth;
-    position: relative;
-    overflow-x: hidden;
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    background: #F6F4F0; /* Fundal crem */
+    scroll-behavior: smooth;
+    position: relative;
+    overflow-x: hidden;
 }
 
-/* Stiluri Generale pentru Main Content */
+/* Stiluri Generale pentru Main Content - aplicabile tuturor paginilor */
 .main-content-area {
-    background-color: transparent;
-    overflow: visible;
-    position: relative;
-    z-index: 5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-grow: 1;
-    text-align: center;
-    padding: 100px 50px;
-    min-height: calc(100vh - 83px);
-    box-sizing: border-box;
+    background-color: transparent;
+    overflow: visible;
+    position: relative;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    text-align: center;
+    padding: 100px 50px;
+    min-height: calc(100vh - 83px); /* Ajustat pentru header */
+    box-sizing: border-box;
 }
 
-/* --- Particulele au fost eliminate --- */
+.content-wrapper {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
-
-/* --- FOOTER STYLES (Global) --- */
+/* --- FOOTER STYLES --- */
 .site-footer {
-    background-color: #FF6600; /* Modificat - Portocaliu */
-    padding: 60px 80px 40px 80px;
-    color: #F6F4F0;
-    font-family: 'Courier New', Courier, monospace;
-    text-align: center;
-    flex-shrink: 0;
-    position: relative;
-    z-index: 5;
+    background-color: #333333; /* Gri închis/Negru */
+    padding: 60px 80px 40px 80px;
+    color: #F6F4F0;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 5;
 }
 
 .footer-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
 }
 
 .footer-branding {
-    font-size: 1.8rem;
-    font-weight: normal;
-    font-family: Arial, sans-serif;
-    letter-spacing: 1px;
-    color: #F6F4F0;
-    text-transform: uppercase;
+    font-size: 1.8rem;
+    font-weight: normal;
+    font-family: Arial, sans-serif;
+    letter-spacing: 1px;
+    color: #F6F4F0;
+    text-transform: uppercase;
 }
 
 .footer-name {
-    font-family: 'Playfair Display', serif; /* Modificat - Font nou */
-    font-size: 2.2rem; /* Modificat */
-    font-weight: 700;
-    text-transform: none; /* Modificat */
-    color: #F6F4F0;
+    font-family: Arial, sans-serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #F6F4F0;
 }
 
 .footer-socials {
-    display: flex;
-    gap: 20px;
-    align-items: center;
+    display: flex;
+    gap: 20px;
+    align-items: center;
 }
 
 .social-button {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: #F6F4F0;
-    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-    text-decoration: none;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #F6F4F0;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .social-button svg {
-    width: 28px;
-    height: 28px;
-    fill: #FF6600; /* Modificat - Portocaliu */
-    transition: fill 0.3s ease;
+    width: 28px;
+    height: 28px;
+    fill: #000000; /* Negru */
+    transition: fill 0.3s ease;
 }
 
 .social-button:hover {
-    background-color: #E65C00; /* Modificat - Portocaliu Hover */
-    transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    background-color: #000000; /* Negru */
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
 }
 
 .social-button:hover svg {
-    fill: #ffffff;
+    fill: #ffffff; /* Alb la hover */
 }
 
 .footer-divider {
-    border-top: 1px solid rgba(246, 244, 240, 0.3);
-    margin: 40px 0;
+    border-top: 1px solid rgba(246, 244, 240, 0.3);
+    margin: 40px 0;
 }
 
 .footer-bottom {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
 }
 
 .copyright {
-    margin: 0;
-    color: #F6F4F0;
-    font-weight: 500;
+    margin: 0;
+    color: #F6F4F0;
+    font-weight: 500;
 }
 
 .footer-links {
-    display: flex;
-    gap: 30px;
+    display: flex;
+    gap: 30px;
 }
 
 .footer-link {
-    color: #F6F4F0;
-    text-decoration: none;
-    transition: color 0.3s ease;
-    font-weight: 500;
+    color: #F6F4F0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-weight: 500;
 }
 
 .footer-link:hover {
-    color: #ffffff;
-    text-decoration: underline;
+    color: #ffffff;
+    text-decoration: underline;
 }
 
 .social-arrow {
-    color: #F6F4F0;
-    margin-right: 5px;
-    font-weight: bold;
-}
-
-
-/* --- STILURI MEDIA QUERIES (Global) --- */
-@media (max-width: 768px) {
-    
-    .site-header,
-    .contact-header {
-        flex-direction: column;
-        padding: 20px;
-        gap: 15px;
-    }
-    
-    .main-nav ul {
-        gap: 10px;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-    
-    .main-nav a {
-        font-size: 1rem;
-        padding: 8px 10px;
-    }
-    
-    .main-nav a.cta-button {
-        font-size: 1rem;
-        padding: 10px 15px;
-    }
-    
-    .contact-nav ul {
-        justify-content: center;
-    }
-    
-    .site-name,
-    .contact-header .site-name {
-        font-size: 2.5rem;
-        font-family: 'Playfair Display', serif; /* Modificat */
-    }
-    
-    .footer-name {
-        font-family: 'Playfair Display', serif; /* Modificat */
-        font-size: 2.5rem;
-        font-weight: 700;
-        text-transform: none;
-    }
-
-    .main-content-area {
-        padding: 60px 20px;
-    }
-    
-    .main-title {
-        font-size: 3rem;
-    }
-    
-    .subtitle {
-        font-size: 1.5rem;
-    }
-
-    .about-intro-section {
-        padding: 60px 20px;
-    }
-    
-    .intro-row {
-        flex-direction: column;
-        gap: 30px;
-    }
-    
-    .intro-title {
-        font-size: 2rem;
-    }
-    
-    .intro-text-content p {
-        font-size: 1.1rem;
-    }
-
-    .services-section {
-        padding: 80px 20px;
-    }
-    
-    .grow-title {
-        font-size: 3.5rem;
-        text-align: center;
-    }
-    
-    .section-title {
-        font-size: 2rem;
-    }
-    
-    .services-grid {
-        grid-template-columns: 1fr;
-        padding: 0 10px;
-        gap: 40px;
-    }
-    
-    .service-card {
-        padding: 30px;
-    }
-    
-    .service-title {
-        font-size: 1.6rem;
-    }
-    
-    .service-description {
-        font-size: 1.1rem;
-    }
-
-    .faq-section {
-        padding: 80px 20px;
-    }
-    
-    .faq-main-title {
-        font-size: 2.8rem;
-    }
-    
-    .faq-container {
-        max-width: 100%;
-    }
-    
-    .faq-question {
-        font-size: 1.2rem;
-        padding: 20px;
-    }
-    
-    .faq-answer {
-        font-size: 1rem;
-        padding: 0 20px 20px 20px;
-    }
-
-    .legal-content-container {
-        padding: 20px;
-    }
-    .legal-content-container h1 {
-        font-size: 2.5rem;
-    }
-    .legal-content-container h2 {
-        font-size: 1.8rem;
-    }
-    .legal-content-container p, .legal-content-container li {
-        font-size: 1rem;
-    }
-
-    .form-container {
-        padding: 20px;
-    }
-    .form-title {
-        font-size: 2rem;
-    }
-
-    .site-footer {
-        padding: 40px 20px;
-    }
-    
-    .footer-top {
-        flex-direction: column;
-        gap: 30px;
-        margin-bottom: 30px;
-    }
-    
-    .footer-bottom {
-        flex-direction: column-reverse;
-        gap: 20px;
-    }
+    color: #F6F4F0;
+    margin-right: 5px;
+    font-weight: bold;
 }
