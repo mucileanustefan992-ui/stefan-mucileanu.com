@@ -59,18 +59,18 @@ html, body {
 .footer-branding {
     font-size: 1.8rem;
     font-weight: normal;
-    font-family: Arial, sans-serif;
-    letter-spacing: 1px;
-    color: #F6F4F0;
-    text-transform: uppercase;
+    font-family: 'Great Vibes', cursive; /* NOU: Font Great Vibes */
+    letter-spacing: 0; /* Dezactivăm letter-spacing pentru font caligrafic */
+    color: #FF6600; /* NOU: Portocaliu */
+    text-transform: none; /* Nu mai e uppercase */
 }
 
 .footer-name {
-    font-family: Arial, sans-serif;
+    font-family: 'Great Vibes', cursive; /* NOU: Font Great Vibes */
     font-size: 1.8rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: #F6F4F0;
+    font-weight: normal; /* Nu mai e bold */
+    text-transform: none; /* Nu mai e uppercase */
+    color: #FF6600; /* NOU: Portocaliu */
 }
 
 .footer-socials {

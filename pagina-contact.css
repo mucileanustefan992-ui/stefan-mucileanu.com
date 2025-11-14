@@ -15,21 +15,16 @@
 }
 .contact-header .site-name {
     font-size: 2.5rem;
-    font-weight: normal;
-    font-family: Arial, sans-serif;
-    letter-spacing: 1px;
-    display: flex; /* Permite alinierea pe o singură linie */
-    align-items: center; /* Centrează vertical */
+    font-weight: normal; /* Nu mai e bold implicit */
+    font-family: 'Great Vibes', cursive; /* NOU: Font Great Vibes */
+    letter-spacing: 0; /* Dezactivăm letter-spacing */
+    display: flex;
+    align-items: center;
 }
 .contact-header .name-stefan,
 .contact-header .name-mucileanu {
-    text-transform: uppercase;
-}
-.contact-header .name-stefan {
-    color: #000000; /* Negru */
-}
-.contact-header .name-mucileanu {
-    color: #000000; /* Negru */
+    text-transform: none; /* Nu mai e uppercase */
+    color: #FF6600; /* NOU: Portocaliu */
 }
 .contact-nav ul {
     margin: 0;
@@ -184,14 +179,5 @@
     background-color: #E65C00; /* Portocaliu închis */
     border-color: #E65C00;
     transform: scale(1.03);
-    box-shadow: 0 0 20px rgba(255, 102, 0, 0.6); /* Glow portocaliu */
-}
-
-.form-required-note {
-    font-size: 1rem;
-    color: #000000; /* Negru */
-    margin-top: 20px;
-    text-align: center;
-    font-family: 'Courier New', Courier, monospace;
-    text-transform: uppercase;
+    box-shadow: 0 0 20px rgba(255, 102, 0, 0.6); 
 }

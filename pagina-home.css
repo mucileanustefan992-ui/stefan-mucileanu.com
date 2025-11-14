@@ -21,24 +21,17 @@
 
 .site-name {
     font-size: 2.5rem;
-    font-weight: normal;
-    font-family: Arial, sans-serif;
-    letter-spacing: 1px;
-    display: flex; /* Permite alinierea pe o singură linie */
-    align-items: center; /* Centrează vertical */
+    font-weight: normal; /* Nu mai e bold implicit */
+    font-family: 'Great Vibes', cursive; /* NOU: Font Great Vibes */
+    letter-spacing: 0; /* Dezactivăm letter-spacing pentru font caligrafic */
+    display: flex;
+    align-items: center;
 }
 
 .name-stefan,
 .name-mucileanu {
-    text-transform: uppercase;
-}
-
-.name-stefan {
-    color: #000000; /* Negru */
-}
-
-.name-mucileanu {
-    color: #000000; /* Negru */
+    text-transform: none; /* Nu mai e uppercase */
+    color: #FF6600; /* NOU: Portocaliu */
 }
 
 .main-nav ul {
