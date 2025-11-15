@@ -1,0 +1,865 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    background: #F6F4F0;
+    scroll-behavior: smooth;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Stiluri Generale pentru Main Content */
+.main-content-area {
+    background-color: transparent;
+    overflow: visible;
+    position: relative;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    text-align: center;
+    padding: 100px 50px;
+    min-height: calc(100vh - 83px);
+    box-sizing: border-box;
+}
+
+/* --- Stiluri Fade-in la Scroll --- */
+.hidden-on-load {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- Stiluri header principal (index.html) --- */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 80px;
+    background-color: #F6F4F0; /* Fundal crem */
+    border-bottom: none; /* Fără linie */
+    flex-shrink: 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.site-name-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.site-name {
+    font-size: 2.5rem;
+    font-weight: normal;
+    font-family: 'Great Vibes', cursive;
+    letter-spacing: 0;
+    display: flex;
+    align-items: center;
+}
+
+.name-stefan,
+.name-mucileanu {
+    text-transform: none;
+    color: #000000; /* Negru */
+}
+
+.main-nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.main-nav a {
+    display: inline-block;
+    text-decoration: none;
+    color: #333333;
+    font-size: 1.3rem;
+    font-weight: 600;
+    padding: 10px 14px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s, transform 0.2s ease-out, outline 0.2s ease-in-out;
+    position: relative;
+    font-family: Arial, sans-serif;
+}
+
+.main-nav a:not(.cta-button):hover {
+    background-color: transparent;
+    color: #000000;
+    outline: none;
+}
+
+.main-nav a:not(.cta-button)::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #000000; /* Negru */
+    bottom: 5px;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease-out;
+}
+
+.main-nav a:not(.cta-button):hover::after {
+    transform: scaleX(1);
+}
+
+.main-nav a.cta-button {
+    font-weight: bold;
+    font-size: 1.35rem;
+    padding: 12px 24px;
+    background-color: #FF9933; /* Portocaliu */
+    color: #ffffff;
+    border-radius: 30px;
+    box-shadow: none;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.main-nav a.cta-button:hover {
+    background-color: #E68A2E; /* Portocaliu închis */
+    color: #ffffff;
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: none;
+}
+
+.main-nav a.cta-button:active {
+    transform: translateY(-1px) scale(1.02);
+    transition-duration: 0.1s;
+}
+
+/* --- Stiluri Main Content (Hero) --- */
+.main-title {
+    font-size: 5.25rem;
+    font-weight: bold;
+    color: #000000;
+    margin: 0;
+    line-height: 1.2;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.main-title .title-line {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.main-title .brown-text {
+    color: #000000; /* Negru */
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.subtitle {
+    font-size: 2.25rem;
+    color: #333333;
+    margin: 15px 0 25px 0;
+}
+
+.blinking-contact-button {
+    display: inline-block;
+    padding: 20px 40px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #FF9933; /* Portocaliu */
+    border-radius: 10px;
+    border: 3px solid #FF9933; /* Portocaliu */
+    animation: blinkSimpleOrange 1.5s infinite alternate;
+    box-shadow: 0 0 15px rgba(255, 153, 51, 0.4), 0 0 25px rgba(255, 153, 51, 0.2);
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    text-transform: uppercase;
+}
+
+.blinking-contact-button:hover {
+    background-color: #E68A2E; /* Portocaliu închis */
+    border-color: #E68A2E;
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 153, 51, 0.6), 0 0 30px rgba(255, 153, 51, 0.3);
+}
+
+@keyframes blinkSimpleOrange {
+     0% { opacity: 1; box-shadow: 0 0 15px rgba(255, 153, 51, 0.4), 0 0 25px rgba(255, 153, 51, 0.2); }
+    100% { opacity: 0.85; box-shadow: 0 0 20px rgba(255, 153, 51, 0.6), 0 0 30px rgba(255, 153, 51, 0.3); }
+}
+
+/* --- Stiluri Secțiune Intro Despre --- */
+.about-intro-section {
+    background-color: #F6F4F0;
+    padding: 100px 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    position: relative;
+    z-index: 5;
+    box-sizing: border-box;
+}
+
+.intro-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.intro-text-content {
+    flex-basis: 55%;
+    color: #333333;
+    font-size: 1.2rem;
+    line-height: 1.7;
+    text-align: left;
+}
+
+.intro-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #000000; /* Negru */
+    margin-bottom: 25px;
+    font-family: Arial, sans-serif;
+}
+
+.intro-text-content p {
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+.image-container {
+    flex-basis: 40%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+}
+
+.intro-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* --- Stiluri noua secțiune SERVICII --- */
+.services-section {
+    min-height: auto;
+    padding: 120px 50px 100px 50px;
+    position: relative;
+    z-index: 5;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.grow-title {
+    font-size: 6rem;
+    font-weight: bold;
+    color: #000000; /* Negru */
+    margin-bottom: 40px;
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: uppercase;
+    text-shadow: 0 0 15px rgba(0, 0, 0, 0.2), 0 0 25px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+    font-size: 3rem;
+    color: #000000;
+    margin-bottom: 70px;
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: uppercase;
+    border-bottom: 3px solid #000000; /* Negru */
+    padding-bottom: 10px;
+    display: inline-block;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+    width: 100%;
+    max-width: 1600px;
+    padding: 0 50px;
+}
+
+.service-card {
+    background-color: #ffffff;
+    border: 3px solid #000000; /* Negru */
+    border-radius: 15px;
+    padding: 45px;
+    font-family: 'Courier New', Courier, monospace;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+.service-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1);
+    border-color: #333333;
+}
+
+.service-icon {
+    font-size: 2.6rem;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.service-icon .icon-svg {
+    width: 45px;
+    height: 45px;
+    fill: #000000; /* Negru */
+    stroke: none;
+    transition: fill 0.3s ease, filter 0.3s ease;
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.2));
+}
+
+.service-card:hover .service-icon .icon-svg {
+    fill: #333333;
+    filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.3));
+}
+
+.service-title {
+    color: #000000; /* Negru */
+    font-size: 1.875rem;
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.service-description {
+    color: #333333;
+    font-size: 1.3rem;
+    line-height: 1.6;
+    text-align: left;
+    font-weight: 700;
+}
+
+/* Stiluri pentru noua secțiune (FAQ) */
+.faq-section {
+    background-color: #F6F4F0;
+    color: #333333;
+    padding: 100px 50px;
+    text-align: center;
+    position: relative;
+    z-index: 5;
+    font-family: Arial, sans-serif;
+}
+
+.faq-main-title {
+    font-size: 4.5rem;
+    color: #000000; /* Negru */
+    margin-bottom: 50px;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.3),
+                 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.faq-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.faq-item {
+    background-color: #ffffff;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border-left: 5px solid #000000; /* Negru */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 30px;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #333333;
+    cursor: pointer;
+    list-style: none;
+    position: relative;
+}
+
+.faq-question::-webkit-details-marker { display: none; }
+.faq-question::marker { display: none; }
+
+.faq-icon {
+    width: 24px;
+    height: 24px;
+    border: 2px solid #000000; /* Negru */
+    border-radius: 50%;
+    position: relative;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+    margin-left: 15px;
+}
+
+.faq-icon::before,
+.faq-icon::after {
+    content: '';
+    position: absolute;
+    background-color: #000000; /* Negru */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.faq-icon::before {
+    width: 12px;
+    height: 2px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.faq-icon::after {
+    width: 2px;
+    height: 12px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+details[open] > summary .faq-icon::after {
+    transform: translate(-50%, -50%) rotate(90deg);
+    opacity: 0;
+}
+
+.faq-answer {
+    padding: 0 30px 30px 30px;
+    font-size: 1.25rem;
+    line-height: 1.8;
+    color: #555555;
+}
+
+.faq-answer p {
+    margin: 0;
+}
+
+/* --- STILURI PAGINA DE CONTACT --- */
+.contact-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 80px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #cccccc;
+    flex-shrink: 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.contact-header .site-name {
+    font-size: 2.5rem;
+    font-weight: normal;
+    font-family: 'Great Vibes', cursive;
+    letter-spacing: 0;
+    display: flex;
+    align-items: center;
+}
+.contact-header .name-stefan,
+.contact-header .name-mucileanu {
+    text-transform: none;
+    color: #000000;
+}
+.contact-nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.contact-nav-button {
+    display: inline-block;
+    text-decoration: none;
+    color: #000000;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+    border: 2px solid #FF9933; /* Portocaliu */
+    border-radius: 5px;
+    transition: background-color 0.3s, border-color 0.3s, transform 0.2s ease-out, color 0.3s;
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: uppercase;
+}
+.contact-nav-button:hover {
+    background-color: #FF9933;
+    border-color: #FF9933;
+    color: #ffffff;
+    transform: translateY(-2px) scale(1.05);
+}
+.contact-nav-button.active {
+    background-color: #FF9933;
+    border-color: #FF9933;
+    color: #ffffff;
+}
+.contact-page-main {
+    align-items: flex-start;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    min-height: calc(100vh - 83px);
+    z-index: 5;
+}
+.form-container {
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+    position: relative;
+    z-index: 10;
+    color: #000000;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+.form-title {
+    font-size: 2.5rem;
+    color: #000000;
+    margin-bottom: 25px;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    line-height: 1.3;
+}
+.form-subtitle {
+    font-size: 1.2rem;
+    color: #333333;
+    margin: 10px 0;
+    text-align: center;
+    line-height: 1.5;
+}
+.contact-form {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 500px;
+}
+.form-label {
+    font-size: 1.1rem;
+    color: #000000;
+    font-weight: bold;
+    text-align: left;
+    text-transform: uppercase;
+}
+.form-input,
+.form-textarea,
+.form-select {
+    background-color: #f9f9f9;
+    border: 2px solid #000000;
+    color: #000000;
+    padding: 15px;
+    font-size: 1rem;
+    border-radius: 5px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.form-input:focus,
+.form-textarea:focus,
+.form-select:focus {
+    outline: none;
+    border-color: #333333;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+.form-select {
+    appearance: none;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23000000%22%20d%3D%22M287%2C197.3L146.2%2C56.6L5.4%2C197.3c-4.8%2C4.8-12.5%2C4.8-17.3%2C0c-4.8-4.8-4.8-12.5%2C0-17.3l149-149c4.8-4.8%2C12.5-4.8%2C17.3%2C0l149%2C149c4.8%2C4.8%2C4.8%2C12.5%2C0%2C17.3C299.5%2C202.1%2C291.8%2C202.1%2C287%2C197.3z%22%2F%3E%3C%2Fsvg%3E');
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 15px;
+    padding-right: 40px;
+}
+.form-textarea {
+    resize: vertical;
+}
+.form-button {
+    padding: 20px 40px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #FF9933; /* Portocaliu */
+    border-radius: 10px;
+    border: 3px solid #FF9933; /* Portocaliu */
+    box-shadow: 0 0 15px rgba(255, 153, 51, 0.4);
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    text-transform: uppercase;
+    font-family: 'Courier New', Courier, monospace;
+    cursor: pointer;
+    width: 100%;
+    max-width: 500px;
+    animation: none;
+}
+.form-button:hover {
+    background-color: #E68A2E; /* Portocaliu închis */
+    border-color: #E68A2E;
+    transform: scale(1.03);
+    box-shadow: 0 0 20px rgba(255, 153, 51, 0.6);
+}
+.form-required-note {
+    font-size: 1rem;
+    color: #000000;
+    margin-top: 20px;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: uppercase;
+}
+
+/* --- STILURI PAGINI LEGALE (Privacy & Terms) --- */
+.legal-page-main {
+    align-items: flex-start;
+    padding: 80px 50px;
+    min-height: calc(100vh - 83px);
+    z-index: 5;
+}
+
+.legal-content-container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 50px;
+    position: relative;
+    z-index: 10;
+    color: #333333;
+    font-family: Arial, sans-serif;
+    text-align: left;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.legal-content-container h1 {
+    font-size: 3.5rem;
+    color: #000000;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.legal-content-container h2 {
+    font-size: 2rem;
+    color: #000000;
+    margin-top: 40px;
+    margin-bottom: 15px;
+}
+
+.legal-content-container p, .legal-content-container li {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    color: #555555;
+    margin-bottom: 20px;
+}
+
+.legal-content-container ul {
+    padding-left: 40px;
+}
+
+.legal-content-container .last-updated {
+    font-style: italic;
+    color: #777777;
+    margin-bottom: 30px;
+}
+
+
+/* --- STILURI MEDIA QUERIES (Global) --- */
+@media (max-width: 768px) {
+    
+    .site-header,
+    .contact-header {
+        flex-direction: column;
+        padding: 20px;
+        gap: 15px;
+    }
+    
+    .main-nav ul {
+        gap: 10px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .main-nav a {
+        font-size: 1rem;
+        padding: 8px 10px;
+    }
+    
+    .main-nav a.cta-button {
+        font-size: 1rem;
+        padding: 10px 15px;
+    }
+    
+    .contact-nav ul {
+        justify-content: center;
+    }
+    
+    .site-name,
+    .contact-header .site-name {
+        font-size: 2.5rem;
+        font-weight: normal;
+        font-family: 'Great Vibes', cursive;
+    }
+
+    .name-stefan,
+    .contact-header .name-stefan,
+    .name-mucileanu,
+    .contact-header .name-mucileanu {
+        text-transform: none;
+        color: #000000;
+    }
+    
+    .footer-name {
+        font-family: 'Great Vibes', cursive;
+        font-size: 2.5rem;
+        font-weight: normal;
+        text-transform: none;
+        color: #000000;
+    }
+
+    .main-content-area {
+        padding: 60px 20px;
+    }
+    
+    .main-title {
+        font-size: 3rem;
+    }
+    
+    .subtitle {
+        font-size: 1.5rem;
+    }
+
+    .about-intro-section {
+        padding: 60px 20px;
+    }
+    
+    .intro-row {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .intro-title {
+        font-size: 2rem;
+    }
+    
+    .intro-text-content p {
+        font-size: 1.1rem;
+    }
+
+    .services-section {
+        padding: 80px 20px;
+    }
+    
+    .grow-title {
+        font-size: 3.5rem;
+        text-align: center;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+        padding: 0 10px;
+        gap: 40px;
+    }
+    
+    .service-card {
+        padding: 30px;
+    }
+    
+    .service-title {
+        font-size: 1.6rem;
+    }
+    
+    .service-description {
+        font-size: 1.1rem;
+    }
+
+    .faq-section {
+        padding: 80px 20px;
+    }
+    
+    .faq-main-title {
+        font-size: 2.8rem;
+    }
+    
+    .faq-container {
+        max-width: 100%;
+    }
+    
+    .faq-question {
+        font-size: 1.2rem;
+        padding: 20px;
+    }
+    
+    .faq-answer {
+        font-size: 1rem;
+        padding: 0 20px 20px 20px;
+    }
+
+    .legal-content-container {
+        padding: 20px;
+    }
+    .legal-content-container h1 {
+        font-size: 2.5rem;
+    }
+    .legal-content-container h2 {
+        font-size: 1.8rem;
+    }
+    .legal-content-container p, .legal-content-container li {
+        font-size: 1rem;
+    }
+
+    .form-container {
+        padding: 20px;
+    }
+    .form-title {
+        font-size: 2rem;
+    }
+
+    .site-footer {
+        padding: 40px 20px;
+    }
+    
+    .footer-top {
+        flex-direction: column;
+        gap: 30px;
+        margin-bottom: 30px;
+    }
+    
+    .footer-bottom {
+        flex-direction: column-reverse;
+        gap: 20px;
+    }
+}
