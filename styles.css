@@ -1,3 +1,4 @@
+/* 1. SETĂRI GENERALE HTML & BODY */
 html, body {
     height: 100%;
     margin: 0;
@@ -9,7 +10,19 @@ html, body {
     position: relative;
     overflow-x: hidden;
 }
-/* --- Containerul "Boxed" --- */
+
+/* --- CONTAINERUL PRINCIPAL --- */
+.page-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    background-color: #F6F4F0;
+    display: flex !important;
+    flex-direction: column !important;
+    min-height: 100vh !important;
+    width: 100%;
+    box-shadow: none;
+}
+
 /* --- ZONA DE CONȚINUT PRINCIPAL (HERO - INDEX) --- */
 .main-content-area {
     background-color: transparent;
@@ -20,18 +33,15 @@ html, body {
     /* FLEXBOX PENTRU CENTRARE */
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centrează vertical textul */
-    align-items: center;     /* Centrează orizontal textul */
+    justify-content: center;
+    align-items: center;
     
     /* STICKY FOOTER */
-    flex-grow: 1; 
+    flex-grow: 1 !important; /* CRITIC: Se extinde */
     
     text-align: center;
     padding: 80px 40px;
-    
-    /* --- DISTANȚA FAȚĂ DE SECȚIUNEA URMĂTOARE --- */
-    margin-bottom: 150px; /* <--- Aici controlezi distanța (mărește sau micșorează) */
-    
+    margin-bottom: 150px;
     box-sizing: border-box;
     width: 100%;
     min-height: 70vh; 
@@ -49,14 +59,14 @@ html, body {
     transform: translateY(0);
 }
 
-/* --- Stiluri header principal (index.html) --- */
+/* --- Stiluri header principal --- */
 .site-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 25px 40px;
-    background-color: #F6F4F0; /* Fundal crem */
-    border-bottom: none; /* Fără linie */
+    background-color: #F6F4F0;
+    border-bottom: none;
     flex-shrink: 0;
     position: sticky;
     top: 0;
@@ -82,7 +92,7 @@ html, body {
 .name-stefan,
 .name-mucileanu {
     text-transform: none;
-    color: #000000; /* Negru */
+    color: #000000;
 }
 
 .main-nav ul {
@@ -134,7 +144,7 @@ html, body {
     font-weight: bold;
     font-size: 1.1rem;
     padding: 10px 20px;
-    background-color: #000000; /* Negru */
+    background-color: #000000;
     color: #ffffff;
     border-radius: 30px;
     box-shadow: none;
@@ -142,10 +152,9 @@ html, body {
 }
 
 .main-nav a.cta-button:hover {
-    background-color: #333333; /* Gri închis */
+    background-color: #333333;
     color: #ffffff;
     transform: translateY(-3px) scale(1.03);
-    box-shadow: none;
 }
 
 .main-nav a.cta-button:active {
@@ -167,18 +176,13 @@ html, body {
     color: #000000;
     margin: 0;
     line-height: 1.2;
-    text-shadow: none; /* Fără umbră */
+    text-shadow: none;
     font-family: Arial, sans-serif;
 }
 
 .main-title .title-line {
     display: block;
     margin-bottom: 5px;
-}
-
-.main-title .accent-text {
-    color: #000000;
-    text-shadow: none; /* Fără umbră */
 }
 
 .subtitle {
@@ -196,7 +200,7 @@ html, body {
     font-weight: bold;
     text-decoration: none;
     color: #ffffff;
-    background-color: #000000; /* Negru */
+    background-color: #000000;
     border-radius: 10px;
     border: 3px solid #000000;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 0, 0, 0.1);
@@ -221,12 +225,7 @@ html, body {
     100% { opacity: 0.85; box-shadow: 0 0 15px rgba(0, 0, 0, 0.5), 0 0 25px rgba(0, 0, 0, 0.2); }
 }
 
-/* --- Stiluri Secțiune Intro Despre (ȘTEARSĂ) --- */
-.about-intro-section {
-    display: none;
-}
-
-/* --- Stiluri Secțiune Comparație --- */
+/* --- Secțiune Comparație --- */
 .comparison-section {
     background-color: #F6F4F0;
     padding: 100px 40px;
@@ -281,18 +280,6 @@ html, body {
     font-weight: 500;
 }
 
-.icon-x {
-    background-color: #fde8e8;
-    color: #d9534f;
-    opacity: 0.6;
-}
-.icon-x::before {
-    content: '×';
-    font-size: 1.3rem;
-    font-weight: bold;
-    line-height: 1;
-}
-
 /* Stil "Promovat" pentru Freelancer */
 .comparison-column.freelancer {
     background-color: #ffffff;
@@ -335,6 +322,18 @@ html, body {
     flex-shrink: 0;
 }
 
+.icon-x {
+    background-color: #fde8e8;
+    color: #d9534f;
+    opacity: 0.6;
+}
+.icon-x::before {
+    content: '×';
+    font-size: 1.3rem;
+    font-weight: bold;
+    line-height: 1;
+}
+
 .icon-check {
     background-color: #e6f7ee;
     color: #28a745;
@@ -346,7 +345,7 @@ html, body {
     line-height: 1;
 }
 
-/* --- Stiluri noua secțiune SERVICII --- */
+/* --- Secțiune SERVICII --- */
 .services-section {
     min-height: auto;
     padding: 100px 50px 80px 50px;
@@ -450,7 +449,7 @@ html, body {
     font-weight: 700;
 }
 
-/* Stiluri pentru noua secțiune (FAQ) */
+/* --- Secțiune FAQ --- */
 .faq-section {
     background-color: #F6F4F0;
     color: #333333;
@@ -559,7 +558,7 @@ details[open] > summary .faq-icon::after {
     margin: 0;
 }
 
-/* --- NOUA SECȚIUNE CTA --- */
+/* --- SECȚIUNE CTA --- */
 .cta-section {
     background-color: #F6F4F0;
     padding: 80px 40px;
@@ -587,17 +586,15 @@ details[open] > summary .faq-icon::after {
     font-family: Arial, sans-serif;
 }
 
-/* NOU: Subtitlul pentru CTA */
 .cta-subtitle {
     font-size: 1.5rem;
-    color: #777777; /* Gri */
+    color: #777777;
     font-weight: 500;
     margin-top: -15px;
     margin-bottom: 20px;
     font-family: Arial, sans-serif;
 }
 
-/* NOU: Săgeata animată */
 .cta-arrow {
     margin-bottom: 20px;
     animation: bounceArrow 2s infinite;
@@ -615,7 +612,7 @@ details[open] > summary .faq-icon::after {
     60% { transform: translateY(-5px); }
 }
 
-/* --- STILURI PAGINA DE CONTACT (formular) --- */
+/* --- STILURI PAGINA DE CONTACT --- */
 .contact-header {
     display: flex;
     justify-content: space-between;
@@ -630,19 +627,7 @@ details[open] > summary .faq-icon::after {
     width: 100%;
     box-sizing: border-box;
 }
-.contact-header .site-name {
-    font-size: 2.5rem;
-    font-weight: normal;
-    font-family: 'Great Vibes', cursive;
-    letter-spacing: 0;
-    display: flex;
-    align-items: center;
-}
-.contact-header .name-stefan,
-.contact-header .name-mucileanu {
-    text-transform: none;
-    color: #000000;
-}
+
 .contact-nav ul {
     margin: 0;
     padding: 0;
@@ -659,7 +644,7 @@ details[open] > summary .faq-icon::after {
     font-weight: bold;
     padding: 10px 20px;
     background-color: #f0f0f0;
-    border: 2px solid #000000; /* Negru */
+    border: 2px solid #000000;
     border-radius: 5px;
     transition: background-color 0.3s, border-color 0.3s, transform 0.2s ease-out, color 0.3s;
     font-family: 'Courier New', Courier, monospace;
@@ -780,7 +765,7 @@ details[open] > summary .faq-icon::after {
     font-weight: bold;
     text-decoration: none;
     color: #ffffff;
-    background-color: #000000; /* Negru */
+    background-color: #000000;
     border-radius: 10px;
     border: 3px solid #000000;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
@@ -809,50 +794,12 @@ details[open] > summary .faq-icon::after {
     text-transform: uppercase;
 }
 
-/* 1. HTML & BODY trebuie să ocupe toată înălțimea vizibilă */
-html, body {
-    height: 100% !important; /* CRITIC */
-    margin: 0 !important;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    display: flex; /* CRITIC */
-    flex-direction: column; /* CRITIC */
-    background: #F6F4F0;
-    overflow-x: hidden;
-}
-
-/* 2. CONTAINERUL PRINCIPAL (.page-container) trebuie să fie Flexbox Column */
-.page-container {
-    max-width: 1400px;
-    margin: 0 auto;
-    background-color: #F6F4F0;
-    
-    display: flex !important; /* CRITIC */
-    flex-direction: column !important; /* CRITIC */
-    min-height: 100vh !important; /* CRITIC: Ocupă minim înălțimea ecranului */
-    
-    width: 100%;
-    box-shadow: none;
-}
-
-/* 3. ZONA DE CONȚINUT (<main>) trebuie să crească */
-.main-content-area {
-    /* ... stiluri existente ... */
-    flex-grow: 1 !important; /* CRITIC: Se extinde, împingând footer-ul */
-    /* ... alte stiluri, de exemplu: */
-    padding: 40px 40px; 
-    box-sizing: border-box;
-    display: flex;
-    justify-content: center; /* Pentru a centra legal-content-container */
-    align-items: flex-start; /* Aliniere sus */
-}
-
-/* 4. Caseta albă din interiorul <main> */
+/* --- STILURI PAGINA LEGALA (Termeni / Confidențialitate) --- */
 .legal-content-container {
     background-color: #ffffff; 
     padding: 50px;
     max-width: 1000px;
-    margin: 40px auto; /* Centrare orizontală și spațiu sus/jos */
+    margin: 40px auto; 
     border-radius: 10px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.05); 
     width: 100%;
@@ -860,16 +807,6 @@ html, body {
     text-align: left; 
 }
 
-/* 5. FOOTER (Asigură-te că nu are nicio regulă de layout conflictuală) */
-.site-footer {
-    padding: 60px 40px 20px 40px;
-    background-color: #F6F4F0;
-    margin-top: auto; /* Foarte util, dar flex-grow pe main ar trebui să fie suficient */
-    width: 100%;
-    box-sizing: border-box;
-}
-
-/* ... (Lasă celelalte stiluri de la header, titluri, etc.) ... */
 /* --- FOOTER STYLES (Noul design) --- */
 .site-footer {
     background-color: #F6F4F0;
@@ -931,7 +868,7 @@ html, body {
     fill: #000000;
 }
 
-/* Culorile originale ale brandurilor */
+/* Culorile brandurilor */
 .social-button-new.whatsapp { background-color: #25D366; }
 .social-button-new.whatsapp svg { fill: #ffffff; }
 
@@ -1205,129 +1142,233 @@ html, body {
     .legal-separator {
         display: none;
     }
-/* SECTION BACKGROUND */
-.newsletter-page-main {
-    padding: 120px 40px;
-    background-color: #F6F4F0;
+}
+
+/* --- FIX NEWSLETTER (Stil Casetă Albă) --- */
+
+/* Fundalul general al secțiunii */
+.newsletter-final-fix {
+    background-color: #F6F4F0; /* Crem */
+    padding: 80px 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-/* LAYOUT WRAPPER */
-.newsletter-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 90px;
-    max-width: 1300px;
     width: 100%;
+    box-sizing: border-box;
 }
 
-/* LEFT COLUMN ---------------------------------------*/
-.newsletter-content {
-    flex: 1;
-    max-width: 48%;
+/* Cutia Albă (Cardul) */
+.newsletter-box {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 700px; /* Cât de lată să fie cutia */
+    padding: 50px 40px;
+    border-radius: 15px;
+    border: 1px solid #e0e0e0; /* Contur fin */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08); /* Umbră fină */
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+/* Titlul */
+.newsletter-title-fix {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #000;
+    margin-top: 0;
+    margin-bottom: 15px;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+/* Descrierea */
+.newsletter-desc-fix {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+/* Formularul */
+.newsletter-form-fix {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 500px; /* Formularul să nu fie prea lat */
+    margin: 0 auto; /* Centrare formular */
+}
+
+/* Inputurile (Câmpurile de text) */
+.input-group-fix {
     text-align: left;
 }
 
-/* TITLE EXACT LIKE IMAGE */
-.newsletter-title {
-    font-size: 4.8rem;
-    font-weight: 800;
-    line-height: 0.93;
-    letter-spacing: -1px;
+.input-group-fix label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #000;
     text-transform: uppercase;
-    margin: 0 0 40px 0;
-    font-family: Arial, sans-serif;
-    color: #000;
 }
 
-/* TEXT */
-.newsletter-text-block p {
-    font-size: 1.25rem;
-    color: #555;
-    line-height: 1.6;
-    margin-bottom: 22px;
-}
-
-
-/* RIGHT COLUMN ---------------------------------------*/
-.newsletter-form-container {
-    flex: 1;
-    max-width: 480px;
-}
-
-/* INPUTS */
-.newsletter-simple-form {
-    display: flex;
-    flex-direction: column;
-    gap: 35px;
-}
-
-.newsletter-simple-form input {
+.input-group-fix input {
     width: 100%;
-    padding: 12px 0;
-    background: transparent;
-    border: none;
-    border-bottom: 2px solid #ccc;
-    font-size: 1.1rem;
-    color: #000;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border: 2px solid #000; /* Chenar negru gros */
+    border-radius: 8px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.input-group-fix input:focus {
     outline: none;
-    transition: border-color 0.25s ease;
+    background-color: #fff;
+    box-shadow: 0 0 0 4px rgba(0,0,0,0.1);
 }
 
-.newsletter-simple-form input:focus {
-    border-bottom-color: #000;
-}
-
-.newsletter-simple-form input::placeholder {
-    color: #777;
-}
-
-/* BUTTON EXACT STYLE */
-.newsletter-btn-black {
+/* Butonul */
+.btn-submit-fix {
     background-color: #000;
     color: #fff;
-    padding: 22px 30px;
+    padding: 18px;
     border: none;
-    border-radius: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
+    border-radius: 8px;
+    font-size: 1.1rem;
     font-weight: bold;
-    font-size: 1rem;
-    margin-top: 25px;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: transform 0.2s, background-color 0.2s;
+    margin-top: 10px;
+    width: 100%;
 }
 
-.newsletter-btn-black:hover {
-    background-color: #222;
+.btn-submit-fix:hover {
+    background-color: #333;
     transform: translateY(-2px);
 }
 
-/* HIDE LABELS */
-.visually-hidden {
-    position: absolute;
-    opacity: 0;
-    pointer-events: none;
+/* --- Adaptare pentru telefon --- */
+@media (max-width: 600px) {
+    .newsletter-box {
+        padding: 30px 20px;
+    }
+    .newsletter-title-fix {
+        font-size: 1.8rem;
+    }
+}
+/* --- FLASH CARDS SECTION (BLOG) --- */
+
+.flash-cards-section {
+    padding: 80px 20px;
+    width: 100%;
+    box-sizing: border-box;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
 }
 
-/* RESPONSIVE */
-@media (max-width: 992px) {
-    .newsletter-wrapper {
-        flex-direction: column;
-        gap: 60px;
-    }
-    .newsletter-content, 
-    .newsletter-form-container {
-        max-width: 100%;
-    }
-    .newsletter-title {
-        font-size: 3.2rem;
-        line-height: 1;
-    }
+.blog-container-wide {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
+
+/* --- TOATĂ ZONA DE TITLU CENTRATĂ --- */
+.blog-header-minimal {
+    text-align: center; /* Asta centrează tot ce e înăuntru */
+    width: 100%;
+    margin-bottom: 50px; /* Spațiu până la carduri */
+}
+
+/* Titlul Code/Terminal */
+.code-title {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 3rem;
+    font-weight: 900;
+    color: #000;
+    margin: 0 auto 15px auto; /* Margini automate stânga/dreapta */
+    text-transform: uppercase;
+    text-align: center; /* Asigurare dublă */
+    display: block;
+}
+
+.code-subtitle {
+    font-family: Arial, sans-serif;
+    font-size: 1.2rem;
+    color: #555;
+    text-align: center; /* Asigurare dublă */
+    margin: 0 auto;
+    display: block;
+    max-width: 600px; /* Să nu fie prea lat textul */
+}
+
+/* --- THE GRID (GRILA DE CARDURI) --- */
+.flash-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Se aranjează automat */
+    gap: 30px; /* Spațiu între carduri */
+    margin-top: 50px;
+}
+
+/* --- FLASH CARD STYLE --- */
+.flash-card {
+    background-color: #ffffff;
+    border: 3px solid #000000; /* Chenar gros */
+    border-radius: 10px;
+    padding: 40px 30px;
+    text-align: center;
+    box-shadow: 5px 5px 0px rgba(0,0,0,1); /* Umbră solidă "Hard" */
+    transition: transform 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.flash-card:hover {
+    transform: translate(-3px, -3px); /* Se ridică la hover */
+    box-shadow: 8px 8px 0px rgba(0,0,0,1);
+}
+
+/* Numărul cardului (#01, #02...) */
+.card-number {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #888;
+    margin-bottom: 15px;
+    display: block;
+}
+
+/* Titlul Cardului */
+.flash-title {
+    font-family: Arial, sans-serif;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #000;
+    margin: 0 0 15px 0;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+/* Textul Cardului */
+.flash-text {
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #444;
+    margin: 0;
+    font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .code-title {
+        font-size: 2rem;
+    }
+    .flash-grid {
+        grid-template-columns: 1fr; /* O coloană pe mobil */
+    }
 }
