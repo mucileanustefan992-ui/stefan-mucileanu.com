@@ -6,53 +6,149 @@
     <title>Politică de Confidențialitate - Stefan Mucileanu</title>
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        /* Forțăm înălțimea minimă pe tot ecranul */
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            background-color: #F6F4F0;
+        }
+
+        /* Body devine container flexibil */
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Containerul paginii se extinde */
+        .page-container {
+            display: flex;
+            flex-direction: column;
+            flex: 1 0 auto; /* Cheia pentru sticky footer */
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        /* Zona de conținut principal împinge footer-ul jos */
+        .main-content-area.legal-page-main {
+            flex: 1 0 auto; /* Se mărește să ocupe spațiul liber */
+            padding: 60px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        /* Caseta Albă */
+        .legal-content-container {
+            background-color: #ffffff;
+            padding: 50px;
+            max-width: 1000px;
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            box-sizing: border-box;
+        }
+
+        /* Footer-ul nu se mai micșorează */
+        .site-footer {
+            flex-shrink: 0; 
+            background-color: #F6F4F0;
+            width: 100%;
+        }
+
+        /* Stiluri Text */
+        h1 { font-size: 2.5rem; margin-bottom: 20px; color: #000; }
+        h2 { font-size: 1.8rem; margin-top: 30px; margin-bottom: 15px; color: #000; }
+        p, li { line-height: 1.6; color: #333; margin-bottom: 10px; }
+        ul { padding-left: 20px; margin-bottom: 20px; }
+    </style>
 </head>
 <body>
 
-    <header class="contact-header">
-        <a href="index.html" class="site-name-link">
-            <div class="site-name">
-                <span class="name-stefan">Stefan</span> <span class="name-mucileanu">Mucileanu</span>
+    <div class="page-container">
+        <header class="site-header">
+            <a href="index.html" class="site-name-link">
+                <div class="site-name">
+                    <span class="name-stefan">Stefan</span> <span class="name-mucileanu">Mucileanu</span>
+                </div>
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="contact.html" class="cta-button">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="main-content-area legal-page-main">
+            <div class="legal-content-container">
+                <h1>Politică de Confidențialitate</h1>
+                
+                <p><strong>Ultima actualizare: 22 noiembrie 2025</strong></p>
+
+                <h2>1. Introducere</h2>
+                <p>Bun venit pe site-ul lui Stefan Mucileanu (stefan-mucileanu.com). Vă respectăm confidențialitatea și ne angajăm să vă protejăm datele personale. Această politică de confidențialitate vă va informa despre cum avem grijă de datele dumneavoastră personale atunci când vizitați site-ul nostru (indiferent de unde îl vizitați) și vă va informa despre drepturile dumneavoastră de confidențialitate și despre cum vă protejează legea.</p>
+
+                <h2>2. Informațiile pe care le colectăm</h2>
+                <p>Putem colecta, utiliza, stoca și transfera diferite tipuri de date personale despre dumneavoastră, pe care le-am grupat astfel:</p>
+                <ul>
+                    <li><strong>Date de Identitate</strong> includ prenumele, numele de familie, numele de utilizator sau un identificator similar.</li>
+                    <li><strong>Date de Contact</strong> includ adresa de e-mail și numerele de telefon.</li>
+                    <li><strong>Date Tehnice</strong> includ adresa protocolului de internet (IP), datele de autentificare, tipul și versiunea browserului, setarea fusului orar și locația, tipurile și versiunile de plug-in-uri ale browserului, sistemul de operare și platforma și alte tehnologii de pe dispozitivele pe care le utilizați pentru a accesa acest site web.</li>
+                    <li><strong>Date de Utilizare</strong> includ informații despre cum utilizați site-ul, produsele și serviciile noastre.</li>
+                    <li><strong>Date de Marketing și Comunicări</strong> includ preferințele dumneavoastră în primirea de marketing de la noi și de la terții noștri și preferințele dumneavoastră de comunicare.</li>
+                </ul>
+                <p>Aceste date sunt colectate în principal prin formularele noastre de contact și de abonare la newsletter.</p>
+                
+                <p>Pe lângă datele pe care le furnizați direct, folosim instrumente de analiză și publicitate de la terți pentru a colecta automat Date Tehnice și de Utilizare. Aceste instrumente includ:</p>
+                <ul>
+                    <li><strong>Microsoft Clarity:</strong> Pentru a înțelege cum interacționează utilizatorii cu site-ul nostru (de ex., hărți termice, înregistrări ale sesiunilor) pentru a îmbunătăți experiența utilizatorului.</li>
+                    <li><strong>Meta Pixel:</strong> Pentru a măsura, optimiza și construi audiențe pentru campaniile noastre publicitare pe Facebook și Instagram.</li>
+                </ul>
+
+                <h2>3. Cum folosim informațiile dumneavoastră</h2>
+                <p>Vom folosi datele dumneavoastră personale numai atunci când legea ne permite. Cel mai frecvent, vom folosi datele dumneavoastră personale în următoarele circumstanțe:</p>
+                <ul>
+                    <li>Pentru a răspunde solicitărilor dumneavoastră trimise prin formularele noastre de contact.</li>
+                    <li>Pentru a vă trimite newsletter-ul nostru dacă v-ați abonat.</li>
+                    <li>Pentru a îmbunătăți site-ul, serviciile, marketingul, relațiile cu clienții și experiențele noastre prin analizarea datelor de utilizare.</li>
+                    <li>Pentru a gestiona relația noastră cu dumneavoastră, ceea ce va include notificarea despre modificările termenilor noștri sau a politicii de confidențialitate.</li>
+                </ul>
+                
+                <h2>4. Partajarea și Vânzarea Datelor către Terți</h2>
+                <p>Nu vindem, nu închiriem și nu comercializăm datele dumneavoastră personale către terți. Informațiile dumneavoastră sunt folosite exclusiv în scopurile noastre proprii de marketing și comunicare, așa cum este descris în această politică.</p>
+                <p>Putem partaja Datele Tehnice și de Utilizare cu partenerii noștri de analiză și publicitate (cum ar fi Meta și Microsoft) doar pentru a ne ajuta să ne derulăm serviciile și campaniile publicitare, dar aceste date nu sunt vândute pentru utilizarea lor independentă.</p>
+
+                <h2>5. Securitatea datelor</h2>
+                <p>Am implementat măsuri de securitate adecvate pentru a preveni pierderea accidentală, utilizarea sau accesarea neautorizată, modificarea sau divulgarea datelor dumneavoastră personale. Limităm accesul la datele dumneavoastră personale la acei angajați, agenți, contractori și alți terți care au o nevoie de afaceri să le cunoască.</p>
+
+                <h2>6. Păstrarea datelor</h2>
+                <p>Vom păstra datele dumneavoastră personale doar atât timp cât este rezonabil necesar pentru a îndeplini scopurile pentru care le-am colectat, inclusiv în scopul satisfacerii oricăror cerințe legale, de reglementare, fiscale, contabile sau de raportare.</p>
+
+                <h2>7. Drepturile dumneavoastră legale</h2>
+                <p>În anumite circumstanțe, aveți drepturi în temeiul legilor privind protecția datelor în legătură cu datele dumneavoastră personale. Acestea includ dreptul de a:</p>
+                <ul>
+                    <li>Solicita accesul la datele dumneavoastră personale.</li>
+                    <li>Solicita corectarea datelor dumneavoastră personale.</li>
+                    <li>Solicita ștergerea datelor dumneavoastră personale.</li>
+                    <li>Vă opune prelucrării datelor dumneavoastră personale.</li>
+                    <li>Solicita restricționarea prelucrării datelor dumneavoastră personale.</li>
+                    <li>Solicita transferul datelor dumneavoastră personale.</li>
+                    <li>Dreptul de a retrage consimțământul.</li>
+                </ul>
+                <p>Dacă doriți să exercitați oricare dintre drepturile menționate mai sus, vă rugăm să ne contactați.</p>
+
+                <h2>8. Contactați-ne</h2>
+                <p>Dacă aveți întrebări despre această politică de confidențialitate sau despre practicile noastre de confidențialitate, vă rugăm să ne contactați.</p>
             </div>
-        </a>
-        <nav class="contact-nav">
-            <ul>
-                <li><a href="index.html" class="contact-nav-button">HOME</a></li>
-                <li><a href="contact.html" class="contact-nav-button">CONTACT</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main class="main-content-area legal-page-main">
-        <div class="legal-content-container hidden-on-load">
-            <h1>Politică de Confidențialitate</h1>
-            <p class="last-updated"><em>Ultima actualizare: 30 Octombrie 2025</em></p>
-            
-            <h2>1. Introducere</h2>
-            <p>Această Politică de Confidențialitate descrie cum Stefan Mucileanu ("noi", "nouă", "al nostru") colectează, utilizează și protejează informațiile personale pe care le furnizați atunci când utilizați acest website.</p>
-
-            <h2>2. Ce date colectăm</h2>
-            <p>Putem colecta următoarele informații atunci când completați formularul de contact sau navigați pe site:</p>
-            <ul>
-                <li>Informații de contact, inclusiv nume, număr de telefon și adresă de e-mail.</li>
-                <li>Informații demografice sau detalii despre proiect (dacă sunt furnizate voluntar).</li>
-                <li>Date de navigare (non-personale) prin intermediul cookie-urilor, cum ar fi paginile vizitate și timpul petrecut pe site, pentru a îmbunătăți experiența utilizatorului.</li>
-            </ul>
-
-            <h2>3. Cum folosim datele</h2>
-            <p>Folosim aceste informații pentru a înțelege nevoile dvs. și a vă oferi un serviciu mai bun, în special pentru:</p>
-            <ul>
-                <li>A vă răspunde la solicitările trimise prin formularul de contact.</li>
-                <li>Evidență internă și administrarea relației cu clientul.</li>
-                <li>Îmbunătățirea serviciilor noastre și a experienței pe website.</li>
-            </ul>
-
-            <h2>4. Securitatea datelor</h2>
-            <p>Ne angajăm să asigurăm securitatea informațiilor dvs. Pentru a preveni accesul sau divulgarea neautorizată, am implementat proceduri fizice, electronice și manageriale adecvate pentru a proteja informațiile pe care le colectăm online.</p>
-        </div>
-    </main>
-
-<footer class="site-footer">
+        </main>
+        
+        <footer class="site-footer">
             <div class="footer-top-new">
                 <div class="footer-branding-new">
                     <span class="footer-name-new">Stefan Mucileanu</span>
@@ -61,9 +157,7 @@
                     <a href="#" class="social-button-new whatsapp" target="_blank" aria-label="WhatsApp"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19.05 4.91A9.816 9.816 0 0 0 12.04 2c-5.46 0-9.9 4.44-9.9 9.9 0 1.77.46 3.45 1.35 4.93L2.05 22l5.03-1.31A9.908 9.908 0 0 0 12.04 22c5.46 0 9.9-4.44 9.9-9.9a9.87 9.87 0 0 0-2.89-7.19zM12.04 20.13c-1.67 0-3.27-.43-4.65-1.2l-.33-.2-3.45.9.92-3.37-.23-.35A8.093 8.093 0 0 1 4.08 11.96c0-4.41 3.58-8 8-8s8 3.59 8 8c0 4.41-3.58 8-8 8h-.04zm4.27-5.41c-.24-.12-1.42-.7-1.64-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1-.37-1.9-1.18-.71-.63-1.18-1.41-1.32-1.65-.14-.24-.01-.37.11-.48.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.2-.48-.4-.41-.54-.42-.14-.01-.3-.01-.46-.01s-.38.06-.58.3c-.2.24-.76.73-.76 1.79s.78 2.07.88 2.23c.1.16 1.55 2.5 3.75 3.3.52.19.93.3 1.25.39.52.13.99.11 1.37.07.43-.05 1.42-.58 1.62-1.14.2-.56.2-.97.14-1.09-.06-.11-.22-.18-.46-.3z"/></svg></a>
                     <a href="#" class="social-button-new instagram" target="_blank" aria-label="Instagram"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="instagram-gradient" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#fd5c4b"/><stop offset="50%" style="stop-color:#d6249f"/><stop offset="100%" style="stop-color:#285aeb"/></linearGradient></defs><path fill="url(#instagram-gradient)" d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2zm-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8c1.99 0 3.6-1.61 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6zm9.65 1.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/></svg></a>
                     <a href="#" class="social-button-new linkedin" target="_blank" aria-label="LinkedIn"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4.98 3.5C4.98 4.881 3.87 6 2.5 6S.02 4.881.02 3.5C.02 2.12 1.13 1 2.5 1s2.48 1.12 2.48 2.5zM5 8H0v16h5V8zm8 0H8v16h5v-8.35c0-2.12 1.05-3.65 3.28-3.65 1.69 0 2.47 1.15 2.47 3.65V24h5V13.9c0-4.83-2.61-7.1-6.24-7.1C13.2 6.8 11.94 8 11.12 9.07V8z"/></svg></a>
-                    <a href="#" class="social-button-new facebook" target="_blank" aria-label="Facebook">
-                        <img src="facebook_logo.png" alt="Facebook" style="width: 100%; height: 100%; border-radius: 50%;">
-                    </a>
+                    <a href="#" class="social-button-new facebook" target="_blank" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="#1877F2" xmlns="http://www.w3.org/2000/svg"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.776-3.89 1.094 0 2.24.195 2.24.195v2.46h-1.26c-1.248 0-1.628.775-1.628 1.57V12h3.097l-.493 3.438h-2.604v6.987C18.343 21.128 22 16.991 22 12z"/></svg></a>
                     <a href="#" class="social-button-new x-twitter" target="_blank" aria-label="X (Twitter)"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.839L7.084 4.126H5.117z"/></svg></a>
                 </div>
             </div>
@@ -79,7 +173,8 @@
                 </div>
             </div>
         </footer>
-
+    </div>
+    
     <script src="script.js" defer></script>
 </body>
 </html>

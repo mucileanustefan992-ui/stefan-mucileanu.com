@@ -9,33 +9,32 @@ html, body {
     position: relative;
     overflow-x: hidden;
 }
-
 /* --- Containerul "Boxed" --- */
-.page-container {
-    max-width: 1400px;
-    margin: 0 auto;
-    box-shadow: none; /* Fără umbră/linii laterale */
-    background-color: #F6F4F0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100%;
-}
-
-/* Stiluri Generale pentru Main Content */
+/* --- ZONA DE CONȚINUT PRINCIPAL (HERO - INDEX) --- */
 .main-content-area {
     background-color: transparent;
     overflow: visible;
     position: relative;
     z-index: 5;
+    
+    /* FLEXBOX PENTRU CENTRARE */
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-grow: 1;
+    flex-direction: column;
+    justify-content: center; /* Centrează vertical textul */
+    align-items: center;     /* Centrează orizontal textul */
+    
+    /* STICKY FOOTER */
+    flex-grow: 1; 
+    
     text-align: center;
     padding: 80px 40px;
-    min-height: calc(100vh - 83px);
+    
+    /* --- DISTANȚA FAȚĂ DE SECȚIUNEA URMĂTOARE --- */
+    margin-bottom: 150px; /* <--- Aici controlezi distanța (mărește sau micșorează) */
+    
     box-sizing: border-box;
     width: 100%;
+    min-height: 70vh; 
 }
 
 /* --- Stiluri Fade-in la Scroll --- */
@@ -810,63 +809,67 @@ details[open] > summary .faq-icon::after {
     text-transform: uppercase;
 }
 
-/* --- STILURI PAGINI LEGALE (Privacy & Terms) --- */
-.legal-page-main {
-    align-items: flex-start;
-    padding: 80px 50px;
-    min-height: calc(100vh - 83px);
-    z-index: 5;
+/* 1. HTML & BODY trebuie să ocupe toată înălțimea vizibilă */
+html, body {
+    height: 100% !important; /* CRITIC */
+    margin: 0 !important;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex; /* CRITIC */
+    flex-direction: column; /* CRITIC */
+    background: #F6F4F0;
+    overflow-x: hidden;
+}
+
+/* 2. CONTAINERUL PRINCIPAL (.page-container) trebuie să fie Flexbox Column */
+.page-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    background-color: #F6F4F0;
+    
+    display: flex !important; /* CRITIC */
+    flex-direction: column !important; /* CRITIC */
+    min-height: 100vh !important; /* CRITIC: Ocupă minim înălțimea ecranului */
+    
+    width: 100%;
+    box-shadow: none;
+}
+
+/* 3. ZONA DE CONȚINUT (<main>) trebuie să crească */
+.main-content-area {
+    /* ... stiluri existente ... */
+    flex-grow: 1 !important; /* CRITIC: Se extinde, împingând footer-ul */
+    /* ... alte stiluri, de exemplu: */
+    padding: 40px 40px; 
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center; /* Pentru a centra legal-content-container */
+    align-items: flex-start; /* Aliniere sus */
+}
+
+/* 4. Caseta albă din interiorul <main> */
+.legal-content-container {
+    background-color: #ffffff; 
+    padding: 50px;
+    max-width: 1000px;
+    margin: 40px auto; /* Centrare orizontală și spațiu sus/jos */
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05); 
+    width: 100%;
+    box-sizing: border-box;
+    text-align: left; 
+}
+
+/* 5. FOOTER (Asigură-te că nu are nicio regulă de layout conflictuală) */
+.site-footer {
+    padding: 60px 40px 20px 40px;
+    background-color: #F6F4F0;
+    margin-top: auto; /* Foarte util, dar flex-grow pe main ar trebui să fie suficient */
     width: 100%;
     box-sizing: border-box;
 }
 
-.legal-content-container {
-    width: 90%;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 50px;
-    position: relative;
-    z-index: 10;
-    color: #333333;
-    font-family: Arial, sans-serif;
-    text-align: left;
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-}
-
-.legal-content-container h1 {
-    font-size: 3rem;
-    color: #000000;
-    margin-bottom: 10px;
-    font-weight: bold;
-}
-
-.legal-content-container h2 {
-    font-size: 1.8rem;
-    color: #000000;
-    margin-top: 30px;
-    margin-bottom: 15px;
-}
-
-.legal-content-container p, .legal-content-container li {
-    font-size: 1.1rem;
-    line-height: 1.7;
-    color: #555555;
-    margin-bottom: 15px;
-}
-
-.legal-content-container ul {
-    padding-left: 40px;
-}
-
-.legal-content-container .last-updated {
-    font-style: italic;
-    color: #777777;
-    margin-bottom: 30px;
-}
-
-
+/* ... (Lasă celelalte stiluri de la header, titluri, etc.) ... */
 /* --- FOOTER STYLES (Noul design) --- */
 .site-footer {
     background-color: #F6F4F0;
@@ -1202,4 +1205,129 @@ details[open] > summary .faq-icon::after {
     .legal-separator {
         display: none;
     }
+/* SECTION BACKGROUND */
+.newsletter-page-main {
+    padding: 120px 40px;
+    background-color: #F6F4F0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* LAYOUT WRAPPER */
+.newsletter-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 90px;
+    max-width: 1300px;
+    width: 100%;
+}
+
+/* LEFT COLUMN ---------------------------------------*/
+.newsletter-content {
+    flex: 1;
+    max-width: 48%;
+    text-align: left;
+}
+
+/* TITLE EXACT LIKE IMAGE */
+.newsletter-title {
+    font-size: 4.8rem;
+    font-weight: 800;
+    line-height: 0.93;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+    margin: 0 0 40px 0;
+    font-family: Arial, sans-serif;
+    color: #000;
+}
+
+/* TEXT */
+.newsletter-text-block p {
+    font-size: 1.25rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 22px;
+}
+
+
+/* RIGHT COLUMN ---------------------------------------*/
+.newsletter-form-container {
+    flex: 1;
+    max-width: 480px;
+}
+
+/* INPUTS */
+.newsletter-simple-form {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.newsletter-simple-form input {
+    width: 100%;
+    padding: 12px 0;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    font-size: 1.1rem;
+    color: #000;
+    outline: none;
+    transition: border-color 0.25s ease;
+}
+
+.newsletter-simple-form input:focus {
+    border-bottom-color: #000;
+}
+
+.newsletter-simple-form input::placeholder {
+    color: #777;
+}
+
+/* BUTTON EXACT STYLE */
+.newsletter-btn-black {
+    background-color: #000;
+    color: #fff;
+    padding: 22px 30px;
+    border: none;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    font-weight: bold;
+    font-size: 1rem;
+    margin-top: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.newsletter-btn-black:hover {
+    background-color: #222;
+    transform: translateY(-2px);
+}
+
+/* HIDE LABELS */
+.visually-hidden {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+    .newsletter-wrapper {
+        flex-direction: column;
+        gap: 60px;
+    }
+    .newsletter-content, 
+    .newsletter-form-container {
+        max-width: 100%;
+    }
+    .newsletter-title {
+        font-size: 3.2rem;
+        line-height: 1;
+    }
+}
 }
