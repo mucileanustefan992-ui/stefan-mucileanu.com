@@ -1,4 +1,3 @@
-/* 1. SETĂRI GENERALE HTML & BODY */
 html, body {
     height: 100%;
     margin: 0;
@@ -10,7 +9,7 @@ html, body {
     position: relative;
     overflow-x: hidden;
 }
-
+ 
 /* --- CONTAINERUL PRINCIPAL --- */
 .page-container {
     max-width: 1400px;
@@ -22,7 +21,7 @@ html, body {
     width: 100%;
     box-shadow: none;
 }
-
+ 
 /* --- ZONA DE CONȚINUT PRINCIPAL (HERO - INDEX) --- */
 .main-content-area {
     background-color: transparent;
@@ -46,19 +45,19 @@ html, body {
     width: 100%;
     min-height: 70vh; 
 }
-
+ 
 /* --- Stiluri Fade-in la Scroll --- */
 .hidden-on-load {
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
-
+ 
 .show {
     opacity: 1;
     transform: translateY(0);
 }
-
+ 
 /* --- Stiluri header principal --- */
 .site-header {
     display: flex;
@@ -74,12 +73,12 @@ html, body {
     width: 100%;
     box-sizing: border-box;
 }
-
+ 
 .site-name-link {
     text-decoration: none;
     color: inherit;
 }
-
+ 
 .site-name {
     font-size: 2.2rem;
     font-weight: normal;
@@ -88,13 +87,13 @@ html, body {
     display: flex;
     align-items: center;
 }
-
+ 
 .name-stefan,
 .name-mucileanu {
     text-transform: none;
     color: #000000;
 }
-
+ 
 .main-nav ul {
     margin: 0;
     padding: 0;
@@ -103,7 +102,7 @@ html, body {
     align-items: center;
     gap: 30px;
 }
-
+ 
 .main-nav a {
     display: inline-block;
     text-decoration: none;
@@ -116,13 +115,13 @@ html, body {
     position: relative;
     font-family: Arial, sans-serif;
 }
-
+ 
 .main-nav a:not(.cta-button):hover {
     background-color: transparent;
     color: #000000;
     outline: none;
 }
-
+ 
 .main-nav a:not(.cta-button)::after {
     content: '';
     position: absolute;
@@ -135,11 +134,11 @@ html, body {
     transform-origin: left;
     transition: transform 0.3s ease-out;
 }
-
+ 
 .main-nav a:not(.cta-button):hover::after {
     transform: scaleX(1);
 }
-
+ 
 .main-nav a.cta-button {
     font-weight: bold;
     font-size: 1.1rem;
@@ -150,18 +149,18 @@ html, body {
     box-shadow: none;
     transition: background-color 0.3s, transform 0.3s;
 }
-
+ 
 .main-nav a.cta-button:hover {
     background-color: #333333;
     color: #ffffff;
     transform: translateY(-3px) scale(1.03);
 }
-
+ 
 .main-nav a.cta-button:active {
     transform: translateY(-1px) scale(1.01);
     transition-duration: 0.1s;
 }
-
+ 
 /* --- Stiluri Main Content (Hero) --- */
 .content-wrapper {
     max-width: 1000px;
@@ -169,7 +168,7 @@ html, body {
     padding: 0 20px;
     box-sizing: border-box;
 }
-
+ 
 .main-title {
     font-size: 4.5rem;
     font-weight: bold;
@@ -179,18 +178,18 @@ html, body {
     text-shadow: none;
     font-family: Arial, sans-serif;
 }
-
+ 
 .main-title .title-line {
     display: block;
     margin-bottom: 5px;
 }
-
+ 
 .subtitle {
     font-size: 1.8rem;
     color: #333333;
     margin: 10px 0 20px 0;
 }
-
+ 
 /* Butonul mare (Hero și CTA) */
 .cta-button-large,
 .blinking-contact-button {
@@ -207,7 +206,7 @@ html, body {
     transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
     text-transform: uppercase;
 }
-
+ 
 .cta-button-large:hover,
 .blinking-contact-button:hover {
     background-color: #333333;
@@ -215,16 +214,16 @@ html, body {
     transform: scale(1.03);
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5), 0 0 25px rgba(0, 0, 0, 0.2);
 }
-
+ 
 .blinking-contact-button {
     animation: blinkSimpleBlack 1.5s infinite alternate;
 }
-
+ 
 @keyframes blinkSimpleBlack {
      0% { opacity: 1; box-shadow: 0 0 10px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 0, 0, 0.1); }
     100% { opacity: 0.85; box-shadow: 0 0 15px rgba(0, 0, 0, 0.5), 0 0 25px rgba(0, 0, 0, 0.2); }
 }
-
+ 
 /* --- Secțiune Comparație --- */
 .comparison-section {
     background-color: #F6F4F0;
@@ -235,7 +234,7 @@ html, body {
     text-align: center;
     width: 100%;
 }
-
+ 
 .comparison-title {
     font-size: 3rem;
     font-weight: bold;
@@ -245,7 +244,7 @@ html, body {
     line-height: 1.3;
     font-family: Arial, sans-serif;
 }
-
+ 
 .comparison-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -254,7 +253,7 @@ html, body {
     margin: 0 auto;
     text-align: left;
 }
-
+ 
 .comparison-column {
     border: 1px solid #eee;
     border-radius: 15px;
@@ -262,7 +261,7 @@ html, body {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
     transition: all 0.3s ease;
 }
-
+ 
 /* Stil "Phantom" pentru Agenții */
 .comparison-column.agency {
     background-color: transparent;
@@ -270,23 +269,23 @@ html, body {
     box-shadow: none;
     opacity: 0.7; 
 }
-
+ 
 .comparison-column.agency .column-title {
     color: #777777;
 }
-
+ 
 .comparison-column.agency li {
     color: #555555;
     font-weight: 500;
 }
-
+ 
 /* Stil "Promovat" pentru Freelancer */
 .comparison-column.freelancer {
     background-color: #ffffff;
     border: 1px solid #ddd;
     transform: scale(1.02);
 }
-
+ 
 .column-title {
     font-size: 1.8rem;
     font-weight: bold;
@@ -294,13 +293,13 @@ html, body {
     margin: 0 0 25px 0;
     font-family: Arial, sans-serif;
 }
-
+ 
 .comparison-column ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
-
+ 
 .comparison-column li {
     display: flex;
     align-items: center;
@@ -310,7 +309,7 @@ html, body {
     font-weight: 600;
     line-height: 1.5;
 }
-
+ 
 .icon-x, .icon-check {
     display: inline-flex;
     justify-content: center;
@@ -321,7 +320,7 @@ html, body {
     margin-right: 12px;
     flex-shrink: 0;
 }
-
+ 
 .icon-x {
     background-color: #fde8e8;
     color: #d9534f;
@@ -333,7 +332,7 @@ html, body {
     font-weight: bold;
     line-height: 1;
 }
-
+ 
 .icon-check {
     background-color: #e6f7ee;
     color: #28a745;
@@ -344,7 +343,7 @@ html, body {
     font-weight: bold;
     line-height: 1;
 }
-
+ 
 /* --- Secțiune SERVICII --- */
 .services-section {
     min-height: auto;
@@ -358,7 +357,7 @@ html, body {
     box-sizing: border-box;
     width: 100%;
 }
-
+ 
 .grow-title {
     font-size: 4.5rem;
     font-weight: bold;
@@ -368,7 +367,7 @@ html, body {
     text-transform: uppercase;
     text-shadow: 0 0 15px rgba(0, 0, 0, 0.2), 0 0 25px rgba(0, 0, 0, 0.1);
 }
-
+ 
 .section-title {
     font-size: 2.5rem;
     color: #000000;
@@ -380,7 +379,7 @@ html, body {
     display: inline-block;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
-
+ 
 .services-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -390,7 +389,7 @@ html, body {
     padding: 0 20px;
     box-sizing: border-box;
 }
-
+ 
 .service-card {
     background-color: #ffffff;
     border: 3px solid #000000;
@@ -403,19 +402,19 @@ html, body {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
-
+ 
 .service-card:hover {
     transform: scale(1.03);
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.25), 0 0 35px rgba(0, 0, 0, 0.15);
     border-color: #333333;
 }
-
+ 
 .service-icon {
     font-size: 2.2rem;
     margin-bottom: 20px;
     text-align: center;
 }
-
+ 
 .service-icon .icon-svg {
     width: 40px;
     height: 40px;
@@ -424,12 +423,12 @@ html, body {
     transition: fill 0.3s ease, filter 0.3s ease;
     filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.2));
 }
-
+ 
 .service-card:hover .service-icon .icon-svg {
     fill: #333333;
     filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.3));
 }
-
+ 
 .service-title {
     color: #000000;
     font-size: 1.6rem;
@@ -440,7 +439,7 @@ html, body {
     text-align: center;
     text-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
 }
-
+ 
 .service-description {
     color: #333333;
     font-size: 1.15rem;
@@ -448,7 +447,7 @@ html, body {
     text-align: left;
     font-weight: 700;
 }
-
+ 
 /* --- Secțiune FAQ --- */
 .faq-section {
     background-color: #F6F4F0;
@@ -461,7 +460,7 @@ html, body {
     width: 100%;
     box-sizing: border-box;
 }
-
+ 
 .faq-main-title {
     font-size: 3.5rem;
     color: #000000;
@@ -470,7 +469,7 @@ html, body {
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.3),
                  0 0 20px rgba(0, 0, 0, 0.2);
 }
-
+ 
 .faq-container {
     max-width: 1000px;
     margin: 0 auto;
@@ -481,7 +480,7 @@ html, body {
     border-radius: 15px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
-
+ 
 .faq-item {
     background-color: #F9F9F9;
     margin-bottom: 15px;
@@ -490,7 +489,7 @@ html, body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
     overflow: hidden;
 }
-
+ 
 .faq-question {
     display: flex;
     justify-content: space-between;
@@ -503,10 +502,10 @@ html, body {
     list-style: none;
     position: relative;
 }
-
+ 
 .faq-question::-webkit-details-marker { display: none; }
 .faq-question::marker { display: none; }
-
+ 
 .faq-icon {
     width: 22px;
     height: 22px;
@@ -517,7 +516,7 @@ html, body {
     flex-shrink: 0;
     margin-left: 10px;
 }
-
+ 
 .faq-icon::before,
 .faq-icon::after {
     content: '';
@@ -525,7 +524,7 @@ html, body {
     background-color: #000000;
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
-
+ 
 .faq-icon::before {
     width: 10px;
     height: 2px;
@@ -533,7 +532,7 @@ html, body {
     left: 50%;
     transform: translate(-50%, -50%);
 }
-
+ 
 .faq-icon::after {
     width: 2px;
     height: 10px;
@@ -541,23 +540,23 @@ html, body {
     left: 50%;
     transform: translate(-50%, -50%);
 }
-
+ 
 details[open] > summary .faq-icon::after {
     transform: translate(-50%, -50%) rotate(90deg);
     opacity: 0;
 }
-
+ 
 .faq-answer {
     padding: 0 25px 25px 25px;
     font-size: 1.1rem;
     line-height: 1.7;
     color: #555555;
 }
-
+ 
 .faq-answer p {
     margin: 0;
 }
-
+ 
 /* --- SECȚIUNE CTA --- */
 .cta-section {
     background-color: #F6F4F0;
@@ -566,7 +565,7 @@ details[open] > summary .faq-icon::after {
     width: 100%;
     box-sizing: border-box;
 }
-
+ 
 .cta-container {
     background-color: #ffffff;
     padding: 60px 40px;
@@ -575,7 +574,7 @@ details[open] > summary .faq-icon::after {
     max-width: 1000px;
     margin: 0 auto;
 }
-
+ 
 .cta-title {
     font-size: 3rem;
     font-weight: bold;
@@ -585,7 +584,7 @@ details[open] > summary .faq-icon::after {
     line-height: 1.3;
     font-family: Arial, sans-serif;
 }
-
+ 
 .cta-subtitle {
     font-size: 1.5rem;
     color: #777777;
@@ -594,24 +593,24 @@ details[open] > summary .faq-icon::after {
     margin-bottom: 20px;
     font-family: Arial, sans-serif;
 }
-
+ 
 .cta-arrow {
     margin-bottom: 20px;
     animation: bounceArrow 2s infinite;
     color: #000000;
 }
-
+ 
 .cta-arrow svg {
     width: 40px;
     height: 40px;
 }
-
+ 
 @keyframes bounceArrow {
     0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
     40% { transform: translateY(-10px); }
     60% { transform: translateY(-5px); }
 }
-
+ 
 /* --- STILURI PAGINA DE CONTACT --- */
 .contact-header {
     display: flex;
@@ -627,7 +626,7 @@ details[open] > summary .faq-icon::after {
     width: 100%;
     box-sizing: border-box;
 }
-
+ 
 .contact-nav ul {
     margin: 0;
     padding: 0;
@@ -661,7 +660,7 @@ details[open] > summary .faq-icon::after {
     border-color: #000000;
     color: #ffffff;
 }
-
+ 
 .contact-page-main {
     align-items: flex-start;
     padding: 80px 50px;
@@ -670,7 +669,7 @@ details[open] > summary .faq-icon::after {
     width: 100%;
     box-sizing: border-box;
 }
-
+ 
 .form-container {
     width: 90%;
     max-width: 700px;
@@ -685,7 +684,7 @@ details[open] > summary .faq-icon::after {
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
-
+ 
 .form-title {
     font-size: 2rem;
     color: #000000;
@@ -693,7 +692,7 @@ details[open] > summary .faq-icon::after {
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     line-height: 1.3;
 }
-
+ 
 .form-subtitle {
     font-size: 1.1rem;
     color: #333333;
@@ -701,7 +700,7 @@ details[open] > summary .faq-icon::after {
     text-align: center;
     line-height: 1.5;
 }
-
+ 
 .contact-form {
     margin-top: 30px;
     display: flex;
@@ -709,7 +708,7 @@ details[open] > summary .faq-icon::after {
     gap: 20px;
     align-items: center;
 }
-
+ 
 .form-group {
     display: flex;
     flex-direction: column;
@@ -717,7 +716,7 @@ details[open] > summary .faq-icon::after {
     width: 100%;
     max-width: 450px;
 }
-
+ 
 .form-label {
     font-size: 1rem;
     color: #000000;
@@ -725,7 +724,7 @@ details[open] > summary .faq-icon::after {
     text-align: left;
     text-transform: uppercase;
 }
-
+ 
 .form-input,
 .form-textarea,
 .form-select {
@@ -737,7 +736,7 @@ details[open] > summary .faq-icon::after {
     border-radius: 5px;
     font-family: 'Courier New', Courier, monospace;
 }
-
+ 
 .form-input:focus,
 .form-textarea:focus,
 .form-select:focus {
@@ -745,7 +744,7 @@ details[open] > summary .faq-icon::after {
     border-color: #333333;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
 }
-
+ 
 .form-select {
     appearance: none;
     background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23000000%22%20d%3D%22M287%2C197.3L146.2%2C56.6L5.4%2C197.3c-4.8%2C4.8-12.5%2C4.8-17.3%2C0c-4.8-4.8-4.8-12.5%2C0-17.3l149-149c4.8-4.8%2C12.5-4.8%2C17.3%2C0l149%2C149c4.8%2C4.8%2C4.8%2C12.5%2C0%2C17.3C299.5%2C202.1%2C291.8%2C202.1%2C287%2C197.3z%22%2F%3E%3C%2Fsvg%3E');
@@ -754,11 +753,11 @@ details[open] > summary .faq-icon::after {
     background-size: 15px;
     padding-right: 40px;
 }
-
+ 
 .form-textarea {
     resize: vertical;
 }
-
+ 
 .form-button {
     padding: 18px 35px;
     font-size: 1.3rem;
@@ -777,14 +776,14 @@ details[open] > summary .faq-icon::after {
     max-width: 450px;
     animation: none;
 }
-
+ 
 .form-button:hover {
     background-color: #333333;
     border-color: #333333;
     transform: scale(1.03);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
-
+ 
 .form-required-note {
     font-size: 0.9rem;
     color: #000000;
@@ -793,7 +792,7 @@ details[open] > summary .faq-icon::after {
     font-family: 'Courier New', Courier, monospace;
     text-transform: uppercase;
 }
-
+ 
 /* --- STILURI PAGINA LEGALA (Termeni / Confidențialitate) --- */
 .legal-content-container {
     background-color: #ffffff; 
@@ -806,7 +805,7 @@ details[open] > summary .faq-icon::after {
     box-sizing: border-box;
     text-align: left; 
 }
-
+ 
 /* --- FOOTER STYLES (Noul design) --- */
 .site-footer {
     background-color: #F6F4F0;
@@ -818,7 +817,7 @@ details[open] > summary .faq-icon::after {
     width: 100%;
     box-sizing: border-box;
 }
-
+ 
 .footer-top-new {
     display: flex;
     justify-content: space-between;
@@ -826,25 +825,25 @@ details[open] > summary .faq-icon::after {
     max-width: 1200px;
     margin: 0 auto 30px auto;
 }
-
+ 
 .footer-branding-new {
     text-align: left;
 }
-
+ 
 .footer-name-new {
     font-family: 'Great Vibes', cursive;
     font-size: 2.5rem;
     color: #000000;
     font-weight: normal;
 }
-
+ 
 .footer-socials-new {
     display: flex;
     gap: 15px;
     flex-wrap: wrap;
     justify-content: flex-end;
 }
-
+ 
 .social-button-new {
     display: inline-flex;
     justify-content: center;
@@ -861,37 +860,37 @@ details[open] > summary .faq-icon::after {
     transform: translateY(-4px);
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
 }
-
+ 
 .social-button-new svg {
     width: 26px;
     height: 26px;
     fill: #000000;
 }
-
+ 
 /* Culorile brandurilor */
 .social-button-new.whatsapp { background-color: #25D366; }
 .social-button-new.whatsapp svg { fill: #ffffff; }
-
+ 
 .social-button-new.instagram { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%); }
 .social-button-new.instagram svg { fill: none; }
-
+ 
 .social-button-new.linkedin { background-color: #0A66C2; }
 .social-button-new.linkedin svg { fill: #ffffff; }
-
+ 
 .social-button-new.facebook { background-color: #1877F2; }
 .social-button-new.facebook svg { fill: #ffffff; }
-
+ 
 .social-button-new.x-twitter { background-color: #000000; }
 .social-button-new.x-twitter svg { fill: #ffffff; }
-
-
+ 
+ 
 /* Noul Footer - Divizor */
 .footer-divider-new {
     border-top: 1px solid #cccccc;
     max-width: 1200px;
     margin: 0 auto 30px auto;
 }
-
+ 
 /* Noul Footer - Rândul de jos */
 .footer-bottom-new {
     display: flex;
@@ -903,35 +902,35 @@ details[open] > summary .faq-icon::after {
     max-width: 1200px;
     margin: 0 auto;
 }
-
+ 
 .copyright-new {
     margin: 0;
     font-weight: 500;
     text-align: left;
 }
-
+ 
 .footer-legal-links-new {
     display: flex;
     justify-content: flex-end;
     gap: 10px;
 }
-
+ 
 .footer-link-new {
     color: #333333;
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s ease;
 }
-
+ 
 .footer-link-new:hover {
     color: #000000;
 }
-
+ 
 .legal-separator {
     color: #cccccc;
 }
-
-
+ 
+ 
 /* --- STILURI MEDIA QUERIES (Global) --- */
 @media (max-width: 1420px) {
     .page-container {
@@ -940,7 +939,7 @@ details[open] > summary .faq-icon::after {
         box-shadow: none;
     }
 }
-
+ 
 @media (max-width: 768px) {
     
     .site-header,
@@ -986,7 +985,7 @@ details[open] > summary .faq-icon::after {
     .contact-header .site-name {
         font-size: 2.5rem;
     }
-
+ 
     .name-stefan,
     .contact-header .name-stefan,
     .name-mucileanu,
@@ -998,7 +997,7 @@ details[open] > summary .faq-icon::after {
     .footer-name-new {
         font-size: 2.5rem;
     }
-
+ 
     .main-content-area {
         padding: 60px 20px;
     }
@@ -1010,7 +1009,7 @@ details[open] > summary .faq-icon::after {
     .subtitle {
         font-size: 1.5rem;
     }
-
+ 
     .comparison-grid {
         grid-template-columns: 1fr;
     }
@@ -1021,7 +1020,7 @@ details[open] > summary .faq-icon::after {
     .comparison-column li {
         font-size: 1rem;
     }
-
+ 
     .services-section {
         padding: 80px 20px;
     }
@@ -1052,7 +1051,7 @@ details[open] > summary .faq-icon::after {
     .service-description {
         font-size: 1.1rem;
     }
-
+ 
     .faq-section {
         padding: 80px 20px;
     }
@@ -1075,14 +1074,14 @@ details[open] > summary .faq-icon::after {
         font-size: 1rem;
         padding: 0 20px 20px 20px;
     }
-
+ 
     .cta-container {
         padding: 40px 20px;
     }
     .cta-title {
         font-size: 2.2rem;
     }
-
+ 
     .legal-content-container {
         padding: 20px;
     }
@@ -1095,14 +1094,14 @@ details[open] > summary .faq-icon::after {
     .legal-content-container p, .legal-content-container li {
         font-size: 1rem;
     }
-
+ 
     .form-container {
         padding: 20px;
     }
     .form-title {
         font-size: 2rem;
     }
-
+ 
     .site-footer {
         padding: 40px 20px;
     }
@@ -1112,7 +1111,7 @@ details[open] > summary .faq-icon::after {
         gap: 30px;
         margin-bottom: 30px;
     }
-
+ 
     .footer-branding-new {
         text-align: center;
     }
@@ -1120,7 +1119,7 @@ details[open] > summary .faq-icon::after {
     .footer-socials-new {
         justify-content: center;
     }
-
+ 
     .social-button-new {
         width: 45px;
         height: 45px;
@@ -1143,9 +1142,9 @@ details[open] > summary .faq-icon::after {
         display: none;
     }
 }
-
+ 
 /* --- FIX NEWSLETTER (Stil Casetă Albă) --- */
-
+ 
 /* Fundalul general al secțiunii */
 .newsletter-final-fix {
     background-color: #F6F4F0; /* Crem */
@@ -1156,7 +1155,7 @@ details[open] > summary .faq-icon::after {
     width: 100%;
     box-sizing: border-box;
 }
-
+ 
 /* Cutia Albă (Cardul) */
 .newsletter-box {
     background-color: #ffffff;
@@ -1169,7 +1168,7 @@ details[open] > summary .faq-icon::after {
     text-align: center;
     font-family: Arial, sans-serif;
 }
-
+ 
 /* Titlul */
 .newsletter-title-fix {
     font-size: 2.5rem;
@@ -1180,7 +1179,7 @@ details[open] > summary .faq-icon::after {
     line-height: 1.2;
     text-transform: uppercase;
 }
-
+ 
 /* Descrierea */
 .newsletter-desc-fix {
     font-size: 1.1rem;
@@ -1188,7 +1187,7 @@ details[open] > summary .faq-icon::after {
     margin-bottom: 40px;
     line-height: 1.6;
 }
-
+ 
 /* Formularul */
 .newsletter-form-fix {
     display: flex;
@@ -1198,12 +1197,12 @@ details[open] > summary .faq-icon::after {
     max-width: 500px; /* Formularul să nu fie prea lat */
     margin: 0 auto; /* Centrare formular */
 }
-
+ 
 /* Inputurile (Câmpurile de text) */
 .input-group-fix {
     text-align: left;
 }
-
+ 
 .input-group-fix label {
     display: block;
     font-size: 0.9rem;
@@ -1212,7 +1211,7 @@ details[open] > summary .faq-icon::after {
     color: #000;
     text-transform: uppercase;
 }
-
+ 
 .input-group-fix input {
     width: 100%;
     padding: 15px;
@@ -1223,13 +1222,13 @@ details[open] > summary .faq-icon::after {
     box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
-
+ 
 .input-group-fix input:focus {
     outline: none;
     background-color: #fff;
     box-shadow: 0 0 0 4px rgba(0,0,0,0.1);
 }
-
+ 
 /* Butonul */
 .btn-submit-fix {
     background-color: #000;
@@ -1244,12 +1243,12 @@ details[open] > summary .faq-icon::after {
     margin-top: 10px;
     width: 100%;
 }
-
+ 
 .btn-submit-fix:hover {
     background-color: #333;
     transform: translateY(-2px);
 }
-
+ 
 /* --- Adaptare pentru telefon --- */
 @media (max-width: 600px) {
     .newsletter-box {
@@ -1260,7 +1259,7 @@ details[open] > summary .faq-icon::after {
     }
 }
 /* --- FLASH CARDS SECTION (BLOG) --- */
-
+ 
 .flash-cards-section {
     padding: 80px 20px;
     width: 100%;
@@ -1269,20 +1268,20 @@ details[open] > summary .faq-icon::after {
     display: flex;
     justify-content: center;
 }
-
+ 
 .blog-container-wide {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
 }
-
+ 
 /* --- TOATĂ ZONA DE TITLU CENTRATĂ --- */
 .blog-header-minimal {
     text-align: center; /* Asta centrează tot ce e înăuntru */
     width: 100%;
     margin-bottom: 50px; /* Spațiu până la carduri */
 }
-
+ 
 /* Titlul Code/Terminal */
 .code-title {
     font-family: 'Courier New', Courier, monospace;
@@ -1294,7 +1293,7 @@ details[open] > summary .faq-icon::after {
     text-align: center; /* Asigurare dublă */
     display: block;
 }
-
+ 
 .code-subtitle {
     font-family: Arial, sans-serif;
     font-size: 1.2rem;
@@ -1304,7 +1303,7 @@ details[open] > summary .faq-icon::after {
     display: block;
     max-width: 600px; /* Să nu fie prea lat textul */
 }
-
+ 
 /* --- THE GRID (GRILA DE CARDURI) --- */
 .flash-grid {
     display: grid;
@@ -1312,7 +1311,7 @@ details[open] > summary .faq-icon::after {
     gap: 30px; /* Spațiu între carduri */
     margin-top: 50px;
 }
-
+ 
 /* --- FLASH CARD STYLE --- */
 .flash-card {
     background-color: #ffffff;
@@ -1326,12 +1325,12 @@ details[open] > summary .faq-icon::after {
     flex-direction: column;
     align-items: center;
 }
-
+ 
 .flash-card:hover {
     transform: translate(-3px, -3px); /* Se ridică la hover */
     box-shadow: 8px 8px 0px rgba(0,0,0,1);
 }
-
+ 
 /* Numărul cardului (#01, #02...) */
 .card-number {
     font-family: 'Courier New', Courier, monospace;
@@ -1341,7 +1340,7 @@ details[open] > summary .faq-icon::after {
     margin-bottom: 15px;
     display: block;
 }
-
+ 
 /* Titlul Cardului */
 .flash-title {
     font-family: Arial, sans-serif;
@@ -1352,7 +1351,7 @@ details[open] > summary .faq-icon::after {
     line-height: 1.2;
     text-transform: uppercase;
 }
-
+ 
 /* Textul Cardului */
 .flash-text {
     font-family: Arial, sans-serif;
@@ -1362,7 +1361,7 @@ details[open] > summary .faq-icon::after {
     margin: 0;
     font-weight: 500;
 }
-
+ 
 /* Responsive */
 @media (max-width: 768px) {
     .code-title {
@@ -1372,3 +1371,22 @@ details[open] > summary .faq-icon::after {
         grid-template-columns: 1fr; /* O coloană pe mobil */
     }
 }
+ 
+/* ===== ADAOSURI PENTRU MEDITATII ===== */
+.about-section { padding: 80px 40px; max-width: 900px; margin: 0 auto; text-align: center; box-sizing: border-box; }
+.about-section p { font-size: 1.3rem; line-height: 1.7; color: #333333; margin: 0 0 18px 0; }
+.price-amount { font-size: 2.4rem; font-weight: bold; color: #000000; margin: 10px 0; }
+.price-note { font-size: 1rem; color: #555555; margin: 0; }
+.services-grid.two-cols { max-width: 900px; }
+@media (max-width: 768px) {
+    .main-nav ul { gap: 4px; flex-wrap: wrap; justify-content: flex-end; }
+    .main-nav a { font-size: 0.95rem; padding: 6px 8px; }
+    .main-nav a.cta-button { padding: 8px 14px; font-size: 0.95rem; }
+    .about-section { padding: 50px 20px; }
+    .about-section p { font-size: 1.1rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .blinking-contact-button, .cta-arrow { animation: none; }
+    .hidden-on-load { transition: none; }
+}
+ 
